@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
    <div class="woshiqingyi">
-     <div class="" v-if="show">iph</div>
+     <div class="" v-if="show">ip</div>
      <div class="" v-if="show">ipa</div>
      <div class="" v-if="show">Mac</div>
      <div class="" v-if="show">Watch</div>
@@ -22,12 +22,14 @@ export default {
     }
   },
   beforeCreate () {
+    console.log(window.innerWidth)
+    console.log(window.innerHeight)
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
       this.show = false
       console.log('1')
     } else {
       this.show = true
-      console.log('4')
+      console.log('2')
     }
   },
   methods: {
