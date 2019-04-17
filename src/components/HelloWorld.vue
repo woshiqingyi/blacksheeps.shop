@@ -1,15 +1,17 @@
 <template>
   <div class="layout">
    <div class="woshiqingyi">
-     <div class="" v-if="show">ip</div>
-     <div class="" v-if="show">ipa</div>
-     <div class="" v-if="show">Mac</div>
+     <div class="">福建</div>
+     <div class="">泉州</div>
+     <div class="">厦门市中心</div>
      <div class="" v-if="show">Watch</div>
      <div class="" >Music</div>
      <select v-model="selected" @change='getValue'>
        <option>--请选择--</option>
        <option v-for="item in optList" v-bind:key='item'>{{item}}</option>
      </select>
+     <input v-model="message" placeholder="edit me">
+     <div>{{message}}</div>
    </div>
   </div>
 </template>
@@ -18,7 +20,8 @@ export default {
   data: function () {
     return {
       selected: '',
-      optList: ['青龙', '白虎', '朱雀', '玄武']
+      optList: ['青龙', '白虎', '朱雀', '玄武'],
+      message: ''
     }
   },
   beforeCreate () {
@@ -44,13 +47,12 @@ export default {
   color: white;
 }
 .woshiqingyi{
-  height: 50px;
+  height: 0.8rem;
   color:white;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 200px;
-  margin-right: 200px;
+  font-size: 0.3rem
 }
 
 .layout{
