@@ -1,37 +1,64 @@
 <template>
   <div class="layout">
-   <div class="woshiqingyi">
-     <div class="">福</div>
-     <div class="">泉州</div>
-     <div class="">厦门市中心</div>
-     <div class="" v-if="show">Watch</div>
-     <div class="" >Music</div>
-   </div>
+   <ul class="category" v-if="show">
+     <li  class="per-category"  v-for="item in CommodityCategory" :key="item.id">{{item.Name}}</li>
+   </ul>
   </div>
 </template>
 <script>
-
 export default {
   data: function () {
     return {
-      selected: '',
-      optList: ['青龙', '白虎', '朱雀', '玄武'],
-      message: '',
       dWidth: '',
-      baseFontSize: ''
+      show: 'true',
+      CommodityCategory: [
+        {
+          Name: '书籍'
+        },
+        {
+          Name: '化妆品'
+        },
+        {
+          Name: '化妆品'
+        },
+        {
+          Name: '化妆品'
+        },
+        {
+          Name: '化妆品'
+        },
+        {
+          Name: '化妆品'
+        },
+        
+        
+      ]
     }
   },
   beforeCreate () {
+    this.dWidth = document.documentElement.clientWidth
     var dWidth = document.documentElement.clientWidth
-    if (dWidth > 750) dWidth = 750
+    if (dWidth > 500) dWidth = 500
     var baseFontSize = dWidth * 100 / 750
-    var woshi =  document.documentElement.style.fontSize = baseFontSize + 'px'
+    document.documentElement.style.fontSize = baseFontSize + 'px'
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      this.show = false
-      console.log('1')
     } else {
-      this.show = true
-      console.log('2')
+    }
+  },
+
+  created () {
+    var dWidth = document.documentElement.clientWidth 
+    var shezhi = this.CommodityCategory.length * 3 
+    if (dWidth > 500) dWidth = 500
+    var baseFontSize = dWidth * 100 / 750
+    var jieguo = shezhi * baseFontSize
+    console.log('222',shezhi)
+    console.log('333',baseFontSize)
+    console.log('444',jieguo)
+    console.log('555',dWidth)
+  
+    if (jieguo > document.documentElement.clientWidth) {
+      this.show = false
     }
   },
 
@@ -39,7 +66,7 @@ export default {
     window.onresize = () => {
       return (() => {
         var dWidth = document.documentElement.clientWidth
-        if (dWidth > 750) dWidth = 750
+        if (dWidth > 500) dWidth = 500
         var baseFontSize = dWidth * 100 / 750
         document.documentElement.style.fontSize = baseFontSize + 'px'
       })()
@@ -47,28 +74,30 @@ export default {
   },
 
   methods: {
-    getValue () {
-      console.log('您选择了', this.selected)
-    }
   }
 }
 </script>
 
 <style>
-
-.nishi{
+.category{
   color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.8rem;
+  font-size: 0.25rem;
 }
-.woshiqingyi{
-  color:white;
-  font-size: 0.3rem
+
+.per-category{
+  width: 3rem;
+  height: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .layout{
-  margin:0px;
+  height: 0.8rem;
   background-color: black;
  }
-  body{
-      margin:0px;
-   }
  </style>
