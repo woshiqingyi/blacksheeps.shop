@@ -1,32 +1,31 @@
 <template>
   <div class="layout">
    <div class="woshiqingyi">
-     <div class="">福建</div>
+     <div class="">福</div>
      <div class="">泉州</div>
      <div class="">厦门市中心</div>
      <div class="" v-if="show">Watch</div>
      <div class="" >Music</div>
-     <select v-model="selected" @change='getValue'>
-       <option>--请选择--</option>
-       <option v-for="item in optList" v-bind:key='item'>{{item}}</option>
-     </select>
-     <input v-model="message" placeholder="edit me">
-     <div>{{message}}</div>
    </div>
   </div>
 </template>
 <script>
+
 export default {
   data: function () {
     return {
       selected: '',
       optList: ['青龙', '白虎', '朱雀', '玄武'],
-      message: ''
+      message: '',
+      dWidth: '',
+      baseFontSize: ''
     }
   },
   beforeCreate () {
-    console.log(window.innerWidth)
-    console.log(window.innerHeight)
+    var dWidth = document.documentElement.clientWidth
+    if (dWidth > 750) dWidth = 750
+    var baseFontSize = dWidth * 100 / 750
+    var woshi =  document.documentElement.style.fontSize = baseFontSize + 'px'
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
       this.show = false
       console.log('1')
@@ -35,6 +34,18 @@ export default {
       console.log('2')
     }
   },
+
+  mounted () {
+    window.onresize = () => {
+      return (() => {
+        var dWidth = document.documentElement.clientWidth
+        if (dWidth > 750) dWidth = 750
+        var baseFontSize = dWidth * 100 / 750
+        document.documentElement.style.fontSize = baseFontSize + 'px'
+      })()
+    }
+  },
+
   methods: {
     getValue () {
       console.log('您选择了', this.selected)
@@ -42,16 +53,14 @@ export default {
   }
 }
 </script>
+
 <style>
+
 .nishi{
   color: white;
 }
 .woshiqingyi{
-  height: 0.8rem;
   color:white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-size: 0.3rem
 }
 
