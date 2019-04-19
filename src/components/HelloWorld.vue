@@ -1,7 +1,15 @@
 <template>
   <div class="layout">
-   <ul class="category" v-if="show">
-     <li  class="per-category"  v-for="item in CommodityCategory" :key="item.id">{{item.Name}}</li>
+   <ul class="category" >
+     <li class="per-category" >
+       <select v-model="selected">
+       <span class="iconfont">&#xe60a;</span>
+      </select>
+     </li>
+       <li class="per-category"  v-for="item in CommodityCategory" :key="item.id">{{item.Name}}</li>
+     <li class="per-category" v-if="show">
+       <span class="iconfont" >&#xe663;</span>
+     </li>
    </ul>
   </div>
 </template>
@@ -9,8 +17,7 @@
 export default {
   data: function () {
     return {
-      dWidth: '',
-      show: 'true',
+      show: false,
       CommodityCategory: [
         {
           Name: '书籍'
@@ -21,22 +28,10 @@ export default {
         {
           Name: '化妆品'
         },
-        {
-          Name: '化妆品'
-        },
-        {
-          Name: '化妆品'
-        },
-        {
-          Name: '化妆品'
-        },
-        
-        
       ]
     }
   },
   beforeCreate () {
-    this.dWidth = document.documentElement.clientWidth
     var dWidth = document.documentElement.clientWidth
     if (dWidth > 500) dWidth = 500
     var baseFontSize = dWidth * 100 / 750
@@ -56,9 +51,9 @@ export default {
     console.log('333',baseFontSize)
     console.log('444',jieguo)
     console.log('555',dWidth)
-  
+    console.log('666',document.documentElement.clientWidth)
     if (jieguo > document.documentElement.clientWidth) {
-      this.show = false
+      this.show = true
     }
   },
 
@@ -87,6 +82,7 @@ export default {
   height: 0.8rem;
   font-size: 0.25rem;
 }
+
 
 .per-category{
   width: 3rem;
