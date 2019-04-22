@@ -1,37 +1,14 @@
 <template>
-  <div class="layout">
-   <ul class="category" >
-     <li class="per-category" >
-       <select v-model="selected">
-       <span class="iconfont">&#xe60a;</span>
-      </select>
-     </li>
-       <li class="per-category"  v-for="item in CommodityCategory" :key="item.id">{{item.Name}}</li>
-     <li class="per-category" v-if="show">
-       <span class="iconfont" >&#xe663;</span>
-     </li>
-   </ul>
-  </div>
+    <div class="layout">
+        <input class='input-style' v-model="message" placeholder="edi">
+    </div>
+   
+    
 </template>
+
 <script>
 export default {
-  data: function () {
-    return {
-      show: false,
-      CommodityCategory: [
-        {
-          Name: '书籍'
-        },
-        {
-          Name: '化妆品'
-        },
-        {
-          Name: '化妆品'
-        },
-      ]
-    }
-  },
-  beforeCreate () {
+    beforeCreate () {
     var dWidth = document.documentElement.clientWidth
     if (dWidth > 500) dWidth = 500
     var baseFontSize = dWidth * 100 / 750
@@ -68,32 +45,30 @@ export default {
     }
   },
 
-  methods: {
-  }
 }
 </script>
 
-<style>
-.category{
-  color: white;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  height: 0.8rem;
-  font-size: 0.25rem;
-}
-
-
-.per-category{
-  width: 3rem;
-  height: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+<style scoped>
 .layout{
-  height: 0.8rem;
-  background-color: black;
- }
- </style>
+    margin-top: 0.5rem;
+    height: 0.8rem;
+    width:6rem;
+    background-color: white;
+    border: 1px rgba(3, 80, 223, 0.918) solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+   
+}
+div{
+  margin: auto;
+}
+
+.input-style{
+  
+   font-size: 0.3rem;
+   margin-left: 0.2rem;
+   width: 100%
+   
+}
+</style>
