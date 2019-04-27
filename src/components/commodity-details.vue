@@ -1,35 +1,19 @@
-<template>
-  <div class="layout">
-   <ul class="category" >
-     <li class="per-category" >
-       <span class="iconfont">&#xe60a;</span>
-     </li>
-     <li class="per-category"  v-for="item in CommodityCategory" :key="item.id">{{item.Name}}</li>
-     <li class="per-category" v-if="show">
-       <span class="iconfont" >&#xe663;</span>
-     </li>
-     <router-link to="/list">Go to Foo</router-link>
-     <div v-on:click='neto'>Go to Foo2</div>
-   </ul>
+<template>  
+<div class='layout'>
+  <div class='commodity-details-layout'>
 
+    <img class="image-style" :src="bannerImg">
+    <div class="introduction-text">
+      南极人床上四件套北欧风床单被套被子宿舍三件套单人网红床上用品
+    </div>
   </div>
+</div>
 </template>
 <script>
 export default {
   data: function () {
     return {
-      show: false,
-      CommodityCategory: [
-        {
-          Name: '书籍'
-        },
-        {
-          Name: '化妆品'
-        },  
-        {
-          Name: '化妆品'
-        },
-      ]
+      bannerImg: require('../image/clothes.png')
     }
   },
   beforeCreate () {
@@ -70,35 +54,43 @@ export default {
   },
 
   methods: {
-    neto () {
-      console.log('2')
-      this.$router.push({name:'home-page'});
-    }
+    
   }
 }
 </script>
 
 <style>
-.category{
-  color: white;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  height: 0.8rem;
-  font-size: 0.25rem;
-}
-
-
-.per-category{
-  width: 3rem;
-  height: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.layout{
-  height: 0.8rem;
-  background-color: black;
+  .layout{
+    display: flex;
+    justify-content: center;
+  }
+  .image-style{
+    margin-left: 0.3rem;
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+  .commodity-details-layout{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 13rem;
+   height: 4rem;
+   border-radius:0.3rem;
+   border:1px rgb(192, 192, 192) solid;
+   margin-top: 0.4rem;
+   margin-left: 0.3rem;
+   margin-right: 0.3rem
+ }
+  .introduction-text{
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+    height: 3rem;
+    letter-spacing:0.015rem;
+    line-height:0.4rem;
+  }
+  div{
+  
+       
+       
  }
  </style>

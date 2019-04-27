@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import HomePage from '@/components/home-page'
 import login from '@/components/login'
 import ShoppingCart from '@/components/shopping-cart'
+import CommodityDetails from '@/components/commodity-details'
 
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {
@@ -22,6 +22,11 @@ export default new Router({
       path: '/shopping-cart',
       name: 'ShoppingCart',
       component: ShoppingCart
+    },
+    {
+      path: '/commodity-details',
+      name: 'CommodityDetails',
+      component: CommodityDetails
     }
   ]
 })
