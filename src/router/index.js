@@ -1,32 +1,44 @@
 import Vue from 'vue'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import Router from 'vue-router'
-import HomePage from '@/components/home-page'
 import login from '@/components/login'
-import ShoppingCart from '@/components/shopping-cart'
-import CommodityDetails from '@/components/commodity-details'
+import shoppingcart from '@/components/shoppingcart'
+import commoditydetails from '@/components/commoditydetails'
+import homepage from '@/components/homepage/homepage'
+import introduce from '@/components/homepage/introduce'
 
+Vue.use(ElementUI)
 Vue.use(Router)
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home-page',
-      component: HomePage
+      name: 'homepage',
+      component: homepage,
+      redirect: 'introduce',
+      children: [
+        {
+          path: '/introduce',
+          name: 'introduce',
+          component: introduce
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: login
+        }
+      ]
     },
     {
-      path: '/login',
-      name: 'login',
-      component: login
+      path: '/shoppingcart',
+      name: 'shoppingcart',
+      component: shoppingcart
     },
     {
-      path: '/shopping-cart',
-      name: 'ShoppingCart',
-      component: ShoppingCart
-    },
-    {
-      path: '/commodity-details',
-      name: 'CommodityDetails',
-      component: CommodityDetails
+      path: '/commoditydetails',
+      name: 'commoditydetails',
+      component: commoditydetails
     }
   ]
 })
