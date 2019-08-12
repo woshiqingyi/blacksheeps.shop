@@ -35,6 +35,8 @@ export default {
   background-color: whitesmoke;
 }
 .introduce_goods {
+  overflow:hidden;
+  height: 500px;
   margin-top: 20px;
   width: 100%;
   background-color: whitesmoke;
