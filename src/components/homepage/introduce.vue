@@ -1,13 +1,19 @@
 <template>
   <div class="introduce_layout">
     <div class="introduce_style">
-      <div class="mini_navigation"></div>
+      <div class="introduce_top"></div>
+      <div class="introduce_goods">
+         <product></product>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import product from "@/components/homepage/product";
+export default {
+   components: { product },
+};
 </script>
 
 <style scoped>
@@ -22,9 +28,15 @@ export default {};
   width: 1300px;
   margin-top: 20px;
 }
-.mini_navigation {
+
+.introduce_top{
   width: 100%;
-  height: 800px;
+  height: 150px;
+  background-color: whitesmoke;
+}
+.introduce_goods {
+  margin-top: 20px;
+  width: 100%;
   background-color: whitesmoke;
   /* border: 1px rgb(212, 212, 212) solid; */
 }
