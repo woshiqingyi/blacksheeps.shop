@@ -36,6 +36,7 @@ export default {
 }
 .introduce_goods {
   overflow:hidden;
+  overflow-y: scroll;
   height: 500px;
   margin-top: 20px;
   width: 100%;

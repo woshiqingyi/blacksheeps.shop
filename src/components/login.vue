@@ -37,13 +37,14 @@ export default {
 
 .account_style{
   margin-bottom: 8px;
-  font-weight: 500
+  font-weight: 500;
+  color: rgb(102, 102, 102);
 }
 
 .input_style {
   margin-top: 10px;
   padding: 10px;
-  border: 1px rgb(226, 226, 226) solid;
+  border: 1px rgb(238, 236, 236) solid;
   border-radius: 7px;
   width: 60%;
   font-size: 14px;
