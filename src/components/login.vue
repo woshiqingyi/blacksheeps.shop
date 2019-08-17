@@ -2,9 +2,10 @@
   <div class="login_layout">
     <div class="login_style">
       <div class="account_style">登陆我的账号</div>
-      <input class="input_style" placeholder="请输入你的账号" type="text">
-      <input class="input_style" placeholder="请输入你的账号" type="text">
-      <el-button class='button_style'>登陆</el-button>
+      <input class="input_style" placeholder="请输入你的账号" v-model="Account.UserName" type="text">
+      <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password" >
+      <el-button class='button_style' :style="LoginStyle" @click="onAccount">登陆</el-button>
+      <el-button class='register_button' @click="onRegister" type="text">无账号？立即去注册</el-button>
     </div>
   </div>
 </template>
@@ -12,9 +13,33 @@
 export default {
   data(){
     return{
-
+      Account:{ 
+        UserName:'',
+        Password:'',
+      },
+     
+      LoginStyle:''
     }
   },
+  methods:{
+    onAccount(){
+      this.$message.warning('请输入账号跟密码')
+    },
+    onRegister(){
+      this.$router.push('register')
+    }
+  },
+
+  watch:{
+    Account:{
+       handler(Values) {
+         if(Values.UserName && ValuesPassword){
+
+         }
+       },
+      deep:true
+    }
+  }
 };
 </script>
 
@@ -38,13 +63,14 @@ export default {
 .account_style{
   margin-bottom: 8px;
   font-weight: 500;
-  color: rgb(102, 102, 102);
+  color: rgb(20, 20, 20);
+  letter-spacing:2px
 }
 
 .input_style {
   margin-top: 10px;
   padding: 10px;
-  border: 1px rgb(238, 236, 236) solid;
+  border: 1px rgb(241, 241, 241) solid;
   border-radius: 7px;
   width: 60%;
   font-size: 14px;
@@ -54,15 +80,19 @@ export default {
 .button_style{
   margin-top: 25px;
   width: 200px;
-  background-color: rgb(241, 241, 241)
+  background-color: rgb(241, 241, 241);
+  color: rgb(20, 20, 20);
+  /*   */
+}
+
+.register_button{
+  font-size: 12px;
 }
 
 .per_input {
   width: 300px;
 }
-
 /* div {
   margin: auto;
 } */
-
 </style>

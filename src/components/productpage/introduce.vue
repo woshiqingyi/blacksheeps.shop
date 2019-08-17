@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import product from "@/components/homepage/product";
+import product from "@/components/productpage/product";
 export default {
    components: { product },
 };

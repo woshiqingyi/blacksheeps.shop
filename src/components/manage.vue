@@ -9,9 +9,10 @@
             class="navigation"
             @command="navigateMenu"
           >
-            <img class="icon_style" src="../../../static/image/icon/myaccount.png">
+            <img class="icon_style" src="../../static/image/icon/myaccount.png">
             <el-dropdown-menu slot="dropdown">
-               <el-dropdown-item command="exitLogin">登陆</el-dropdown-item>
+              <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
+              <el-dropdown-item command="exitLogin">我的账户</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -86,6 +87,9 @@ export default {
     navigateMenu(Choosed){
       if(Choosed == 'exitLogin'){
         this.$router.push({name:'login'})
+      }
+      if(Choosed == 'onShoppingCart'){
+        this.$router.push({name:'shoppingcart'})
       }
     }
   }
