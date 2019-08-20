@@ -1,5 +1,12 @@
 <template>
   <div class="shoppingcart_layout">
+    <div class="per_product_title">
+      <div>购物车的所有的商品</div>
+      <div class="per_product_remark">所有订单均可享受免费送货和退货服务</div>
+    </div>
+
+
+   
     <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
@@ -18,21 +25,36 @@
       </div>
       <div class="operation_style">移除购物车</div>
     </div>
-    <!-- <div class="line_style"></div> -->
-    <!-- <div class="operation_style">移除购物车</div> -->
 
-    <!-- <div class="per_product">
+    <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
         <div class="product_details">
           <div class="product_title">红楼梦书籍</div>
           <div class="product_content">RMB 15</div>
-          <div class="product_content">数量 1</div>
+          
+          <div class="number_style">
+            <img class="number_icon" @click="reduceNumber"  src="../../../static/image/icon/reduce.png">
+            <div >数量 {{number}}</div>
+            <img class="number_icon" @click="addNumber" src="../../../static/image/icon/add.png">
+          </div>
+      
           <div class="product_content">总金额 100</div>
         </div>
-       </div>
+      </div>
       <div class="operation_style">移除购物车</div>
-    </div> -->
+    </div>
+
+    <!-- <div class="line_style"></div> -->
+
+    <div class="settlement_style">
+       <div class="payment_style">
+          <div>RMB 1000</div>
+          <el-button type="mini" class="button_style">结算</el-button>
+      </div>
+      <div class="freight_style">（含运费 5RMB）</div>
+    </div>
+    
 
   </div>
 </template>
@@ -65,16 +87,28 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 50px;
+}
+
+.per_product_title{
+  width: 830px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.per_product_remark{
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500
 }
 
 .per_product {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 800px;
   display: flex;
-  background-color: whitesmoke;
   padding: 15px;
   justify-content: space-between;
+  background-color: rgb(247, 247, 247);
 }
 
 .product_left{
@@ -128,21 +162,54 @@ export default {
   height: 20px;
 }
 
-.line_style{
-  border-top:1px lightgray solid;
-  margin-top: 20px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 .operation_style{
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   margin-top: 35px;
   font-size: 16px;
   font-weight: 600;
   color: rgb(3, 92, 194);
   margin-right: 10%
 }
+
+/* .line_style{
+  border-top: 1px rgb(196, 196, 196) solid;
+  width: 880px;
+  margin-top: 20px;
+} */
+
+.settlement_style{
+  margin-top:20px;
+  width: 830px;
+  height: 100px;
+  background-color: rgb(240, 239, 239);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.freight_style{
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 35px;
+  color: gray;
+}
+
+.payment_style{
+ margin-right: 10%;
+ font-weight: 600;
+ font-size: 20px;
+}
+
+.button_style{
+  width: 100px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgb(62, 134, 202);
+  color: white;
+}
+
 </style>
