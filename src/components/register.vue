@@ -50,7 +50,8 @@ export default {
 .button_style{
   margin-top: 25px;
   width: 200px;
-  background-color: rgb(241, 241, 241)
+  background-color: #3e86ca;
+  color: white;
 }
 
 .per_input {

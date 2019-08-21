@@ -4,79 +4,74 @@
       <div>购物车的所有的商品</div>
       <div class="per_product_remark">所有订单均可享受免费送货和退货服务</div>
     </div>
-
-
-   
     <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
         <div class="product_details">
           <div class="product_title">红楼梦书籍</div>
           <div class="product_content">RMB 15</div>
-          
           <div class="number_style">
-            <img class="number_icon" @click="reduceNumber"  src="../../../static/image/icon/reduce.png">
-            <div >数量 {{number}}</div>
+            <img
+              class="number_icon"
+              @click="reduceNumber"
+              src="../../../static/image/icon/reduce.png"
+            >
+            <div>数量 {{number}}</div>
             <img class="number_icon" @click="addNumber" src="../../../static/image/icon/add.png">
           </div>
-      
           <div class="product_content">总金额 100</div>
         </div>
       </div>
       <div class="operation_style">移除购物车</div>
     </div>
-
     <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
         <div class="product_details">
           <div class="product_title">红楼梦书籍</div>
           <div class="product_content">RMB 15</div>
-          
           <div class="number_style">
-            <img class="number_icon" @click="reduceNumber"  src="../../../static/image/icon/reduce.png">
-            <div >数量 {{number}}</div>
+            <img
+              class="number_icon"
+              @click="reduceNumber"
+              src="../../../static/image/icon/reduce.png"
+            >
+            <div>数量 {{number}}</div>
             <img class="number_icon" @click="addNumber" src="../../../static/image/icon/add.png">
           </div>
-      
           <div class="product_content">总金额 100</div>
         </div>
       </div>
       <div class="operation_style">移除购物车</div>
     </div>
-
-    <!-- <div class="line_style"></div> -->
-
     <div class="settlement_style">
-       <div class="payment_style">
-          <div>RMB 1000</div>
-          <el-button type="mini" class="button_style">结算</el-button>
+      <div class="payment_style">
+        <div>RMB 1000</div>
+        <el-button type="mini" class="button_style">结算</el-button>
       </div>
       <div class="freight_style">（含运费 5RMB）</div>
     </div>
-    
-
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
-      number:1
-    }
+  data() {
+    return {
+      number: 1
+    };
   },
-  methods:{
-    reduceNumber(){
-    var number = --this.number
-    if (number <= 1) number = 1
-    this.number = number
-  },
+  methods: {
+    reduceNumber() {
+      var number = --this.number;
+      if (number <= 1) number = 1;
+      this.number = number;
+    },
 
-  addNumber(){
-    var number = ++this.number
-    this.number = number
-   }
+    addNumber() {
+      var number = ++this.number;
+      this.number = number;
+    }
   }
 };
 </script>
@@ -90,16 +85,16 @@ export default {
   margin-top: 50px;
 }
 
-.per_product_title{
+.per_product_title {
   width: 830px;
   font-size: 30px;
   font-weight: 600;
 }
 
-.per_product_remark{
+.per_product_remark {
   font-size: 16px;
   margin-top: 10px;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .per_product {
@@ -111,7 +106,7 @@ export default {
   background-color: rgb(247, 247, 247);
 }
 
-.product_left{
+.product_left {
   display: flex;
 }
 
@@ -122,7 +117,7 @@ export default {
   padding: 8px;
 }
 
-.product_details{
+.product_details {
   margin-top: 25px;
   margin-left: 100px;
   font-size: 15px;
@@ -132,14 +127,14 @@ export default {
   justify-content: center;
 }
 
-.product_title{
+.product_title {
   text-align: center;
   font-size: 20px;
   font-weight: 600;
   color: rgb(46, 46, 46);
 }
 
-.number_style{
+.number_style {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -150,27 +145,27 @@ export default {
   width: 150px;
 }
 
-.product_content{
+.product_content {
   margin-top: 25px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
 }
 
-.number_icon{
+.number_icon {
   width: 20px;
   height: 20px;
 }
 
-.operation_style{
+.operation_style {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 35px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(3, 92, 194);
-  margin-right: 10%
+  color: #3e86ca;
+  margin-right: 10%;
 }
 
 /* .line_style{
@@ -179,8 +174,9 @@ export default {
   margin-top: 20px;
 } */
 
-.settlement_style{
-  margin-top:20px;
+.settlement_style {
+  margin-top: 20px;
+  margin-bottom: 30px;
   width: 830px;
   height: 100px;
   background-color: rgb(240, 239, 239);
@@ -189,7 +185,7 @@ export default {
   align-items: center;
 }
 
-.freight_style{
+.freight_style {
   display: flex;
   font-size: 15px;
   font-weight: 600;
@@ -197,19 +193,18 @@ export default {
   color: gray;
 }
 
-.payment_style{
- margin-right: 10%;
- font-weight: 600;
- font-size: 20px;
+.payment_style {
+  margin-right: 10%;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.button_style{
+.button_style {
   width: 100px;
   margin-top: 10px;
   font-size: 16px;
   font-weight: 600;
-  background-color: rgb(62, 134, 202);
+  background-color: #3e86ca;
   color: white;
 }
-
 </style>

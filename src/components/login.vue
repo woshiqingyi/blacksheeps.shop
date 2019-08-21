@@ -81,12 +81,14 @@ export default {
   margin-top: 25px;
   width: 200px;
   background-color: rgb(241, 241, 241);
-  color: rgb(20, 20, 20);
+  color: white;
+  background-color: #3e86ca;
   /*   */
 }
 
 .register_button{
   font-size: 12px;
+  color: #3e86ca;
 }
 
 .per_input {
