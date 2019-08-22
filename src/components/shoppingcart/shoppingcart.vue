@@ -103,7 +103,8 @@ export default {
   display: flex;
   padding: 15px;
   justify-content: space-between;
-  background-color: rgb(247, 247, 247);
+  border:1px #90b8df solid;
+  border-radius: 7px;
 }
 
 .product_left {
@@ -179,7 +180,6 @@ export default {
   margin-bottom: 30px;
   width: 830px;
   height: 100px;
-  background-color: rgb(240, 239, 239);
   display: flex;
   flex-direction: row-reverse;
   align-items: center;

@@ -1,5 +1,5 @@
 <template>
-  <div class="login_layout">
+  <div class="login_layout" :class="{height:Height}">
     <div class="login_style">
       <div class="account_style">登陆我的账号</div>
       <input class="input_style" placeholder="请输入你的账号" v-model="Account.UserName" type="text">
@@ -17,9 +17,18 @@ export default {
         UserName:'',
         Password:'',
       },
-     
-      LoginStyle:''
+      LoginStyle:'',
+      Height:'',
     }
+  },
+  created(){
+    var Width = document.documentElement.clientWidth;
+    var Height = document.documentElement.clientHeight
+    console.log('Width',Width)
+    console.log('Height',Height)
+    // this.Height = Height
+
+
   },
   methods:{
     onAccount(){
@@ -48,6 +57,7 @@ export default {
   margin-top: 10%;
   display: flex;
   justify-content: center;
+  
 }
 
 .login_style {

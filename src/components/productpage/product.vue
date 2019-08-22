@@ -1,44 +1,28 @@
 <template>
  <div>
   <div class="product_layout">
-
-    <div class="per_product">
-      <div class="per_mini_product" @click="getProductDetails">
+    
+    <div class="per_product" >
+      <div class="per_mini_product" id="1" :style="id1 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
         <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
         <div class="per_product_content">
-          <div class="per_product_title">红楼梦</div>
+          <div class="per_product_title">{{data1}}</div>
           <div class="per_product_price">RMB 1000</div>
         </div>
       </div>
     </div>
 
     <div class="per_product">
-      <div class="per_mini_product"></div>
-    </div>
-
-    <div class="per_product">
-      <div class="per_mini_product"></div>
-    </div>
-
-    <div class="per_product">
-      <div class="per_mini_product"></div>
-    </div>
-
-    <div class="per_product">
-      <div class="per_mini_product"></div>
-    </div>
-
-    <div class="per_product">
-      <div class="per_mini_product"></div>
-    </div>
-
-    <div class="per_product">
-      <div class="per_mini_product"></div>
+      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB 1000</div>
+        </div>
+      </div>
     </div>
 
   </div>
-
-
   </div>
 </template>
 
@@ -46,12 +30,26 @@
 export default {
   data(){
     return{
-     
+     data1:'你是',
+     ChoosedID:'',
+     id1:'1',
+     id2:'2',
+     Style1:'box-shadow:0 0 12px 3px rgb(219, 219, 219),2px 2px 12px 3px rgb(223, 223, 223);transition:all 0.2s linear;transform: translate3d(0,-0.5%,0);',
+     Style2:'transition:all 0.2s linear;transform: translate3d(0,0,0);'
     }
   },
   methods:{
     getProductDetails(){
       this.$router.push({name:'productdetails'})
+    },
+
+    showMouse(e){
+      console.log('e',e.target.id)
+      this.ChoosedID = e.target.id
+    },
+
+    hiddenMouse(){
+     this.ChoosedID = ''
     }
   }
 };
@@ -66,10 +64,11 @@ export default {
 .per_product {
   width: 33.3%;
   height: 320px;
-  background-color: whitesmoke;
+  background-color: rgb(245, 245, 245);
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .per_mini_product {
@@ -80,7 +79,9 @@ export default {
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
+ 
 }
+ /* box-shadow:0 0 12px 3px rgb(219, 219, 219),2px 2px 12px 3px rgb(223, 223, 223); */
 
 .image_style{
   height: 230px;
