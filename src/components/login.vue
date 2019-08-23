@@ -27,8 +27,6 @@ export default {
     console.log('Width',Width)
     console.log('Height',Height)
     // this.Height = Height
-
-
   },
   methods:{
     onAccount(){

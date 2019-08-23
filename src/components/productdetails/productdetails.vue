@@ -35,7 +35,7 @@ export default {};
 .product_details {
   margin-top: 60px;
   width: 700px;
-  height: 2000px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -87,14 +87,18 @@ export default {
 
 .per_product_title {
   width: 830px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .per_product_remark {
+  margin-top: 20px;
   font-size: 16px;
-  margin-top: 10px;
-  font-weight: 500;
+  letter-spacing: 2px;
+  font-weight: 500
 }
 
 .per_product {
