@@ -51,6 +51,7 @@ export default new Router({
           path: '/accountmanage',
           name: 'accountmanage',
           component: accountmanage,
+          redirect: 'accountinfo',
           children: [
             {
               path: '/accountinfo',

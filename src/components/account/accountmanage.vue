@@ -1,6 +1,7 @@
 <template>
   <div class="account_manage_layout">
     <div class="account_manage_title">账户信息</div>
+    <div class="account_manage_mini_title">编辑修改你的信息</div>
     <div class="account_manage">
       <div class="left_menu">
         <button
@@ -37,8 +38,8 @@ export default {
           ID: "2"
         }
       ],
-      ChooseID: "",
-      ClickMenu: "background-color: #3e86ca;color:white"
+      ChooseID: "0",
+      ClickMenu: "background-color: #8aadce;color:white"
     };
   },
   methods: {
@@ -70,27 +71,39 @@ export default {
   font-weight: 600;
 }
 
+.account_manage_mini_title{
+  margin-top: 20px;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
 .account_manage {
   display: flex;
-  margin-top: 20px;
-  background-color: rgb(245, 245, 245);
+  justify-content: space-between;
+  margin-top: 40px;
   width: 1000px;
   height: 500px;
-  border-radius: 6px;
 }
 
 .left_menu {
   background-color: rgb(238, 238, 238);
-  width: 90px;
+  width: 85px;
   height: 100%;
 }
 
 .right_menu {
+  width:905px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  
 }
 
 .per_menu {
   width: 100%;
-  height: 80px;
+  height: 70px;
   background-color: rgb(238, 238, 238);
   display: flex;
   justify-content: center;
@@ -98,7 +111,6 @@ export default {
   font-size: 15px;
   font-weight: 600;
   color: rgb(92, 92, 92);
-  border: 1px #ffffff solid;
-  border-radius: 6px;
+  border: 1px white solid;
 }
 </style>

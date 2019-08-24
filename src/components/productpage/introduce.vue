@@ -52,7 +52,7 @@ export default {
 
 .introduce_content{
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 2px;
 }
 
