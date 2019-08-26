@@ -2,7 +2,6 @@
   <div class="product_details_layout">
     <div class="product_details">
       <div class="product_title">商品详情</div>
-      
       <div class="product_layout">
         <div class="per_product_image">
           <img class="product_image_details" src="../../../static/image/icon/product.png" alt="">

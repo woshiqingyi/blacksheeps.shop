@@ -7,6 +7,8 @@ import manage from '@/components/manage'
 import register from '@/components/register'
 import shoppingcart from '@/components/shoppingcart/shoppingcart'
 import productdetails from '@/components/productdetails/productdetails'
+import order from '@/components/order/order'
+import orderlogistics from '@/components/order/orderlogistics'
 
 import accountmanage from '@/components/account/accountmanage'
 import accountinfo from '@/components/account/accountinfo'
@@ -46,6 +48,16 @@ export default new Router({
           path: '/productdetails',
           name: 'productdetails',
           component: productdetails
+        },
+        {
+          path: '/order',
+          name: 'order',
+          component: order
+        },
+        {
+          path: '/orderlogistics',
+          name: 'orderlogistics',
+          component: orderlogistics
         },
         {
           path: '/accountmanage',

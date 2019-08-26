@@ -21,6 +21,7 @@
       <el-button type="mini" @click="editInfo" class="button_style">编辑</el-button>
       <el-button type="mini" v-if="PreserveButton" @click="preserveInfo" class="button_style">保存</el-button>
     </div>
+
   </div>
 </template>
 
@@ -75,7 +76,7 @@ export default {
 }
 
 .per_content {
-  margin-left: 40px;
+  margin-left: 80px;
   font-size: 16px;
   background-color: whitesmoke;
   color: black;
