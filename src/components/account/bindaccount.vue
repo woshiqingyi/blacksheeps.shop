@@ -15,10 +15,7 @@
       <input class="per_content" value='已设置' placeholder="请输入昵称">
     </div>
     
-
-     <div class="line_style"></div>
-
-
+    <div class="line_style"></div>
   </div>
 </template>
 

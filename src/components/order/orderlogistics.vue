@@ -6,10 +6,10 @@
       </div>
       <div class="order_logistics_steps">
         <el-steps :active="1" style="width:700px;">
-          <el-step title="拍下商品" icon="el-icon-edit"></el-step>
+          <el-step title="拍下商品" icon="el-icon-upload"></el-step>
           <el-step title="卖家发货" icon="el-icon-upload"></el-step>
-          <el-step title="确认收货" icon="el-icon-picture"></el-step>
-          <el-step title="签收" icon="el-icon-picture"></el-step>
+          <el-step title="派送中" icon="el-icon-picture"></el-step>
+          <el-step title="已签收" icon="el-icon-picture"></el-step>
         </el-steps>
       </div>
       <div class="order_logistics_steps_layout">
@@ -20,7 +20,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+    
+    }
+  }
+};
 </script>
 
 <style scoped>

@@ -16,6 +16,17 @@
             </el-dropdown-menu>
           </el-dropdown>
         </div>
+        <div class="menu_classify_layout">
+          <div class="menu_classify">
+            <!-- <el-button class="" type="text">商品分类</el-button>
+            <el-button class="" type="text">我的收藏</el-button>
+            <el-button class="" type="text">我的订单</el-button> -->
+            <div class="per_menu">商品分类</div>
+            <div class="per_menu">我的收藏</div>
+            <div class="per_menu">我的订单</div>
+        </div>
+       </div>
+       <div class="icon_style"></div>
       </div>
     </div>
     <router-view/>
@@ -127,6 +138,7 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   width: 1100px;
+  align-items: center;
 }
 
 .account_style {
@@ -140,6 +152,29 @@ export default {
 .icon_style {
   height: 0.5rem;
   width: 0.5rem;
+}
+
+.menu_classify_layout{
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_classify{
+  width: 60%;
+  height: 0.8rem;
+  font-size: 15px;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.per_menu{
+
 }
 </style>
 
