@@ -9,6 +9,7 @@ import shoppingcart from '@/components/shoppingcart/shoppingcart'
 import productdetails from '@/components/productdetails/productdetails'
 import order from '@/components/order/order'
 import orderlogistics from '@/components/order/orderlogistics'
+import orderpayment from '@/components/order/orderpayment'
 
 import accountmanage from '@/components/account/accountmanage'
 import accountinfo from '@/components/account/accountinfo'
@@ -58,6 +59,11 @@ export default new Router({
           path: '/orderlogistics',
           name: 'orderlogistics',
           component: orderlogistics
+        },
+        {
+          path: '/orderpayment',
+          name: 'orderpayment',
+          component: orderpayment
         },
         {
           path: '/accountmanage',

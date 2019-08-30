@@ -72,6 +72,5 @@ export default {
   height: 100px;
   background-color: whitesmoke;
   border-radius: 4px;
-  
 }
 </style>

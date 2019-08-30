@@ -21,7 +21,7 @@
       <el-button type="mini" @click="editInfo" class="button_style">编辑</el-button>
       <el-button type="mini" v-if="PreserveButton" @click="preserveInfo" class="button_style">保存</el-button>
     </div>
-
+    
   </div>
 </template>
 
