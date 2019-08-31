@@ -25,6 +25,29 @@
           </div>
         </div>
       </div>
+      <div class="per_order">
+        <div class="per_order_title">
+          <div class="per_order_title_date">2018-10-10</div>
+          <div class="per_order_title_order">订单号：15548752485115</div>
+        </div>
+        <div class="per_order_content">
+          <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
+          <div class="per_order_content_productdetails">
+            <div class="per_productdetails">红楼梦书籍</div>
+            <div class="per_productdetails">RMB 100</div>
+            <div class="per_productdetails">数量 x 1</div>
+          </div>
+          <div class="per_order_content_price">
+            <div class="per_order_content_price_details">RMB 100</div>
+            <div class="per_order_content_price_details">（含运费）</div>
+          </div>
+          <div class="per_order_content_remark">
+            <div class="per_order_content_remark_status">交易成功</div>
+            <el-button type="mini" class="per_order_content_remark_details">订单详情</el-button>
+            <el-button type="mini" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -14,12 +14,22 @@
             :key="item.ID"
             :id="item.ID"
             :style="ChooseID == item.ID ? ClickStyle:''"
-          >
-            {{item.Name}} {{item.Address}} {{item.Tel}}
-          </button>
+          >{{item.Name}} {{item.Address}} {{item.Tel}}</button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
+      <div class="payment_layout">
+        <button
+          class="per_payment"
+          v-for="item in PayItems"
+          :key="item.ID"
+          :id="item.ID"
+          :style="PayID == item.ID?BorderStyle:''"
+          @click="choosePay"
+        >
+          <img :id="item.ID" @click="choosePay" :src="item.Image" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -28,8 +38,20 @@
 export default {
   data() {
     return {
+      BorderStyle: "border:1px #3e86ca solid",
       ChooseID: "0",
+      PayID: "1",
       ClickStyle: "color:#3e86ca",
+      PayItems: [
+        {
+          ID: 0,
+          Image: "../../../static/image/icon/weixin.png"
+        },
+        {
+          ID: 1,
+          Image: "../../../static/image/icon/zhifubao.png"
+        }
+      ],
       AddressItems: [
         {
           ID: "0",
@@ -49,6 +71,10 @@ export default {
   methods: {
     chooseAddress(e) {
       this.ChooseID = e.target.id;
+    },
+    choosePay(e) {
+      console.log('e',e.target.id)
+      this.PayID = e.target.id;
     }
   }
 };
@@ -102,11 +128,25 @@ export default {
   font-weight: 600;
 }
 
-.payment_title{
+.payment_title {
   margin-top: 20px;
   font-size: 16px;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.payment_layout {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.per_payment {
+  border: 1px rgb(230, 230, 230) solid;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: white;
 }
 
 .receive_address_lists {
