@@ -14,10 +14,16 @@
             :key="item.ID"
             :id="item.ID"
             :style="ChooseID == item.ID ? ClickStyle:''"
-          >{{item.Name}} {{item.Address}} {{item.Tel}}</button>
+          >
+            {{item.Name}} {{item.Address}} {{item.Tel}}
+            <span class="image_style">
+              <img :src="Tick" v-show="ChooseID == item.ID ? true: false">
+            </span>
+          </button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
+      <div class="line_style"></div>
       <div class="payment_layout">
         <button
           class="per_payment"
@@ -27,8 +33,30 @@
           :style="PayID == item.ID?BorderStyle:''"
           @click="choosePay"
         >
-          <img :id="item.ID" @click="choosePay" :src="item.Image" />
+          <img :id="item.ID" @click="choosePay" :src="item.Image">
         </button>
+      </div>
+      <div class="delivery_title">送货清单</div>
+      <div class="delivery_layout">
+        <div class="per_delivery">
+          <div class="per_delivery_logistics">
+            <div class="logistics_details_title">配送方式（默认）</div>
+            <div class="logistics_details_style">
+              顺丰快递
+              <img class="logistics_image" :src="Tick">
+            </div>
+            <div class="logistics_details">预计2019.8.31送达</div>
+          </div>
+          <div class="per_delivery_goods">
+            <img class="per_goods_image" :src="Book">
+            <div class="per_goods_content">
+              <div class="per_goods_content_deatils_title">红楼梦</div>
+              <div class="per_goods_content_deatils">RMB 15</div>
+              <div class="per_goods_content_deatils">数量 1</div>
+              <div class="per_goods_content_deatils">总金额 100</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,6 +70,8 @@ export default {
       ChooseID: "0",
       PayID: "1",
       ClickStyle: "color:#3e86ca",
+      Book: "../../../static/image/icon/honglou.jpg",
+      Tick: "../../../static/image/icon/tick.png",
       PayItems: [
         {
           ID: 0,
@@ -73,7 +103,7 @@ export default {
       this.ChooseID = e.target.id;
     },
     choosePay(e) {
-      console.log('e',e.target.id)
+      console.log("e", e.target.id);
       this.PayID = e.target.id;
     }
   }
@@ -107,6 +137,15 @@ export default {
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: 500;
+}
+
+.image_style {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
 }
 
 .line_style {
@@ -149,6 +188,86 @@ export default {
   background-color: white;
 }
 
+.delivery_title {
+  margin-top: 40px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.delivery_layout {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.per_delivery {
+  display: flex;
+  height: 138px;
+}
+
+.logistics_details_title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.logistics_details_style {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #3e86ca;
+  display: flex;
+  align-items: center;
+}
+
+.logistics_image {
+  margin-left: 10px;
+}
+
+.per_delivery_logistics {
+  width: 240px;
+  background-color: whitesmoke;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logistics_details {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.per_delivery_goods {
+  width: 500px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.per_goods_image {
+  height: 110px;
+  width: 110px;
+}
+
+.per_goods_content {
+  margin-left: 10px;
+}
+
+.per_goods_content_deatils_title{
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+}
+
+.per_goods_content_deatils{
+  color: rgb(80, 80, 80);
+  margin-top: 7px;
+  font-size: 15px;
+}
+
 .receive_address_lists {
   margin-top: 20px;
   width: 700px;
@@ -166,5 +285,7 @@ export default {
   border-radius: 7px;
   font-size: 15px;
   color: gray;
+  display: flex;
+  align-items: center;
 }
 </style>
