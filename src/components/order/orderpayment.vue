@@ -36,7 +36,7 @@
           <img :id="item.ID" @click="choosePay" :src="item.Image">
         </button>
       </div>
-      <div class="delivery_title">送货清单</div>
+      <div class="delivery_title">我的送货清单</div>
       <div class="delivery_layout">
         <div class="per_delivery">
           <div class="per_delivery_logistics">
@@ -53,8 +53,11 @@
               <div class="per_goods_content_deatils_title">红楼梦</div>
               <div class="per_goods_content_deatils">RMB 15</div>
               <div class="per_goods_content_deatils">数量 1</div>
-              <div class="per_goods_content_deatils">总金额 100</div>
+             <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
             </div>
+            <div class="per_goods_content_amount">金额：
+              <span style="color: #3e86ca;">  100</span>
+               </div>
           </div>
         </div>
       </div>
@@ -204,6 +207,7 @@ export default {
 .per_delivery {
   display: flex;
   height: 138px;
+  border:1px rgb(214, 214, 214) solid;
 }
 
 .logistics_details_title {
@@ -225,12 +229,14 @@ export default {
 }
 
 .per_delivery_logistics {
-  width: 240px;
-  background-color: whitesmoke;
+  width: 200px;
   font-size: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-right:1px rgb(219, 219, 219) solid;
+  /* border-left: 1px rgb(219, 219, 219) solid;
+  border-bottom: 1px rgb(219, 219, 219) solid; */
 }
 
 .logistics_details {
@@ -240,10 +246,10 @@ export default {
 }
 
 .per_delivery_goods {
-  width: 500px;
+  width: 540px;
   background-color: whitesmoke;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -254,6 +260,12 @@ export default {
 
 .per_goods_content {
   margin-left: 10px;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 85px;
 }
 
 .per_goods_content_deatils_title{
@@ -264,8 +276,17 @@ export default {
 
 .per_goods_content_deatils{
   color: rgb(80, 80, 80);
-  margin-top: 7px;
   font-size: 15px;
+}
+
+.per_goods_content_amount{
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:15px;
+  font-weight:600;
+  height: 85px;
 }
 
 .receive_address_lists {
