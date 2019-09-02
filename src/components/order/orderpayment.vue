@@ -37,6 +37,7 @@
         </button>
       </div>
       <div class="delivery_title">我的送货清单</div>
+   
       <div class="delivery_layout">
         <div class="per_delivery">
           <div class="per_delivery_logistics">
@@ -53,12 +54,78 @@
               <div class="per_goods_content_deatils_title">红楼梦</div>
               <div class="per_goods_content_deatils">RMB 15</div>
               <div class="per_goods_content_deatils">数量 1</div>
-             <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
+            <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
             </div>
             <div class="per_goods_content_amount">金额：
-              <span style="color: #3e86ca;">  100</span>
-               </div>
+              <span style="color: red">  100</span>
+              </div>
           </div>
+        </div>
+      </div>
+
+      <div class="delivery_layout">
+        <div class="per_delivery">
+          <div class="per_delivery_logistics">
+            <div class="logistics_details_title">配送方式（默认）</div>
+            <div class="logistics_details_style">
+              顺丰快递
+              <img class="logistics_image" :src="Tick">
+            </div>
+            <div class="logistics_details">预计2019.8.31送达</div>
+          </div>
+          <div class="per_delivery_goods">
+            <img class="per_goods_image" :src="Book">
+            <div class="per_goods_content">
+              <div class="per_goods_content_deatils_title">红楼梦</div>
+              <div class="per_goods_content_deatils">RMB 15</div>
+              <div class="per_goods_content_deatils">数量 1</div>
+            <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
+            </div>
+            <div class="per_goods_content_amount">金额：
+              <span style="color: red">  100</span>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pay_details">
+        <div class="pay_details_layout">
+          <div class="per_pay_details">
+            <div class="per_pay_details_title">总商品金额：</div>
+            <div class="per_pay_details_content">100</div>
+          </div>
+          <div class="per_pay_details">
+            <div class="per_pay_details_title">运费：</div>
+            <div class="per_pay_details_content">100</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="last_line_style"/>
+
+      <!-- <div class="pay_amount_layout">
+        <div class="pay_amount_title">应付总金额：</div>
+        <div class="pay_amount_content">1000</div>
+      </div>
+
+      <div class="pay_amount_layout">
+        <div class="pay_amount_address">寄送至： 福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002汇创网融 收货人 郑晓峰 18861828564</div>
+      </div>
+
+      <div class="pay_amount_layout">
+        <el-button type="mini" class="button_style">结算</el-button>
+      </div> -->
+
+      <div class="pay_amount">
+        <div class="pay_amount_layout">
+          <div class="pay_amount_title">应付总金额：</div>
+          <div class="pay_amount_content">1000</div>
+        </div>
+        <div class="pay_amount_layout">
+          <div class="pay_amount_address">寄送至： 福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002汇创网融 收货人 郑晓峰 18861828564</div>
+        </div>
+        <div class="pay_amount_layout">
+           <el-button type="mini" class="button_style">支付</el-button>
         </div>
       </div>
     </div>
@@ -125,9 +192,8 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background-color: whitesmoke; */
   width: 1100px;
-  height: 800px;
+  margin-bottom: 50px;
 }
 
 .order_payment_title {
@@ -308,5 +374,83 @@ export default {
   color: gray;
   display: flex;
   align-items: center;
+}
+
+.pay_details {
+  width:600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.pay_details_layout {
+  margin-top: 10px;
+}
+
+.per_pay_details {
+  font-size: 14px;
+  color: rgb(107, 107, 107);
+  margin-top: 7px;
+  display: flex;
+  letter-spacing: 1px;
+}
+
+.per_pay_details_title {
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.per_pay_details_content {
+  width: 40px;
+}
+
+.last_line_style {
+  margin-top: 25px;
+  border-top: 1px rgb(230, 230, 230) solid;
+  width: 820px;
+}
+
+.pay_amount{
+  margin-top: 20px;
+  width: 715px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  padding: 15px;
+  border: 1px lightgray solid;
+
+}
+
+.pay_amount_layout{
+  margin-right: 55px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.pay_amount_address{
+  font-size: 13px;
+}
+
+.pay_amount_title{
+  width: 100px;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 600;
+}
+
+.pay_amount_content{
+  color: red;
+  width: 40px;
+  font-weight: 600;
+}
+
+.button_style {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3e86ca;
+  color: white;
 }
 </style>
