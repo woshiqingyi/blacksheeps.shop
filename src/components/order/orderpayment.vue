@@ -20,6 +20,7 @@
               <img :src="Tick" v-show="ChooseID == item.ID ? true: false">
             </span>
           </button>
+          <el-button type="mini" class="address_button_style" @click="addAddress">新增地址</el-button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
@@ -54,7 +55,7 @@
               <div class="per_goods_content_deatils_title">红楼梦</div>
               <div class="per_goods_content_deatils">RMB 15</div>
               <div class="per_goods_content_deatils">数量 1</div>
-            <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
+
             </div>
             <div class="per_goods_content_amount">金额：
               <span style="color: red">  100</span>
@@ -79,7 +80,6 @@
               <div class="per_goods_content_deatils_title">红楼梦</div>
               <div class="per_goods_content_deatils">RMB 15</div>
               <div class="per_goods_content_deatils">数量 1</div>
-            <!--  <div class="per_goods_content_deatils">总金额 100</div> -->
             </div>
             <div class="per_goods_content_amount">金额：
               <span style="color: red">  100</span>
@@ -102,20 +102,6 @@
       </div>
 
       <div class="last_line_style"/>
-
-      <!-- <div class="pay_amount_layout">
-        <div class="pay_amount_title">应付总金额：</div>
-        <div class="pay_amount_content">1000</div>
-      </div>
-
-      <div class="pay_amount_layout">
-        <div class="pay_amount_address">寄送至： 福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002汇创网融 收货人 郑晓峰 18861828564</div>
-      </div>
-
-      <div class="pay_amount_layout">
-        <el-button type="mini" class="button_style">结算</el-button>
-      </div> -->
-
       <div class="pay_amount">
         <div class="pay_amount_layout">
           <div class="pay_amount_title">应付总金额：</div>
@@ -129,16 +115,26 @@
         </div>
       </div>
     </div>
+
+    <el-dialog title="提示" :visible.sync="DialogAddress" width="30%" center>
+      <span>需要注意的是内容是默认不居中的</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button class="add_address_button" type="mini" @click="DialogAddress = false">取 消</el-button>
+        <el-button class="add_address_button" type="mini" @click="DialogAddress = false">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
+
 </template>
 
 <script>
 export default {
   data() {
     return {
+      DialogAddress:false,
       BorderStyle: "border:1px #3e86ca solid",
       ChooseID: "0",
-      PayID: "1",
+      PayID: "0",
       ClickStyle: "color:#3e86ca",
       Book: "../../../static/image/icon/honglou.jpg",
       Tick: "../../../static/image/icon/tick.png",
@@ -175,6 +171,9 @@ export default {
     choosePay(e) {
       console.log("e", e.target.id);
       this.PayID = e.target.id;
+    },
+    addAddress(){
+      this.DialogAddress = true;
     }
   }
 };
@@ -413,7 +412,7 @@ export default {
 
 .pay_amount{
   margin-top: 20px;
-  width: 715px;
+  width: 720px;
   display: flex;
   flex-direction: column;
   align-items:flex-end;
@@ -423,7 +422,7 @@ export default {
 }
 
 .pay_amount_layout{
-  margin-right: 55px;
+  margin-right: 60px;
   margin-top: 10px;
   display: flex;
 }
@@ -449,6 +448,23 @@ export default {
 .button_style {
   width: 100px;
   font-size: 16px;
+  font-weight: 600;
+  background-color: #3e86ca;
+  color: white;
+}
+
+.add_address_button{
+  width: 60px;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #3e86ca;
+  color: white;
+}
+
+.address_button_style{
+  width: 90px;
+  font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;

@@ -126,6 +126,7 @@ export default {
 }
 
 .layout {
+  width: 100%;
   height: 0.8rem;
   background-color: rgb(83, 83, 83);
   display: flex;
