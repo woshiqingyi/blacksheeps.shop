@@ -55,7 +55,6 @@ export default {
   margin-top: 10%;
   display: flex;
   justify-content: center;
-  
 }
 
 .login_style {
@@ -91,7 +90,6 @@ export default {
   background-color: rgb(241, 241, 241);
   color: white;
   background-color: #3e86ca;
-  /*   */
 }
 
 .register_button{

@@ -11,6 +11,7 @@
           >
             <img class="icon_style" src="../../static/image/icon/myaccount.png">
             <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
               <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
               <el-dropdown-item command="exitLogin">我的账户</el-dropdown-item>
             </el-dropdown-menu>
@@ -101,6 +102,9 @@ export default {
       }
       if(Choosed == 'onShoppingCart'){
         this.$router.push({name:'shoppingcart'})
+      }
+      if(Choosed == 'onHelpCenter'){
+        this.$router.push({name:'helpcenter'})
       }
     }
   }

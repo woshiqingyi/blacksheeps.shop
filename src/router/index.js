@@ -15,6 +15,7 @@ import accountmanage from '@/components/account/accountmanage'
 import accountinfo from '@/components/account/accountinfo'
 import bindaccount from '@/components/account/bindaccount'
 import receiveaddress from '@/components/account/receiveaddress'
+import helpcenter from '@/components/helpcenter/helpcenter'
 
 Vue.use(Router)
 export default new Router({
@@ -59,6 +60,11 @@ export default new Router({
           path: '/orderlogistics',
           name: 'orderlogistics',
           component: orderlogistics
+        },
+        {
+          path: '/helpcenter',
+          name: 'helpcenter',
+          component: helpcenter
         },
         {
           path: '/orderpayment',
