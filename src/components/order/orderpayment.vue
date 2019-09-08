@@ -407,7 +407,7 @@ export default {
 .last_line_style {
   margin-top: 25px;
   border-top: 1px rgb(230, 230, 230) solid;
-  width: 820px;
+  width: 750px;
 }
 
 .pay_amount{
@@ -432,7 +432,6 @@ export default {
 }
 
 .pay_amount_title{
-  width: 100px;
   font-size: 16px;
   display: flex;
   justify-content: flex-end;
