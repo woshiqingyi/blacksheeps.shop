@@ -171,6 +171,7 @@ export default {
   font-weight: 600;
   color: #3e86ca;
   margin-right: 10%;
+  cursor: pointer;
 }
 
 /* .line_style{
