@@ -16,6 +16,8 @@ import accountinfo from '@/components/account/accountinfo'
 import bindaccount from '@/components/account/bindaccount'
 import receiveaddress from '@/components/account/receiveaddress'
 import helpcenter from '@/components/helpcenter/helpcenter'
+import collection from '@/components/collection'
+
 
 Vue.use(Router)
 export default new Router({
@@ -35,6 +37,11 @@ export default new Router({
           path: '/login',
           name: 'login',
           component: login
+        },
+        {
+          path: '/collection',
+          name: 'collection',
+          component: collection
         },
         {
           path: '/register',

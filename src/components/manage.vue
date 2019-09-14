@@ -22,9 +22,9 @@
             <!-- <el-button class="" type="text">商品分类</el-button>
             <el-button class="" type="text">我的收藏</el-button>
             <el-button class="" type="text">我的订单</el-button> -->
-            <div class="per_menu">商品分类</div>
-            <div class="per_menu">我的收藏</div>
-            <div class="per_menu">我的订单</div>
+            <div class="per_menu" @click="onIntroduce">商品分类</div>
+            <div class="per_menu" @click="onCollection">我的收藏</div>
+            <div class="per_menu" @click="onOrder">我的订单</div>
         </div>
        </div>
        <div class="icon_style"></div>
@@ -106,6 +106,18 @@ export default {
       if(Choosed == 'onHelpCenter'){
         this.$router.push({name:'helpcenter'})
       }
+    },
+
+    onIntroduce(){
+      this.$router.push({name:'introduce'})
+    },
+
+    onCollection(){
+       this.$router.push({name:'collection'})
+    },
+
+    onOrder(){
+      this.$router.push({name:'order'})
     }
   }
 };
@@ -179,7 +191,9 @@ export default {
 }
 
 .per_menu{
-
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 </style>
 

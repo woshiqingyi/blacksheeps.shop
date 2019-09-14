@@ -1,7 +1,7 @@
 <template>
   <div class="order_layout">
     <div class="order_style">
-      <div class="order_title">已购买商品的物流信息</div>
+      <div class="order_title">已购买商品的详情信息</div>
       <div class="per_order">
         <div class="per_order_title">
           <div class="per_order_title_date">2018-10-10</div>
