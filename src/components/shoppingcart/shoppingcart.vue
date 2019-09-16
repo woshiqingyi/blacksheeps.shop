@@ -1,7 +1,7 @@
 <template>
   <div class="shoppingcart_layout">
     <div class="per_product_title">
-      <div>购物车的所有的商品</div>
+      <div class="c_main_title">购物车的所有的商品</div>
       <div class="per_product_remark">所有订单均可享受免费送货和退货服务</div>
     </div>
     <div class="per_product">
@@ -87,8 +87,6 @@ export default {
 
 .per_product_title {
   width: 830px;
-  font-size: 20px;
-  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;

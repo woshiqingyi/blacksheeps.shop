@@ -1,7 +1,7 @@
 <template>
   <div class="order_payment">
     <div class="order_payment_layout">
-      <div class="order_payment_title">为你将要购买的商品进行付款</div>
+      <div class="c_main_title">为你将要购买的商品进行付款</div>
       <div class="order_payment_remark">所有的商品在活动期间有一定的优惠</div>
       <div class="line_style"></div>
       <div class="receive_address">
@@ -193,11 +193,6 @@ export default {
   flex-direction: column;
   width: 1100px;
   margin-bottom: 50px;
-}
-
-.order_payment_title {
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .order_payment_remark {

@@ -1,7 +1,7 @@
 <template>
   <div class="order_layout">
     <div class="order_style">
-      <div class="order_title">已购买商品的详情信息</div>
+      <div class="c_main_title">已购买商品的详情信息</div>
       <div class="per_order">
         <div class="per_order_title">
           <div class="per_order_title_date">2018-10-10</div>
@@ -71,18 +71,12 @@ export default {
 }
 
 .order_style {
-  margin-top: 40px;
+  margin-top: 70px;
   width: 1000px;
   height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.order_title {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .per_order {

@@ -1,7 +1,7 @@
 <template>
   <div class="help_center">
     <div class="help_center_layout">
-      <div class="help_center_title">常见问题及解答</div>
+      <div class="c_main_title">常见问题及解答</div>
       <div class="line_style"></div>
       <div class="help_center_content">
         <div class="per_help">
@@ -33,7 +33,7 @@ export default {};
 }
 
 .help_center_layout {
-  margin-top: 50px;
+  margin-top: 70px;
   height: 500px;
   width: 1000px;
   border-radius: 7px;
@@ -42,16 +42,8 @@ export default {};
   align-items: center;
 }
 
-.help_center_title {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
 .line_style {
-  margin-top: 15px;
+  margin-top: 20px;
   border-top: 1px rgb(235, 235, 235) solid;
   width: 450px;
 }

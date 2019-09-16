@@ -1,7 +1,7 @@
 <template>
   <div class="collection">
     <div class="collection_layout">
-      <div class="collection_title">我的收藏库</div>
+      <div class="c_main_title">我的收藏库</div>
       <div class="collection_mini_title">可将你的宝贝添加在收藏库，方便查看</div>
       <div class="line_style"></div>
       <div class="collection_content">
@@ -47,9 +47,7 @@ export default {
   align-items: center;
 }
 
-.collection_title {
-  font-weight: 600;
-}
+
 
 .collection_mini_title {
   margin-top: 20px;
