@@ -16,8 +16,8 @@
             :style="ChooseID == item.ID ? ClickStyle:''"
           >
             {{item.Name}} {{item.Address}} {{item.Tel}}
-            <span class="image_style">
-              <img :src="Tick" v-show="ChooseID == item.ID ? true: false">
+            <span :id="item.ID"  class="image_style">
+              <img :id="item.ID" :src="Tick" v-show="ChooseID == item.ID ? true: false">
             </span>
           </button>
           <el-button type="mini" class="address_button_style" @click="addAddress">新增地址</el-button>
@@ -166,6 +166,7 @@ export default {
   },
   methods: {
     chooseAddress(e) {
+      console.log('e',e.target.id)
       this.ChooseID = e.target.id;
     },
     choosePay(e) {

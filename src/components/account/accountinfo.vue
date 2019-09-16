@@ -52,16 +52,12 @@ export default {
 
 <style scoped>
 .account_info {
-  height: 70%;
-  width: 70%;
-}
-
-.account_info_title {
-
+  height: 90%;
+  width: 90%;
 }
 
 .per_info {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
   height: 55px;
   display: flex;
@@ -79,7 +75,7 @@ export default {
   margin-left: 80px;
   font-size: 16px;
   background-color: whitesmoke;
-  color: black;
+  color: rgb(109, 109, 109);
 }
 
 .line_style{

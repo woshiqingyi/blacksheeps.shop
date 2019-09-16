@@ -13,7 +13,7 @@
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
               <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
-              <el-dropdown-item command="exitLogin">我的账户</el-dropdown-item>
+              <el-dropdown-item command="onAccounts">我的账户</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -97,8 +97,8 @@ export default {
     //   this.$router.push({ name: "login" });
     // },
     navigateMenu(Choosed){
-      if(Choosed == 'exitLogin'){
-        this.$router.push({name:'login'})
+      if(Choosed == 'onAccounts'){
+        this.$router.push({name:'accountmanage'})
       }
       if(Choosed == 'onShoppingCart'){
         this.$router.push({name:'shoppingcart'})

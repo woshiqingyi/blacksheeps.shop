@@ -94,7 +94,7 @@ export default {
 
 .per_product_remark {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 2px;
   font-weight: 500
 }

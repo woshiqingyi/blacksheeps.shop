@@ -1,6 +1,6 @@
 <template>
   <div class="account_manage_layout">
-    <div class="account_manage_title">账户信息</div>
+    <div class="c_main_title">账户信息</div>
     <div class="account_manage_mini_title">编辑修改你的信息</div>
     <div class="account_manage">
       <div class="left_menu">
@@ -63,12 +63,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.account_manage_title {
   margin-top: 70px;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 .account_manage_mini_title{
@@ -81,8 +76,8 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  width: 1000px;
-  height: 500px;
+  width: 800px;
+  height: 350px;
 }
 
 .left_menu {
@@ -92,7 +87,7 @@ export default {
 }
 
 .right_menu {
-  width:905px;
+  width:708px;
   display: flex;
   justify-content: center;
   align-items: center;

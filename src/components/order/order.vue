@@ -117,7 +117,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 17px;
+  font-size: 16px;
   color: rgb(71, 71, 71);
   margin-top: 20px;
   letter-spacing: 1px;
@@ -161,7 +161,7 @@ export default {
   justify-content: center;
   width: 85px;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
