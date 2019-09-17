@@ -76,8 +76,8 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  width: 800px;
-  height: 350px;
+  width: 950px;
+  height: 470px;
 }
 
 .left_menu {
@@ -87,7 +87,7 @@ export default {
 }
 
 .right_menu {
-  width:708px;
+  width:858px;
   display: flex;
   justify-content: center;
   align-items: center;

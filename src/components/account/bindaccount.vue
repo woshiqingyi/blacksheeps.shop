@@ -31,8 +31,8 @@ export default {
 
 <style scoped>
 .bind_account {
-  height: 90%;
-  width: 90%;
+  height: 75%;
+  width: 75%;
 }
 
 .per_info {

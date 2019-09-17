@@ -52,8 +52,8 @@ export default {
 
 <style scoped>
 .account_info {
-  height: 90%;
-  width: 90%;
+  height: 75%;
+  width: 75%;
 }
 
 .per_info {
