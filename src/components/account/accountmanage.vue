@@ -93,7 +93,6 @@ export default {
   align-items: center;
   background-color: whitesmoke;
   border-radius: 4px;
-  
 }
 
 .per_menu {

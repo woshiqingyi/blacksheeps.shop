@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="per_receive_address">
+      <!-- <div class="per_receive_address">
         <div class="per_receive_address_content">
           <div>
             <span>郑晓锋</span>
@@ -47,9 +47,9 @@
           <el-button class="operation_button" @click="modifyReceiveAddress" type="mini">修改</el-button>
           <el-button class="operation_button" style="margin-left:0px" type="mini">删除</el-button>
         </div>
-      </div>
+      </div> -->
 
-      <div class="per_receive_address">
+      <!-- <div class="per_receive_address">
         <div class="per_receive_address_content">
           <div>
             <span>郑晓锋</span>
@@ -63,7 +63,7 @@
           <el-button class="operation_button" @click="modifyReceiveAddress" type="mini">修改</el-button>
           <el-button class="operation_button" style="margin-left:0px" type="mini">删除</el-button>
         </div>
-      </div>
+      </div> -->
 
       <el-button class="add_address_button" type="mini">新增收货地址</el-button>
     </div>
