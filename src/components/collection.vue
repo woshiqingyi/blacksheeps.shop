@@ -5,17 +5,57 @@
       <div class="collection_mini_title">可将你的宝贝添加在收藏库，方便查看</div>
       <div class="line_style"></div>
       <div class="collection_content">
-        <div class="per_collection_"></div>
 
-        <div class="per_collection_"></div>
+        <div class="per_collection">
+          <div class="per_collection_mini">
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+                <div class="per_collection_title">红楼梦</div>
+                <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
 
-        <div class="per_collection_"></div>
+         <div class="per_collection">
+          <div class="per_collection_mini">
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+                <div class="per_collection_title">红楼梦</div>
+                <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
 
-        <div class="per_collection_"></div>
+         <div class="per_collection">
+          <div class="per_collection_mini">
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+                <div class="per_collection_title">红楼梦</div>
+                <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
 
-        <div class="per_collection_"></div>
+         <div class="per_collection">
+          <div class="per_collection_mini">
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+                <div class="per_collection_title">红楼梦</div>
+                <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
 
-       
+         <div class="per_collection">
+          <div class="per_collection_mini">
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+                <div class="per_collection_title">红楼梦</div>
+                <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -47,8 +87,6 @@ export default {
   align-items: center;
 }
 
-
-
 .collection_mini_title {
   margin-top: 20px;
   font-size: 15px;
@@ -62,16 +100,52 @@ export default {
 }
 
 .collection_content {
+  background-color: whitesmoke;
   margin-top: 20px;
   width: 1100px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.per_collection_ {
+.per_collection {
   width: 25%;
   height: 250px;
-  background-color: rgb(238, 238, 238);
-
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.per_collection_mini {
+  width: 85%;
+  height: 85%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.image_style {
+  height: 180px;
+  width: 180px;
+}
+
+.per_collection_content{
+  display: flex;
+  justify-content: space-around;
+}
+
+.per_collection_title{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.per_collection_price{
+  margin-left: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e86ca;
+}
+
 </style>
