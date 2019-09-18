@@ -38,8 +38,8 @@
     <el-dialog title="提示" :visible.sync="DialogDeleteCollection" width="500px" center>
       <span style="font-size:15px;">确认要移除此商品？</span>
       <span slot="footer" class="dialog-footer">
-        <el-button class="operation_button" type="mini" @click="DialogDeleteCollection = false">取 消</el-button>
-        <el-button class="operation_button" type="mini" @click="DialogDeleteCollection = false">确 定</el-button>
+        <el-button class="button_style" type="mini" @click="DialogDeleteCollection = false">取 消</el-button>
+        <el-button class="button_style" type="mini" @click="DialogDeleteCollection = false">确 定</el-button>
       </span>
     </el-dialog>
 
@@ -165,5 +165,14 @@ export default {
   font-size: 16px;
   font-weight: 600;
   color: #3e86ca;
+}
+
+.button_style{
+  width: 60px;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #3e86ca;
+  color: white;
 }
 </style>
