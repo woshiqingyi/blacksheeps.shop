@@ -114,8 +114,8 @@ export default {
 }
 
 .icon_style {
-  width: 240px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   border-radius: 7px;
   padding: 8px;
 }

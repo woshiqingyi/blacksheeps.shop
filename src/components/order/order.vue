@@ -159,12 +159,13 @@ export default {
 .per_order_content_remark_details {
   display: flex;
   justify-content: center;
-  width: 85px;
+  width: 90px;
   margin-top: 15px;
   font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  letter-spacing: 1px;
 }
 
 .per_order_content_remark_logistic {

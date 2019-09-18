@@ -7,66 +7,68 @@
       <div class="collection_content">
 
         <div class="per_collection">
-          <div class="per_collection_mini">
+          <div class="per_collection_mini" id='1' @mouseenter="showDelete" @mouseleave="hiddenDelete">
+            <div class="icon_layout" v-show="ID1 == ChoosedID ? true : false" @click="deletePerCollection">
+               <img class="icon_detele"   src="../../static/image/icon/delete.png" alt="">
+            </div>
             <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
             <div class="per_collection_content">
-                <div class="per_collection_title">红楼梦</div>
-                <div class="per_collection_price">RMB 100</div>
+              <div class="per_collection_title">红楼梦</div>
+              <div class="per_collection_price">RMB 100</div>
             </div>
           </div>
         </div>
 
          <div class="per_collection">
-          <div class="per_collection_mini">
-            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
-            <div class="per_collection_content">
-                <div class="per_collection_title">红楼梦</div>
-                <div class="per_collection_price">RMB 100</div>
+          <div class="per_collection_mini" id='2' @mouseenter="showDelete" @mouseleave="hiddenDelete">
+            <div class="icon_layout" v-show="ID2 == ChoosedID ? true : false" @click="deletePerCollection">
+               <img class="icon_detele" src="../../static/image/icon/delete.png" alt="">
             </div>
-          </div>
-        </div>
-
-         <div class="per_collection">
-          <div class="per_collection_mini">
             <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
             <div class="per_collection_content">
-                <div class="per_collection_title">红楼梦</div>
-                <div class="per_collection_price">RMB 100</div>
-            </div>
-          </div>
-        </div>
-
-         <div class="per_collection">
-          <div class="per_collection_mini">
-            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
-            <div class="per_collection_content">
-                <div class="per_collection_title">红楼梦</div>
-                <div class="per_collection_price">RMB 100</div>
-            </div>
-          </div>
-        </div>
-
-         <div class="per_collection">
-          <div class="per_collection_mini">
-            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
-            <div class="per_collection_content">
-                <div class="per_collection_title">红楼梦</div>
-                <div class="per_collection_price">RMB 100</div>
+              <div class="per_collection_title">红楼梦</div>
+              <div class="per_collection_price">RMB 100</div>
             </div>
           </div>
         </div>
 
       </div>
     </div>
+
+    <el-dialog title="提示" :visible.sync="DialogDeleteCollection" width="500px" center>
+      <span style="font-size:15px;">确认要移除此商品？</span>
+      <span slot="footer" class="dialog-footer">
+        <el-button class="operation_button" type="mini" @click="DialogDeleteCollection = false">取 消</el-button>
+        <el-button class="operation_button" type="mini" @click="DialogDeleteCollection = false">确 定</el-button>
+      </span>
+    </el-dialog>
+
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      ID1:'1',
+      ID2:'2',
+      ChoosedID:'',
+      DialogDeleteCollection:false
+    };
   },
   created() {},
-  methods: {}
+  methods: {
+    showDelete(e) {
+      this.ChoosedID = e.target.id
+    },
+
+    hiddenDelete(){
+      this.ChoosedID = ''
+    },
+
+    deletePerCollection(){
+      this.DialogDeleteCollection = true
+    }
+  }
 };
 </script>
 
@@ -81,7 +83,6 @@ export default {
   margin-top: 40px;
   width: 1000px;
   height: 1000px;
-  /*  border: 1px lightgray solid; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,13 +118,31 @@ export default {
 }
 
 .per_collection_mini {
-  width: 85%;
-  height: 85%;
+  width: 90%;
+  height: 90%;
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
+  position:relative
+}
+
+.icon_layout{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  background-color: rgb(219, 219, 219);
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+
+.icon_detele{
+  height:20px;
+  width:20px;
 }
 
 .image_style {
@@ -131,21 +150,20 @@ export default {
   width: 180px;
 }
 
-.per_collection_content{
+.per_collection_content {
   display: flex;
   justify-content: space-around;
 }
 
-.per_collection_title{
+.per_collection_title {
   font-size: 16px;
   font-weight: 600;
 }
 
-.per_collection_price{
+.per_collection_price {
   margin-left: 13px;
   font-size: 16px;
   font-weight: 600;
   color: #3e86ca;
 }
-
 </style>

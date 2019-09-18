@@ -41,7 +41,7 @@ export default {};
 }
     
 .product_title {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 600;
 }
 
