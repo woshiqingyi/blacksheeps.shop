@@ -108,6 +108,7 @@ export default {};
 .amount_layout{
   display: flex;
   font-weight: 600;
+  margin-right: 7px;
 }
 
 .amount_style{
@@ -115,7 +116,7 @@ export default {};
 }
 
 .price_style{
-  color: red;
+  color: #3e86ca;
   font-size: 19px;
 }
 
@@ -148,6 +149,6 @@ export default {};
   font-weight: 600;
   background-color: white;
   color: #3e86ca;
-  border: 1px #3e86ca solid;
+  /* border: 1px #3e86ca solid; */
 }
 </style>
