@@ -106,6 +106,8 @@ export default {
   height: 180px;
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
+  color: rgb(126, 126, 126);
 }
 
 .icon_style {
@@ -118,7 +120,6 @@ export default {
   flex-direction: column;
   height: 100%;
   font-size: 16px;
-  color: rgb(71, 71, 71);
   margin-top: 20px;
   letter-spacing: 1px;
 }
@@ -131,7 +132,6 @@ export default {
   height: 100%;
   width: 150px;
   font-size: 16px;
-  color: rgb(71, 71, 71);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,7 +145,6 @@ export default {
 .per_order_content_remark {
   width: 200px;
   font-size: 16px;
-  color: rgb(71, 71, 71);
   margin-top: 20px;
 }
 

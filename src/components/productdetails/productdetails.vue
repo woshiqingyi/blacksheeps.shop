@@ -27,8 +27,8 @@
           <span class="price_style">1000</span>
         </div>
         <div class="button_layout">
-          <el-button type="mini" class="button_style1" style="margin-right:15px;">添入购物车</el-button>
-          <el-button type="mini" class="button_style2">直接购买</el-button>
+          <el-button type="mini" class="button_style1" @click="addShoppingCart" style="margin-right:15px;">添入购物车</el-button>
+          <el-button type="mini" class="button_style2" @click="payGoods">直接购买</el-button>
         </div>
       </div>
     </div>
@@ -36,7 +36,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods:{
+    payGoods(){
+      this.$router.push({name:'orderpayment'})
+    },
+
+    addShoppingCart(){
+      this.$router.push({name:'shoppingcart'})
+    }
+      
+  }
+};
 </script>
 <style scoped>
 .product_details_layout {
@@ -121,7 +132,7 @@ export default {};
 }
 
 .button_layout {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
 }
 
@@ -129,8 +140,8 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 110px;
+  height: 45px;
+  width: 120px;
   margin-top: 10px;
   font-size: 16px;
   font-weight: 600;
@@ -142,8 +153,8 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 110px;
+  height: 45px;
+  width: 120px;
   margin-top: 10px;
   font-size: 16px;
   font-weight: 600;
