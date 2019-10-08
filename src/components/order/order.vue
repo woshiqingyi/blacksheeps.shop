@@ -21,7 +21,7 @@
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
             <el-button type="mini" class="per_order_content_remark_details">订单详情</el-button>
-            <el-button type="mini" class="per_order_content_remark_details" style="margin-left:0px;" @click="onLogistics" >查看物流</el-button>
+            <el-button type="mini" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
           </div>
         </div>
       </div>
@@ -160,12 +160,11 @@ export default {
   justify-content: center;
   width: 90px;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
   letter-spacing: 1px;
-  padding: 8px;
 }
 
 .per_order_content_remark_logistic {

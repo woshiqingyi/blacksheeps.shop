@@ -48,15 +48,13 @@ export default {
   margin-left: 15px;
   font-size: 16px;
   font-weight: 600;
-  color: rgb(92, 92, 92);
 }
 
 .per_content {
   margin-left: 80px;
   font-size: 16px;
   background-color: whitesmoke;
-  color:#3e86ca;
-  font-weight: 600;
+  color:rgb(109, 109, 109);
 }
 
 
