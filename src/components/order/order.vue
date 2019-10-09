@@ -82,7 +82,8 @@ export default {
 .per_order {
   margin-top: 30px;
   width: 900px;
-  border: 1px rgb(238, 238, 238) solid;
+  border: 1px rgb(226, 226, 226) solid;
+  /* border:1px #90b8df solid; */
 }
 
 .per_order_title {
@@ -103,6 +104,7 @@ export default {
 }
 
 .per_order_content {
+  margin-top: 8px;
   height: 180px;
   display: flex;
   justify-content: space-between;
@@ -111,6 +113,7 @@ export default {
 }
 
 .icon_style {
+  margin-left: 5px;
   height: 170px;
   width: 170px;
 }

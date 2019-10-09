@@ -21,16 +21,49 @@
           <div class="menu_classify">
             <!-- <el-button class="" type="text">商品分类</el-button>
             <el-button class="" type="text">我的收藏</el-button>
-            <el-button class="" type="text">我的订单</el-button> -->
+            <el-button class="" type="text">我的订单</el-button>-->
             <div class="per_menu" @click="onIntroduce">商品分类</div>
             <div class="per_menu" @click="onCollection">我的收藏</div>
             <div class="per_menu" @click="onOrder">我的订单</div>
+          </div>
         </div>
-       </div>
-       <div class="icon_style"></div>
+        <div class="icon_style"></div>
       </div>
     </div>
     <router-view/>
+    <div class="manage_bottom_layout">
+      <div class="per_mini_menu">
+        <div class="main_title">帮助中心</div>
+        <div class="mini_title">账户管理</div>
+        <div class="mini_title">购物指南</div>
+        <div class="mini_title">订单操作</div>
+      </div>
+
+      <div class="per_mini_menu">
+        <div class="main_title">服务支持</div>
+        <div class="mini_title">售后服务</div>
+        <div class="mini_title">七天无理由退货</div>
+      </div>
+
+      <div class="per_mini_menu">
+        <div class="main_title">关于本网站</div>
+        <div class="mini_title">网站建设初衷</div>
+        <div class="mini_title">联系我</div>
+        <div class="mini_title">balcksheeps的价值观</div>
+      </div>
+
+    </div>
+    <!-- 帮助中心
+      1.账户管理
+      2.购物指南
+      3.订单操作
+      服务支持
+      1.售后服务
+      2.七天无理由退货
+      关于本网站
+      1.了解网站的建设的初衷
+      2.联系我
+    3.balcksheeps的价值观-->
   </div>
 </template>
 <script>
@@ -96,28 +129,28 @@ export default {
     // onAccountLogin() {
     //   this.$router.push({ name: "login" });
     // },
-    navigateMenu(Choosed){
-      if(Choosed == 'onAccounts'){
-        this.$router.push({name:'accountmanage'})
+    navigateMenu(Choosed) {
+      if (Choosed == "onAccounts") {
+        this.$router.push({ name: "accountmanage" });
       }
-      if(Choosed == 'onShoppingCart'){
-        this.$router.push({name:'shoppingcart'})
+      if (Choosed == "onShoppingCart") {
+        this.$router.push({ name: "shoppingcart" });
       }
-      if(Choosed == 'onHelpCenter'){
-        this.$router.push({name:'helpcenter'})
+      if (Choosed == "onHelpCenter") {
+        this.$router.push({ name: "helpcenter" });
       }
     },
 
-    onIntroduce(){
-      this.$router.push({name:'introduce'})
+    onIntroduce() {
+      this.$router.push({ name: "introduce" });
     },
 
-    onCollection(){
-       this.$router.push({name:'collection'})
+    onCollection() {
+      this.$router.push({ name: "collection" });
     },
 
-    onOrder(){
-      this.$router.push({name:'order'})
+    onOrder() {
+      this.$router.push({ name: "order" });
     }
   }
 };
@@ -171,7 +204,7 @@ export default {
   width: 0.5rem;
 }
 
-.menu_classify_layout{
+.menu_classify_layout {
   width: 100%;
   height: 0.8rem;
   display: flex;
@@ -179,21 +212,48 @@ export default {
   justify-content: center;
 }
 
-.menu_classify{
+.menu_classify {
   width: 60%;
   height: 0.8rem;
   font-size: 15px;
-  color:white;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
 }
 
-.per_menu{
+.per_menu {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.manage_bottom_layout {
+  width: 100%;
+  border-top: 1px rgb(230, 230, 230) solid;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.per_mini_menu {
+  margin-top: 20px;
+  width: 250px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_title{
+  margin-top: 12px;
+}
+
+.mini_title{
+  margin-top: 14px;
+  color: gray;
+  font-size: 13px;
 }
 </style>
 
