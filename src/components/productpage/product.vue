@@ -20,6 +20,17 @@
         </div>
       </div>
     </div>
+
+    <div class="per_product">
+      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB 1000</div>
+        </div>
+      </div>
+    </div>
+
   </div>
   </div>
 </template>

@@ -3,66 +3,48 @@
     <div class="login_style">
       <div class="account_style">登陆我的账号</div>
       <input class="input_style" placeholder="请输入你的账号" v-model="Account.UserName" type="text">
-      <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password">
-      <el-button class="button_style" :style="LoginStyle" @click="onAccount">登陆</el-button>
-      <el-button class="register_button" @click="onRegister" type="text">无账号？立即去注册</el-button>
+      <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password" >
+      <el-button class='button_style' :style="LoginStyle" @click="onAccount">登陆</el-button>
+      <el-button class='register_button' @click="onRegister" type="text">无账号？立即去注册</el-button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      Account: {
-        UserName: "",
-        Password: ""
+  data(){
+    return{
+      Account:{ 
+        UserName:'',
+        Password:'',
       },
-      LoginStyle: "",
-      Height: ""
-    };
+      LoginStyle:'',
+      Height:'',
+    }
   },
-  created() {
+  created(){
     var Width = document.documentElement.clientWidth;
-    var Height = document.documentElement.clientHeight;
-    console.log("Width", Width);
-    console.log("Height", Height);
-
-    $.ajax({
-      disabledLoading: true,
-      type: "Post",
-      traditional: false,
-      url: "https://trdsvc.yqybl.com/api/gateway/Login",
-      dataType: "json",
-      data: {
-        __Token__: '',
-        Data: { loginName: "18861828560", password: "123456", TelPrefix: "+86" }
-      },
-      crossDomain: true,
-      success: function(data) {
-        console.log("data", data);
-      },
-    });
-
-    return;
-
+    var Height = document.documentElement.clientHeight
+    console.log('Width',Width)
+    console.log('Height',Height)
     // this.Height = Height
   },
-  methods: {
-    onAccount() {
-      this.$message.warning("请输入账号跟密码");
+  methods:{
+    onAccount(){
+      this.$message.warning('请输入账号跟密码')
     },
-    onRegister() {
-      this.$router.push("register");
+    onRegister(){
+      this.$router.push('register')
     }
   },
 
-  watch: {
-    Account: {
-      handler(Values) {
-        if (Values.UserName && ValuesPassword) {
-        }
-      },
-      deep: true
+  watch:{
+    Account:{
+       handler(Values) {
+         if(Values.UserName && ValuesPassword){
+
+         }
+       },
+      deep:true
     }
   }
 };
@@ -85,11 +67,11 @@ export default {
   align-items: center;
 }
 
-.account_style {
+.account_style{
   margin-bottom: 8px;
   font-weight: 500;
   color: rgb(20, 20, 20);
-  letter-spacing: 2px;
+  letter-spacing:2px
 }
 
 .input_style {
@@ -102,7 +84,7 @@ export default {
   height: 27px;
 }
 
-.button_style {
+.button_style{
   margin-top: 25px;
   width: 200px;
   background-color: rgb(241, 241, 241);
@@ -110,7 +92,7 @@ export default {
   background-color: #3e86ca;
 }
 
-.register_button {
+.register_button{
   font-size: 12px;
   color: #3e86ca;
 }

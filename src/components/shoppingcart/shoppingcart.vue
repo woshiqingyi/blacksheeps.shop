@@ -106,7 +106,7 @@ export default {
   padding: 15px;
   justify-content: space-between;
   border:1px #90b8df solid;
-  border-radius: 7px;
+  border-radius: 4px;
 }
 
 .product_left {

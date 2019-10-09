@@ -18,6 +18,7 @@ import receiveaddress from '@/components/account/receiveaddress'
 import helpcenter from '@/components/helpcenter/helpcenter'
 import collection from '@/components/collection'
 
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -25,7 +26,7 @@ export default new Router({
       path: '/',
       name: 'manage',
       component: manage,
-      redirect: 'login',
+      redirect: 'introduce',
       children: [
         {
           path: '/introduce',

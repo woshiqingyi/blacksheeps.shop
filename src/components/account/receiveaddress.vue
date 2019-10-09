@@ -71,8 +71,8 @@
     <el-dialog title="提示" :visible.sync="DialogModifyAddress" width="30%" center>
       <span>需要注意的是内容是默认不居中的</span>
       <span slot="footer" class="dialog-footer">
-        <el-button class="operation_button" type="mini" @click="DialogModifyAddress = false">取 消</el-button>
-        <el-button class="operation_button" type="mini" @click="DialogModifyAddress = false">确 定</el-button>
+        <el-button class="dialog_operation_button" type="mini" @click="DialogModifyAddress = false">取 消</el-button>
+        <el-button class="dialog_operation_button" type="mini" @click="DialogModifyAddress = false">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -122,20 +122,30 @@ export default {
 
 .per_receive_address_content {
   width: 450px;
-  color: rgb(109, 109, 109);
+  font-weight: 600;
+  color: rgb(92, 92, 92);
 }
 
 .per_address_details {
-  margin-top: 13px;
+  margin-top: 15px;
 }
 
 .operation_button {
-  width: 60px;
-  margin-top: 5px;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #3e86ca;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.dialog_operation_button{
+  margin-top: 6px;
   font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  letter-spacing: 1px;
 }
 
 .button_layout {

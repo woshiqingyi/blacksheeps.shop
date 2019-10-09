@@ -2,12 +2,12 @@
   <div class="introduce_layout">
     <div class="introduce_style">
       <div class="introduce_top">
-        <div class="c_main_title">简介</div>
+        <div class="c_main_title" style="margin-top: 35px;">简介</div>
         <div class="introduce_content" >网站售卖一些二手商品，涉及范围是家具、书籍、生活用品</div>
         <div class="introduce_content">低价出售</div>
-        <div class="introduce_content">售卖的商品全是私人物品</div>
-        <div class="line_style"></div>
+        <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
       </div>
+      <!-- <div class="line_style"></div> -->
       <div class="introduce_goods_title">货架上所有商品</div>
       <div class="introduce_goods_mini_title">（生活用品类）</div>
       <div class="introduce_goods">
@@ -31,19 +31,23 @@ export default {
 }
 
 .introduce_style {
-  /* border: 1px gray solid;
-  height: 700px; */
-  width: 1300px;
-  margin-top: 20px;
-}
-
-.introduce_top{
-  margin-top: 15px;
   width: 100%;
-  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+
+.introduce_top{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  /* border-bottom: 1px rgb(230, 230, 230) solid; */
+  /* background-color: rgb(248, 244, 240); */
+  /* background-color: rgb(241, 240, 236); */
 }
 
 .introduce_content{
@@ -83,7 +87,7 @@ export default {
   overflow-y: scroll;
   height: 500px; */
   margin-bottom: 100px;
-  width: 100%;
+  width: 1300px;
   background-color: whitesmoke;
   /* border: 1px rgb(212, 212, 212) solid; */
 }
