@@ -47,6 +47,19 @@ export default {
      Style2:'transition:all 0.2s linear;transform: translate3d(0,0,0);'
     }
   },
+
+  created() {
+    // var Width = document.documentElement.clientWidth;
+    // if (Width > 500) Width = 500;
+    // var baseFontSize = (Width * 100) / 750;
+    // document.documentElement.style.fontSize = baseFontSize + "px";
+
+    var Width = document.documentElement.clientWidth;
+    
+  
+    
+  },
+
   methods:{
     getProductDetails(){
       this.$router.push({name:'productdetails'})
@@ -73,6 +86,7 @@ export default {
 .per_product {
   width: 33.3%;
   height: 320px;
+  /* height: 320px; */
   background-color: rgb(245, 245, 245);
   display: flex;
   justify-content: center;
@@ -81,8 +95,10 @@ export default {
 }
 
 .per_mini_product {
-  height: 300px;
-  width: 400px;
+  /* height: 300px;
+  width: 400px; */
+  height: 95%;
+  width: 95%;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;

@@ -6,6 +6,14 @@
 
 <script>
 export default {
+  created(){
+    var Width = document.documentElement.clientWidth;
+    console.log('Width',Width)
+    if (Width > 1300) Width = 1300;
+    var baseFontSize = (Width * 100) / 750;
+    console.log('baseFontSize',baseFontSize)
+    document.documentElement.style.fontSize = baseFontSize + "px";
+  },
   name: 'App'
 }
 </script>
