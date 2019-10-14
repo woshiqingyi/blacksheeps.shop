@@ -15,7 +15,7 @@ import accountmanage from '@/components/account/accountmanage'
 import accountinfo from '@/components/account/accountinfo'
 import bindaccount from '@/components/account/bindaccount'
 import receiveaddress from '@/components/account/receiveaddress'
-import helpcenter from '@/components/helpcenter/helpcenter'
+import helpcenter from '@/components/othersmatter/helpcenter'
 import collection from '@/components/collection'
 
 

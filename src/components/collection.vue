@@ -32,6 +32,34 @@
           </div>
         </div>
 
+        <div class="per_collection">
+          <div class="per_collection_mini" id='2' @mouseenter="showDelete" @mouseleave="hiddenDelete">
+            <div class="icon_layout" v-show="ID2 == ChoosedID ? true : false" @click="deletePerCollection">
+               <img class="icon_detele" src="../../static/image/icon/delete.png" alt="">
+            </div>
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+              <div class="per_collection_title">红楼梦</div>
+              <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="per_collection">
+          <div class="per_collection_mini" id='2' @mouseenter="showDelete" @mouseleave="hiddenDelete">
+            <div class="icon_layout" v-show="ID2 == ChoosedID ? true : false" @click="deletePerCollection">
+               <img class="icon_detele" src="../../static/image/icon/delete.png" alt="">
+            </div>
+            <img class="image_style" src="../../static/image/icon/honglou.jpg" alt>
+            <div class="per_collection_content">
+              <div class="per_collection_title">红楼梦</div>
+              <div class="per_collection_price">RMB 100</div>
+            </div>
+          </div>
+        </div>
+
+        
+
       </div>
     </div>
 
@@ -82,7 +110,6 @@ export default {
 .collection_layout {
   margin-top: 40px;
   width: 1000px;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;

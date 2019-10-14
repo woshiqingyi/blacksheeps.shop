@@ -230,6 +230,7 @@ export default {
 }
 
 .manage_bottom_layout {
+  margin-top: 100px;
   width: 100%;
   border-top: 1px rgb(230, 230, 230) solid;
   display: flex;

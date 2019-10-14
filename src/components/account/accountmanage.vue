@@ -64,7 +64,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 70px;
-  margin-bottom: 200px; 
 }
 
 .account_manage_mini_title{

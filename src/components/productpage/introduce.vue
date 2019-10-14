@@ -88,7 +88,6 @@ export default {
   /* overflow:hidden;
   overflow-y: scroll;
   height: 500px; */
-  margin-bottom: 100px;
   width: 85%;
   max-width: 1300px;
   background-color: whitesmoke;

@@ -4,6 +4,7 @@
       <div class="c_main_title">购物车的所有的商品</div>
       <div class="per_product_remark">所有订单均可享受免费送货和退货服务</div>
     </div>
+   <!--  <div class="line_style"></div> -->
     <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
@@ -99,14 +100,23 @@ export default {
   font-weight: 500
 }
 
+.line_style{
+  margin-top: 15px;
+  border-top: 1px rgb(226, 226, 226) solid;
+  width: 500px;
+}
+
 .per_product {
-  margin-top: 20px;
+  margin-top: 30px;
   width: 800px;
+  height: 230px;
   display: flex;
+  align-items: center;
   padding: 15px;
   justify-content: space-between;
-  border:1px #90b8df solid;
-  border-radius: 4px;
+  border-top:1px rgb(226, 226, 226) solid;
+  border-bottom:1px rgb(226, 226, 226) solid;
+  /* border-radius: 4px; */
 }
 
 .product_left {
@@ -180,7 +190,6 @@ export default {
 
 .settlement_style {
   margin-top: 20px;
-  margin-bottom: 30px;
   width: 830px;
   height: 100px;
   display: flex;

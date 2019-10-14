@@ -73,16 +73,17 @@ export default {
 .order_style {
   margin-top: 70px;
   width: 1000px;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .per_order {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 900px;
-  border: 1px rgb(226, 226, 226) solid;
+  height: 280px;
+  border-bottom: 1px rgb(226, 226, 226) solid;
+  
   /* border:1px #90b8df solid; */
 }
 
@@ -91,7 +92,8 @@ export default {
   display: flex;
   align-items: center;
   font-size: 15px;
-  background-color: whitesmoke;
+  border-bottom: 1px rgb(226, 226, 226) solid;
+  /* background-color: whitesmoke; */
 }
 
 .per_order_title_date {
@@ -104,7 +106,7 @@ export default {
 }
 
 .per_order_content {
-  margin-top: 8px;
+  margin-top: 20px;
   height: 180px;
   display: flex;
   justify-content: space-between;

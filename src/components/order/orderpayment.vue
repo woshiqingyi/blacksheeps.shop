@@ -193,7 +193,6 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 1100px;
-  margin-bottom: 50px;
 }
 
 .order_payment_remark {

@@ -34,7 +34,6 @@ export default {};
 
 .help_center_layout {
   margin-top: 70px;
-  height: 500px;
   width: 1000px;
   border-radius: 7px;
   display: flex;
