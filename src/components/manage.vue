@@ -32,6 +32,7 @@
     </div>
     <router-view/>
     <div class="manage_bottom_layout">
+      
       <div class="per_mini_menu">
         <div class="main_title">帮助中心</div>
         <div class="mini_title">账户管理</div>
@@ -41,15 +42,15 @@
 
       <div class="per_mini_menu">
         <div class="main_title">服务支持</div>
-        <div class="mini_title">售后服务</div>
-        <div class="mini_title">七天无理由退货</div>
+        <div class="mini_title" @click="onAfterSale">售后服务</div>
+        <div class="mini_title" @click='onReturnePurchase'>七天无理由退货</div>
       </div>
 
       <div class="per_mini_menu">
         <div class="main_title">关于本网站</div>
-        <div class="mini_title">网站建设初衷</div>
-        <div class="mini_title">联系我</div>
-        <div class="mini_title">balcksheeps的价值观</div>
+        <div class="mini_title" @click="onOriginalIntention">网站建设初衷</div>
+        <div class="mini_title" @click="onContactMe">联系我</div>
+        <div class="mini_title" @click="onLeaveMessage">留言板</div>
       </div>
 
     </div>
@@ -151,7 +152,29 @@ export default {
 
     onOrder() {
       this.$router.push({ name: "order" });
+    },
+
+    onAfterSale(){
+       this.$router.push({name:'aftersale'})
+    },
+
+    onReturnePurchase(){
+       this.$router.push({name:'returnedpurchase'})
+    },
+
+    onOriginalIntention(){
+      this.$router.push({name:'originalintention'})
+    },
+
+    onContactMe(){
+      this.$router.push({name:'contactme'})
+    },
+
+    onLeaveMessage(){
+      this.$router.push({name:'leavemessage'})
     }
+
+
   }
 };
 </script>
@@ -255,6 +278,7 @@ export default {
   margin-top: 14px;
   color: gray;
   font-size: 13px;
+  cursor: pointer;
 }
 </style>
 

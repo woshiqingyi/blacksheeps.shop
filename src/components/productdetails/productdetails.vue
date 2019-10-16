@@ -136,6 +136,7 @@ export default {
   font-size: 15px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .change_button{

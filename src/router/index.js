@@ -16,6 +16,12 @@ import accountinfo from '@/components/account/accountinfo'
 import bindaccount from '@/components/account/bindaccount'
 import receiveaddress from '@/components/account/receiveaddress'
 import helpcenter from '@/components/othersmatter/helpcenter'
+import originalintention from '@/components/othersmatter/originalintention'
+import contactme from '@/components/othersmatter/contactme'
+import aftersale from '@/components/othersmatter/aftersale'
+import returnedpurchase from '@/components/othersmatter/returnedpurchase'
+import leavemessage from '@/components/othersmatter/leavemessage'
+
 import collection from '@/components/collection'
 
 
@@ -72,6 +78,31 @@ export default new Router({
           path: '/helpcenter',
           name: 'helpcenter',
           component: helpcenter
+        },
+        {
+          path: '/originalintention',
+          name: 'originalintention',
+          component: originalintention
+        },
+        {
+          path: '/contactme',
+          name: 'contactme',
+          component: contactme
+        },
+        {
+          path: '/aftersale',
+          name: 'aftersale',
+          component: aftersale
+        },
+        {
+          path: '/returnedpurchase',
+          name: 'returnedpurchase',
+          component: returnedpurchase
+        },
+        {
+          path: '/leavemessage',
+          name: 'leavemessage',
+          component: leavemessage
         },
         {
           path: '/orderpayment',

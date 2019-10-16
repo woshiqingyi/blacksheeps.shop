@@ -43,11 +43,13 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <el-button type="mini" class="per_order_content_remark_details">订单详情</el-button>
+            <el-button type="mini"  class="per_order_content_remark_details">订单详情</el-button>
             <el-button type="mini" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
           </div>
         </div>
       </div>
+
+      
     </div>
   </div>
 </template>
@@ -82,9 +84,9 @@ export default {
   margin-top: 50px;
   width: 900px;
   height: 280px;
-  border-bottom: 1px rgb(226, 226, 226) solid;
+  border-bottom: 1px #bed0e2 solid;
   
-  /* border:1px #90b8df solid; */
+ /*  border:1px #90b8df solid; */
 }
 
 .per_order_title {
@@ -92,7 +94,7 @@ export default {
   display: flex;
   align-items: center;
   font-size: 15px;
-  border-bottom: 1px rgb(226, 226, 226) solid;
+  border-bottom: 1px #bed0e2 solid;
   /* background-color: whitesmoke; */
 }
 

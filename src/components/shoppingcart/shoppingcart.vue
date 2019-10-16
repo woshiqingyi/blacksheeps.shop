@@ -109,14 +109,15 @@ export default {
 .per_product {
   margin-top: 30px;
   width: 800px;
-  height: 230px;
+  height: 220px;
   display: flex;
   align-items: center;
   padding: 15px;
   justify-content: space-between;
-  border-top:1px rgb(226, 226, 226) solid;
-  border-bottom:1px rgb(226, 226, 226) solid;
-  /* border-radius: 4px; */
+  /* border-top:1px rgb(226, 226, 226) solid;
+  border-bottom:1px rgb(226, 226, 226) solid; */
+  border-top: 1px #bed0e2 solid;
+  border-bottom: 1px #bed0e2 solid;
 }
 
 .product_left {
