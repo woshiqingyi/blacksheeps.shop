@@ -46,7 +46,7 @@ export default {
   flex-direction: column;
   align-items: center;
   background-color: rgb(240, 240, 240);
-   border-bottom: 1px rgb(182, 208, 238) solid;
+  border-bottom: 1px rgb(182, 208, 238) solid;
   /* border-bottom: 1px rgb(230, 230, 230) solid; */
   /* background-color: rgb(248, 244, 240); */
   /* background-color: rgb(241, 240, 236); */

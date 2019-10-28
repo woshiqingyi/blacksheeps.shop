@@ -20,7 +20,7 @@
               <img :id="item.ID" :src="Tick" v-show="ChooseID == item.ID ? true: false">
             </span>
           </button>
-          <el-button type="mini" class="address_button_style" @click="addAddress">新增地址</el-button>
+          <el-button class="address_button_style" type="text" @click="addAddress">新增地址</el-button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
@@ -111,7 +111,7 @@
           <div class="pay_amount_address">寄送至： 福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002汇创网融 收货人 郑晓峰 18861828564</div>
         </div>
         <div class="pay_amount_layout">
-           <el-button type="mini" class="button_style">支付</el-button>
+           <el-button type="text" class="button_style">支付</el-button>
         </div>
       </div>
     </div>
@@ -440,11 +440,16 @@ export default {
 }
 
 .button_style {
-  width: 100px;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  margin-top: 15px;
+  font-size: 14px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  letter-spacing: 1px;
+  padding: 9px;
 }
 
 .add_address_button{
@@ -457,10 +462,14 @@ export default {
 }
 
 .address_button_style{
+  display: flex;
+  justify-content: center;
   width: 90px;
   font-size: 13px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  letter-spacing: 1px;
+  padding: 8px;
 }
 </style>

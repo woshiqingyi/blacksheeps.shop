@@ -11,17 +11,21 @@
           <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
           <div class="per_order_content_productdetails">
             <div class="per_productdetails">红楼梦书籍</div>
-            <div class="per_productdetails">RMB 100</div>
-            <div class="per_productdetails">数量 x 1</div>
+            <div class="per_productdetails">RMB 100
+              <!-- <span class='per_productdetails_price'>100</span> -->
+            </div>
+            <div class="per_productdetails">数量
+              <span class="per_number"> x 1</span>
+            </div>
           </div>
           <div class="per_order_content_price">
             <div class="per_order_content_price_details">RMB 100</div>
-            <div class="per_order_content_price_details">（含运费）</div>
+            <div class="per_order_content_price_details">（含运费）</div> 
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <el-button type="mini" class="per_order_content_remark_details">订单详情</el-button>
-            <el-button type="mini" class="per_order_content_remark_details" style="margin-left:0px;" @click="onLogistics" >查看物流</el-button>
+            <el-button type="text"  class="per_order_content_remark_details">订单详情</el-button>
+            <el-button type="text" class="per_order_content_remark_details" style="margin-left:0px;" @click="onLogistics" >查看物流</el-button>
           </div>
         </div>
       </div>
@@ -35,7 +39,9 @@
           <div class="per_order_content_productdetails">
             <div class="per_productdetails">红楼梦书籍</div>
             <div class="per_productdetails">RMB 100</div>
-            <div class="per_productdetails">数量 x 1</div>
+            <div class="per_productdetails">数量
+              <span class="per_number"> x 1</span>
+            </div>
           </div>
           <div class="per_order_content_price">
             <div class="per_order_content_price_details">RMB 100</div>
@@ -43,13 +49,11 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <el-button type="mini"  class="per_order_content_remark_details">订单详情</el-button>
-            <el-button type="mini" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
+            <el-button type="text"  class="per_order_content_remark_details">订单详情</el-button>
+            <el-button type="text" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
           </div>
         </div>
       </div>
-
-      
     </div>
   </div>
 </template>
@@ -67,6 +71,11 @@ export default {
 </script>
 
 <style scoped>
+.per_number{
+  color: rgba(160, 23, 23, 0.89);
+  font-weight: 600
+}
+
 .order_layout {
   display: flex;
   justify-content: center;
@@ -85,7 +94,6 @@ export default {
   width: 900px;
   height: 280px;
   border-bottom: 1px #bed0e2 solid;
-  
  /*  border:1px #90b8df solid; */
 }
 
@@ -135,6 +143,11 @@ export default {
   margin-top: 15px;
 }
 
+.per_productdetails_price{
+  color: rgba(160, 23, 23, 0.89);
+  font-weight: 600
+}
+
 .per_order_content_price {
   height: 100%;
   width: 150px;
@@ -160,6 +173,7 @@ export default {
   width: 80px;
   display: flex;
   justify-content: center;
+  font-weight: 600;
 }
 
 .per_order_content_remark_details {

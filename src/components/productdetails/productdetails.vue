@@ -42,7 +42,7 @@
 
         <div class="button_layout">
           <el-button type="mini" class="button_style1" @click="addShoppingCart" style="margin-right:15px;">添入购物车</el-button>
-          <el-button type="mini" class="button_style2" @click="payGoods">直接购买</el-button>
+          <el-button type="text" class="button_style2" @click="payGoods">直接购买</el-button>
         </div>
       </div>
     </div>
