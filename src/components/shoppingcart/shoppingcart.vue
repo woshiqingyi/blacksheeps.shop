@@ -17,7 +17,9 @@
               @click="reduceNumber"
               src="../../../static/image/icon/reduce.png"
             >
-            <div>数量 {{number}}</div>
+            <div>数量
+               <span class="per_number_style">{{number}}</span>
+            </div>
             <img class="number_icon" @click="addNumber" src="../../../static/image/icon/add.png">
           </div>
           <div class="product_content">总金额 100</div>
@@ -37,7 +39,10 @@
               @click="reduceNumber"
               src="../../../static/image/icon/reduce.png"
             >
-            <div>数量 {{number}}</div>
+            <div>
+              数量 
+              <span class="per_number_style">{{number}}</span>
+            </div>
             <img class="number_icon" @click="addNumber" src="../../../static/image/icon/add.png">
           </div>
           <div class="product_content">总金额 100</div>
@@ -135,7 +140,7 @@ export default {
   margin-top: 25px;
   margin-left: 100px;
   font-size: 15px;
-  color: gray;
+ /*  color: gray; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,7 +160,7 @@ export default {
   margin-top: 25px;
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+ /*  font-weight: 600; */
   width: 150px;
 }
 
@@ -163,12 +168,17 @@ export default {
   margin-top: 25px;
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .number_icon {
   width: 20px;
   height: 20px;
+}
+
+.per_number_style{
+  color: rgba(160, 23, 23, 0.89);
+  font-weight: 600
 }
 
 .operation_style {
@@ -181,6 +191,7 @@ export default {
   color: #3e86ca;
   margin-right: 10%;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 /* .line_style{
