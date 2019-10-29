@@ -5,6 +5,8 @@ import login from '@/components/login'
 import introduce from '@/components/productpage/introduce'
 import manage from '@/components/manage'
 import register from '@/components/register'
+import accounthome from '@/components/accounthome'
+
 import shoppingcart from '@/components/shoppingcart/shoppingcart'
 import productdetails from '@/components/productdetails/productdetails'
 import order from '@/components/order/order'
@@ -53,6 +55,11 @@ export default new Router({
           path: '/register',
           name: 'register',
           component: register
+        },
+        {
+          path: '/accounthome',
+          name: 'accounthome',
+          component: accounthome
         },
         {
           path: '/shoppingcart',

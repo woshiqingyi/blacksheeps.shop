@@ -132,7 +132,7 @@ export default {
     // },
     navigateMenu(Choosed) {
       if (Choosed == "onAccounts") {
-        this.$router.push({ name: "accountmanage" });
+        this.$router.push({ name: "accounthome" });
       }
       if (Choosed == "onShoppingCart") {
         this.$router.push({ name: "shoppingcart" });

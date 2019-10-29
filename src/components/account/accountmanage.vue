@@ -92,6 +92,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: whitesmoke;
+  /* border:1px rgb(194, 219, 231) solid; */
   border-radius: 4px;
 }
 
