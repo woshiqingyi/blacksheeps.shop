@@ -10,8 +10,8 @@
       <!-- <div class="line_style"></div> -->
       <div class="introduce_goods_title">货架上所有商品</div>
       <div class="product_line_style"></div>
-      <div class="introduce_goods_mini_title">（生活用品类）</div>
-      
+      <div class="introduce_goods_mini_title">生活用品类</div>
+        
       <div class="introduce_goods">
          <product></product>
       </div>
@@ -87,12 +87,15 @@ export default {
 
 .introduce_goods_mini_title{
   margin-bottom: 15px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   display: flex;
   justify-content:center;
-  color: #1468b6;
-
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  background-color: #6c9fce;
+  color: white;
 }
 
 .introduce_goods {
