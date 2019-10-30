@@ -6,60 +6,40 @@
         <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
         <div class="per_product_content">
           <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="per_product">
-      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+    <div class="per_product" >
+      <div class="per_mini_product" id="2" :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
         <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
         <div class="per_product_content">
           <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="per_product">
-      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+    <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
         <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
         <div class="per_product_content">
           <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
         </div>
       </div>
     </div>
 
-      <div class="per_product">
-      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
-        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
-        <div class="per_product_content">
-          <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
-        </div>
-      </div>
-    </div>
+    
 
-      <div class="per_product">
-      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
-        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
-        <div class="per_product_content">
-          <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="per_product">
-      <div class="per_mini_product" id="2"  :style="id2 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
-        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
-        <div class="per_product_content">
-          <div class="per_product_title">{{data1}}</div>
-          <div class="per_product_price">RMB 1000</div>
-        </div>
-      </div>
-    </div>
 
   </div>
   </div>
@@ -69,10 +49,11 @@
 export default {
   data(){
     return{
-     data1:'你是',
+     data1:'红楼梦',
      ChoosedID:'',
      id1:'1',
      id2:'2',
+     id3:'3',
      Style1:'box-shadow:0 0 12px 3px rgb(219, 219, 219),2px 2px 12px 3px rgb(223, 223, 223);transition:all 0.2s linear;transform: translate3d(0,-0.5%,0);',
      Style2:'transition:all 0.2s linear;transform: translate3d(0,0,0);'
     }
@@ -111,13 +92,16 @@ export default {
 .product_layout {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
 }
 
 .per_product {
   width: 33.3%;
   height: 320px;
   /* height: 320px; */
-  background-color: rgb(245, 245, 245);
+  /* border-top: 1px rgb(182, 208, 238) solid;
+  border-bottom: 1px rgb(182, 208, 238) solid; */
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,19 +132,20 @@ export default {
   justify-content: center;
   align-items: center;
   font-weight: 600;
-
 }
 
 .per_product_title{
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 15.5px;
+ 
 }
 
 .per_product_price{
-  margin-left: 20px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #3e86ca;
+  margin-left: 10px;
+  font-size: 15.5px;
+}
+
+.per_price_number{
+  color: rgba(160, 23, 23, 0.89);
 }
 
 </style>

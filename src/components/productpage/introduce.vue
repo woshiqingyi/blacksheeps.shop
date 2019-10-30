@@ -9,10 +9,14 @@
       </div>
       <!-- <div class="line_style"></div> -->
       <div class="introduce_goods_title">货架上所有商品</div>
+      <div class="product_line_style"></div>
       <div class="introduce_goods_mini_title">（生活用品类）</div>
+      
       <div class="introduce_goods">
          <product></product>
       </div>
+      <!-- <div class="interval_style"></div> -->
+     
     </div>
     
   </div>
@@ -46,7 +50,7 @@ export default {
   flex-direction: column;
   align-items: center;
   background-color: rgb(240, 240, 240);
-  border-bottom: 1px rgb(182, 208, 238) solid;
+  /* border-bottom: 1px rgb(182, 208, 238) solid; */
   /* border-bottom: 1px rgb(230, 230, 230) solid; */
   /* background-color: rgb(248, 244, 240); */
   /* background-color: rgb(241, 240, 236); */
@@ -58,6 +62,13 @@ export default {
   letter-spacing: 2px;
 }
 
+.product_line_style{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-top: 1px rgb(219, 219, 219) solid;
+  width: 500px;
+}
+
 .line_style{
   margin-top: 15px;
   border-top: 1px rgb(219, 219, 219) solid;
@@ -65,8 +76,8 @@ export default {
 }
 
 .introduce_goods_title{
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-top: 35px;
+  margin-bottom: 20px;
   margin-left: 10px;
   font-size: 20px;
   font-weight: 600;
@@ -92,6 +103,13 @@ export default {
   max-width: 1300px;
   background-color: whitesmoke;
   /* border: 1px rgb(212, 212, 212) solid; */
+}
+
+.interval_style{
+  height: 30px;
+  background-color: whitesmoke;
+  width: 70%
+  
 }
 
 </style>

@@ -199,7 +199,7 @@ export default {
 
 .layout {
   width: 100%;
-  height: 0.8rem;
+  height: 0.67rem;
   background-color: rgb(83, 83, 83);
   display: flex;
   flex-direction: row-reverse;
@@ -223,8 +223,8 @@ export default {
   border-radius: 50%;
 }
 .icon_style {
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 0.4rem;
+  width: 0.4rem;
 }
 
 .menu_classify_layout {
@@ -238,7 +238,7 @@ export default {
 .menu_classify {
   width: 60%;
   height: 0.8rem;
-  font-size: 15px;
+  font-size: 14.5px;
   color: white;
   display: flex;
   align-items: center;

@@ -12,7 +12,6 @@
           <div class="per_order_content_productdetails">
             <div class="per_productdetails">红楼梦书籍</div>
             <div class="per_productdetails">RMB 100
-              <!-- <span class='per_productdetails_price'>100</span> -->
             </div>
             <div class="per_productdetails">数量
               <span class="per_number"> x 1</span>
