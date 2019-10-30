@@ -8,15 +8,15 @@
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
       </div>
       <!-- <div class="line_style"></div> -->
-      <div class="introduce_goods_title">货架上所有商品</div>
+      <div class="introduce_goods_title">货架上所有商品
+        <img class="icon_style" src="../../../static/image/icon/up.png" alt="">
+      </div>
       <div class="product_line_style"></div>
       <div class="introduce_goods_mini_title">生活用品类</div>
-        
       <div class="introduce_goods">
          <product></product>
       </div>
       <!-- <div class="interval_style"></div> -->
-     
     </div>
     
   </div>
@@ -83,6 +83,10 @@ export default {
   font-weight: 600;
   display: flex;
   justify-content: center;
+}
+
+.icon_style{
+  height: 23px;
 }
 
 .introduce_goods_mini_title{
