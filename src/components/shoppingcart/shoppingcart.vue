@@ -53,7 +53,7 @@
     <div class="settlement_style">
       <div class="payment_style">
         <div>RMB 1000</div>
-        <el-button type="mini" class="button_style">结算</el-button>
+        <el-button type="text" class="button_style">结算</el-button>
       </div>
       <div class="freight_style">（含运费 5RMB）</div>
     </div>
@@ -224,11 +224,15 @@ export default {
 }
 
 .button_style {
+  display: flex;
+  justify-content: center;
   width: 100px;
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 15px;
+  font-size: 14px;
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  letter-spacing: 1px;
+  padding: 10px;
 }
 </style>
