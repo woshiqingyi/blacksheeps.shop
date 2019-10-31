@@ -6,7 +6,15 @@
         <div class="introduce_content" >网站售卖一些二手商品，涉及范围是家具、书籍、生活用品</div>
         <div class="introduce_content">低价出售</div>
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
+        <img class="icon_more" src="../../../static/image/icon/more.png" alt="">
       </div>
+      <!-- <el-drawer
+        title="我是标题"
+        :visible.sync="drawer"
+        direction="ttb"
+        :before-close="handleClose">
+        <span>我来啦!</span>
+      </el-drawer> -->
       <!-- <div class="line_style"></div> -->
       <div class="introduce_goods_title">货架上所有商品
         <img class="icon_style" src="../../../static/image/icon/up.png" alt="">
@@ -25,7 +33,13 @@
 <script>
 import product from "@/components/productpage/product";
 export default {
-   components: { product },
+  data(){
+    return{
+      drawer:''
+    }
+  },
+
+  components: { product },
 };
 </script>
 
@@ -45,7 +59,7 @@ export default {
 
 .introduce_top{
   width: 100%;
-  height: 200px;
+  /* height: 200px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,6 +101,10 @@ export default {
 
 .icon_style{
   height: 23px;
+}
+
+.icon_more{
+  width: 34px;
 }
 
 .introduce_goods_mini_title{
