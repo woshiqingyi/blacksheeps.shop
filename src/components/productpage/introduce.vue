@@ -3,43 +3,54 @@
     <div class="introduce_style">
       <div class="introduce_top">
         <div class="c_main_title" style="margin-top: 35px;">简介</div>
-        <div class="introduce_content" >网站售卖一些二手商品，涉及范围是家具、书籍、生活用品</div>
+        <div class="introduce_content">网站售卖一些二手商品，涉及范围是家具、书籍、生活用品</div>
         <div class="introduce_content">低价出售</div>
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
-        <img class="icon_more" src="../../../static/image/icon/more.png" alt="">
+        <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt />
       </div>
-      <!-- <el-drawer
-        title="我是标题"
-        :visible.sync="drawer"
-        direction="ttb"
-        :before-close="handleClose">
-        <span>我来啦!</span>
-      </el-drawer> -->
-      <!-- <div class="line_style"></div> -->
-      <div class="introduce_goods_title">货架上所有商品
-        <img class="icon_style" src="../../../static/image/icon/up.png" alt="">
+      <div class="introduce_goods_title">
+        货架上所有商品
+        <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/up.png" alt />
       </div>
+      <div></div>
       <div class="product_line_style"></div>
       <div class="introduce_goods_mini_title">生活用品类</div>
       <div class="introduce_goods">
-         <product></product>
+        <product></product>
       </div>
-      <!-- <div class="interval_style"></div> -->
+      <el-dialog :center='true' top='22vh' :visible.sync="DialogMoreIntroduce" width="700px" >
+        <div class="introduce_more_content" >网站售卖一些二手商品，涉及范围是家具、书籍、生活用品，全部都是低价出售，售卖的商品全是私人物品，无利润。</div>
+      </el-dialog>
+
+      <!-- <el-dialog title="" :center='true' top='22vh' :visible.sync="DialogClassification" width="500px" >
+          
+      </el-dialog> -->
+      
+      <!-- <transition name='fade' enter-active-class="fade-enter-active" leave-active-class="fade-leave-active">
+        <div v-show="Is">hello</div>
+      </transition>
+      <button @click="click">点击1111</button> -->
     </div>
-    
   </div>
 </template>
 
 <script>
 import product from "@/components/productpage/product";
 export default {
-  data(){
-    return{
-      drawer:''
+  data() {
+    return {
+      DialogMoreIntroduce:false,
+      DialogClassification:false
+    };
+  },
+
+  methods:{
+    click(){
+      this.Is = !this.Is
     }
   },
 
-  components: { product },
+  components: { product }
 };
 </script>
 
@@ -54,10 +65,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.introduce_top{
+.introduce_top {
   width: 100%;
   /* height: 200px; */
   display: flex;
@@ -70,26 +80,26 @@ export default {
   /* background-color: rgb(241, 240, 236); */
 }
 
-.introduce_content{
+.introduce_content {
   margin-top: 20px;
   font-size: 15px;
   letter-spacing: 2px;
 }
 
-.product_line_style{
+.product_line_style {
   margin-top: 10px;
   margin-bottom: 15px;
   border-top: 1px rgb(219, 219, 219) solid;
   width: 500px;
 }
 
-.line_style{
+.line_style {
   margin-top: 15px;
   border-top: 1px rgb(219, 219, 219) solid;
   width: 300px;
 }
 
-.introduce_goods_title{
+.introduce_goods_title {
   margin-top: 35px;
   margin-bottom: 20px;
   margin-left: 10px;
@@ -99,20 +109,28 @@ export default {
   justify-content: center;
 }
 
-.icon_style{
+.introduce_more_content{
+  height: 200px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: gray
+}
+
+.icon_style {
   height: 23px;
 }
 
-.icon_more{
+.icon_more {
   width: 34px;
 }
 
-.introduce_goods_mini_title{
+.introduce_goods_mini_title {
   margin-bottom: 15px;
   font-size: 15px;
   font-weight: 600;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   padding: 10px;
   border-radius: 10px;
   letter-spacing: 2px;
@@ -130,11 +148,20 @@ export default {
   /* border: 1px rgb(212, 212, 212) solid; */
 }
 
-.interval_style{
-  height: 30px;
-  background-color: whitesmoke;
-  width: 70%
-  
+.fade-enter{
+  opacity: 0;
+}
+
+.fade-enter-active{
+  transition: opacity 1.5s;
+}
+
+.fade-leave-to{
+  opacity: 0;
+}
+
+.fade-leave-active{
+  transition: opacity 1.5s;
 }
 
 </style>

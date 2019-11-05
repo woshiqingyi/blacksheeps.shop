@@ -24,9 +24,22 @@ export default {
   created(){
     var Width = document.documentElement.clientWidth;
     var Height = document.documentElement.clientHeight
-    console.log('Width',Width)
-    console.log('Height',Height)
-    // this.Height = Height
+    // $.ajax({
+    //   disabledLoading: true,
+    //   type: "GET",
+    //   traditional: false,
+    //   url: "http(s)://api02.aliyun.venuscn.com/area/all",
+    //   dataType: "JSON",
+    //   data: {
+    //     __Token__: '',
+    //     Data: { level: "1", page: "1", size: "50" }
+    //   },
+    //   crossDomain: true,
+    //   success: function(data) {
+    //     console.log("data", data);
+    //   },
+    // });
+
   },
   methods:{
     onAccount(){
