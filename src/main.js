@@ -9,10 +9,11 @@ import './assets/styles/iconfont.css'
 import ElementUI from 'element-ui'
 import '../node_modules/element-ui/lib/theme-chalk/index.css'
 import globaldate from '@/assets/globaldate'
-Vue.prototype.Global = globaldate
+Vue.prototype.$ = globaldate
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+
 
 /* eslint-disable no-new */
 new Vue({

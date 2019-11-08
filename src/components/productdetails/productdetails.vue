@@ -41,8 +41,8 @@
            
 
         <div class="button_layout">
-          <el-button type="mini" class="button_style1" @click="addShoppingCart" style="margin-right:15px;">添入购物车</el-button>
-          <el-button type="text" class="button_style2" @click="payGoods">直接购买</el-button>
+          <button type="mini" class="button_style" @click="addShoppingCart" style="margin-right:15px;">添入购物车</button>
+          <button class="c_button" @click="payGoods">直接购买</button>
         </div>
       </div>
     </div>
@@ -191,7 +191,7 @@ export default {
   display: flex;
 }
 
-.button_style2 {
+.c_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,9 +202,10 @@ export default {
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+  border-radius: 3px;
 }
 
-.button_style1 {
+.button_style{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,6 +216,8 @@ export default {
   font-weight: 600;
   background-color: white;
   color: #3e86ca;
+  border: 1px #c0cdd8 solid;
+  border-radius: 3px;
   /* border: 1px #3e86ca solid; */
 }
 

@@ -45,8 +45,8 @@
     >
       <el-input type="textarea" :rows="4" placeholder="请输入内容" v-model="textarea"></el-input>
       <div class="button_layout">
-        <el-button type="text" class="button_style" @click='DialogLeaveMessage = false'>关闭</el-button>
-        <el-button type="text" class="button_style" @click='DialogLeaveMessage = false'>确认</el-button>
+        <button class="c_button" style="margin-right:10px;" @click='DialogLeaveMessage = false'>关闭</button>
+        <button class="c_button" @click='DialogLeaveMessage = false'>确认</button>
       </div>
     </el-dialog>
   </div>
@@ -130,23 +130,7 @@ export default {
   justify-content:flex-end;
 }
 
-.button_style {
-  display: flex;
-  justify-content: center;
+.c_button{
   width: 80px;
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #3e86ca;
-  color: white;
-  letter-spacing: 1px;
-  padding: 7px;
 }
-
-/* .border_line{
-  margin-top: 15px;
-  border-top: 1px rgb(231, 231, 231) solid;
-  width: 450px;
-  
-} */
 </style>

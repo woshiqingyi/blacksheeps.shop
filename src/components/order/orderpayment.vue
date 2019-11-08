@@ -20,7 +20,7 @@
               <img :id="item.ID" :src="Tick" v-show="ChooseID == item.ID ? true: false">
             </span>
           </button>
-          <el-button class="address_button_style" type="text" @click="addAddress">新增地址</el-button>
+          <button class="c_button" style="padding:4px;font-size:13px;border-radius:3px;" @click="addAddress">新增地址</button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
@@ -111,17 +111,17 @@
           <div class="pay_amount_address">寄送至： 福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002汇创网融 收货人 郑晓峰 18861828564</div>
         </div>
         <div class="pay_amount_layout">
-           <el-button type="text" class="button_style">支付</el-button>
+           <button class="c_button">支付</button>
         </div>
       </div>
     </div>
 
-    <el-dialog title="提示" :visible.sync="DialogAddress" width="30%" center>
+    <el-dialog title="提示" :visible.sync="DialogAddress" width="450px" center>
       <span>需要注意的是内容是默认不居中的</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button class="add_address_button" type="mini" @click="DialogAddress = false">取 消</el-button>
-        <el-button class="add_address_button" type="mini" @click="DialogAddress = false">确 定</el-button>
-      </span>
+      <div class="button_layout">
+        <button class="c_button" style='margin-right:10px;'  @click="DialogAddress = false">取 消</button>
+        <button class="c_button"  @click="DialogAddress = false">确 定</button>
+      </div>
     </el-dialog>
   </div>
 
@@ -181,6 +181,16 @@ export default {
 </script>
 
 <style scoped>
+.c_button{
+  padding:6px;
+}
+
+.button_layout{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .order_payment {
   display: flex;
   justify-content: center;

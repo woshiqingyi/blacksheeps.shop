@@ -53,7 +53,7 @@
     <div class="settlement_style">
       <div class="payment_style">
         <div>RMB 1000</div>
-        <el-button type="text" class="button_style">结算</el-button>
+        <button class="c_button" @click="payGoods">结算</button>
       </div>
       <div class="freight_style">（含运费 5RMB）</div>
     </div>
@@ -77,12 +77,22 @@ export default {
     addNumber() {
       var number = ++this.number;
       this.number = number;
+    },
+
+    payGoods(){
+      this.$router.push({name:'orderpayment'})
     }
   }
 };
 </script>
 
 <style scoped>
+.c_button{
+  width: 100px;
+  padding: 7px;
+  border-radius: 3px;
+  font-size: 16px;
+}
 .shoppingcart_layout {
   display: flex;
   flex-direction: column;
@@ -223,16 +233,5 @@ export default {
   font-size: 20px;
 }
 
-.button_style {
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #3e86ca;
-  color: white;
-  letter-spacing: 1px;
-  padding: 10px;
-}
+
 </style>

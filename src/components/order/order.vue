@@ -23,8 +23,8 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <el-button type="text"  class="per_order_content_remark_details">订单详情</el-button>
-            <el-button type="text" class="per_order_content_remark_details" style="margin-left:0px;" @click="onLogistics" >查看物流</el-button>
+            <button  class="c_button">订单详情</button>
+            <button  class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
       </div>
@@ -48,8 +48,8 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <el-button type="text"  class="per_order_content_remark_details">订单详情</el-button>
-            <el-button type="text" style="margin-left:0px;" @click="onLogistics" class="per_order_content_remark_details">查看物流</el-button>
+            <button class="c_button">订单详情</button>
+            <button class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
       </div>
@@ -72,7 +72,8 @@ export default {
 <style scoped>
 .per_number{
   color: rgba(160, 23, 23, 0.89);
-  font-weight: 600
+  font-weight: 600;
+  
 }
 
 .order_layout {
@@ -185,7 +186,8 @@ export default {
   background-color: #3e86ca;
   color: white;
   letter-spacing: 1px;
-  padding: 8px;
+  padding: 6px;
+  border-radius:5px;
 }
 
 .per_order_content_remark_logistic {

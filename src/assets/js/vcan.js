@@ -3,14 +3,14 @@
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global.vcan = factory());
 }(this,(function () { 
-    Array.prototype.remove = function(val) {
-        for(var i=0; i<this.length; i++) {
-          if(this[i] == val) {
-            this.splice(i, 1);
-            break;
-          }
-        }
-    };
+    // Array.prototype.remove = function(val) {
+    //     for(var i=0; i<this.length; i++) {
+    //       if(this[i] == val) {
+    //         this.splice(i, 1);
+    //         break;
+    //       }
+    //     }
+    // };
     window.vcan = window.$v =
     {
         Debug:function(){

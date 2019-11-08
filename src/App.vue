@@ -23,9 +23,19 @@ export default {
   font-weight: 600;
   font-size: 20px;
 }
-.c_button {
-  color: white;
+
+.c_button{
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
   background-color: #3e86ca;
+  color: white;
+  letter-spacing: 1px;
+  padding: 6px;
+  border-radius:5px;
 }
 .c_text_button {
   font-size: 12px;

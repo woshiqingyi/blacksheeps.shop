@@ -63,16 +63,17 @@
         </el-select>
       </div>
       <div class="button_layout">
-        <el-button
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
+          style="margin-right:10px;"
           @click="PersonInfo.dialogAccountInfo = false"
-        >关闭</el-button>
-        <el-button
+        >关闭</button>
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
           @click="PersonInfo.dialogAccountInfo = false"
-        >确认</el-button>
+        >确认</button>
       </div>
     </el-dialog>
 
@@ -90,16 +91,17 @@
         <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入昵称" style="width:370px;"></el-input>
       </div>
       <div class="button_layout">
-        <el-button
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
           @click="PersonInfo.dialogBindAccount = false"
-        >关闭</el-button>
-        <el-button
+          style="margin-right:10px;"
+        >关闭</button>
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
           @click="PersonInfo.dialogBindAccount = false"
-        >确认</el-button>
+        >确认</button>
       </div>
     </el-dialog>
 
@@ -122,28 +124,28 @@
         <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入联系地址" style="width:370px;"></el-input>
       </div>
        <div class="button_layout">
-        <el-button
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
           @click="PersonInfo.dialogReceiveAddress = false"
-        >关闭</el-button>
-        <el-button
+          style="margin-right:10px;"
+        >关闭</button>
+        <button
           type="text"
-          class="button_style"
+          class="c_button"
           @click="PersonInfo.dialogReceiveAddress = false"
-        >确认</el-button>
+        >确认</button>
       </div>
     </el-dialog>
   </div>
 </template>
-
 <script>
 
 export default {
   data() {
     return {
-      GenderItems:this.Global.GenderItems,
-      ProvinceItems:this.Global.ProvinceItems,
+      GenderItems:this.$.GenderItems,
+      ProvinceItems:this.$.ProvinceItems,
       PersonInfo: {
         dialogAccountInfo: false,
         dialogBindAccount: false,
@@ -151,15 +153,20 @@ export default {
         nickname: "",
         gender: "",
         city: ""
-      }
+      },
     };
   },
   created(){
-    console.log('1111',Global)
+   
+    console.log(this.$.Fun(100))
+    console.log(this.$.ProvinceItems)
   }
 };
 </script>
 <style scoped>
+.c_button{
+  padding:6px;
+}
 .account_home {
   display: flex;
   flex-direction: column;
