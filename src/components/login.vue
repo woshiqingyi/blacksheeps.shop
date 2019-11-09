@@ -24,21 +24,21 @@ export default {
   created(){
     var Width = document.documentElement.clientWidth;
     var Height = document.documentElement.clientHeight
-    // $.ajax({
-    //   disabledLoading: true,
-    //   type: "GET",
-    //   traditional: false,
-    //   url: "http(s)://api02.aliyun.venuscn.com/area/all",
-    //   dataType: "JSON",
-    //   data: {
-    //     __Token__: '',
-    //     Data: { level: "1", page: "1", size: "50" }
-    //   },
-    //   crossDomain: true,
-    //   success: function(data) {
-    //     console.log("data", data);
-    //   },
-    // });
+    $.ajax({
+      disabledLoading: true,
+      type: "Post",
+      traditional: false,
+      url: "https://www.blacksheeps.cn/user/login.do",
+      dataType: "json",
+      data: {
+        __Token__: '',
+        Data: { username: "text", password:"text" }
+      },
+      crossDomain: true,
+      success: function(data) {
+        console.log("data", data);
+      },
+    });
 
   },
   methods:{

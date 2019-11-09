@@ -67,8 +67,8 @@
         <button class="c_button"  @click="DialogDeleteCollection = false">确 定</button>
       </div>
     </el-dialog>
-
   </div>
+
 </template>
 <script>
 export default {

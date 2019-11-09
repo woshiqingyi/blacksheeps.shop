@@ -23,7 +23,7 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <button  class="c_button">订单详情</button>
+            <button  class="c_button" @click="onOrderDetails">订单详情</button>
             <button  class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
@@ -48,7 +48,7 @@
           </div>
           <div class="per_order_content_remark">
             <div class="per_order_content_remark_status">交易成功</div>
-            <button class="c_button">订单详情</button>
+            <button class="c_button" @click="onOrderDetails">订单详情</button>
             <button class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
@@ -64,6 +64,10 @@ export default {
   methods:{
     onLogistics(){
       this.$router.push({name:'orderlogistics'})
+    },
+
+    onOrderDetails(){
+       this.$router.push({name:'productdetails'})
     }
   }
 };
