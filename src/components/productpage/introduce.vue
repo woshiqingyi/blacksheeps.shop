@@ -8,9 +8,10 @@
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
         <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt />
       </div>
+      
       <div class="introduce_goods_title">
-        货架上所有商品
-        <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/up.png" alt />
+        <div>货架上所有商品</div>
+        <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt />
       </div>
       <div></div>
       <div class="product_line_style"></div>
@@ -107,6 +108,13 @@ export default {
   font-weight: 600;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.icon_style{
+  margin-left: 10px;
+  width: 20px;
+
 }
 
 .introduce_more_content{
