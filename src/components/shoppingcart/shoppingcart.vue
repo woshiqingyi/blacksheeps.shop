@@ -133,6 +133,7 @@ export default {
   border-bottom:1px rgb(226, 226, 226) solid; */
   border-top: 1px #bed0e2 solid;
   border-bottom: 1px #bed0e2 solid;
+
 }
 
 .product_left {
