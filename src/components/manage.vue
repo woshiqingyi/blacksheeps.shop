@@ -54,6 +54,8 @@
       </div>
 
     </div>
+
+    <a class='record_number' target="view_window" href="http://www.beian.miit.gov.cn/" >苏ICP备19063606号</a>
     <!-- 帮助中心
       1.账户管理
       2.购物指南
@@ -258,7 +260,7 @@ export default {
   border-top: 1px rgb(230, 230, 230) solid;
   display: flex;
   justify-content: center;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .per_mini_menu {
@@ -268,6 +270,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.record_number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 70px;
 }
 
 .main_title{

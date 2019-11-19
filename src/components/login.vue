@@ -1,3 +1,4 @@
+
 <template>
   <div class="login_layout" :class="{height:Height}">
     <div class="login_style">
@@ -9,6 +10,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data(){
@@ -26,13 +28,14 @@ export default {
     var Height = document.documentElement.clientHeight
     $.ajax({
       disabledLoading: true,
-      type: "Post",
+      type: "Get",
       traditional: false,
-      url: "https://www.blacksheeps.cn/user/login.do",
+      url: "https://www.blacksheeps.cn/manage/category/get_category.do",
       dataType: "json",
+      async:false,
       data: {
         __Token__: '',
-        Data: { username: "text", password:"text" }
+        Data: {}
       },
       crossDomain: true,
       success: function(data) {
@@ -50,16 +53,16 @@ export default {
     }
   },
 
-  watch:{
-    Account:{
-       handler(Values) {
-         if(Values.UserName && ValuesPassword){
+  // watch:{
+  //   Account:{
+  //      handler(Values) {
+  //        if(Values.UserName && ValuesPassword){
 
-         }
-       },
-      deep:true
-    }
-  }
+  //        }
+  //      },
+  //     deep:true
+  //   }
+  // }
 };
 </script>
 
@@ -116,4 +119,6 @@ export default {
 /* div {
   margin: auto;
 } */
+
+
 </style>
