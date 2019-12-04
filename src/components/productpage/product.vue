@@ -59,7 +59,6 @@ export default {
     // if (Width > 500) Width = 500;
     // var baseFontSize = (Width * 100) / 750;
     // document.documentElement.style.fontSize = baseFontSize + "px";
-
     var Width = document.documentElement.clientWidth;
     
   

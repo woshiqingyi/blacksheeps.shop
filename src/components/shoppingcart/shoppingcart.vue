@@ -27,7 +27,7 @@
       </div>
       <div class="operation_style">移除购物车</div>
     </div>
-    <div class="per_product">
+    <!-- <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
         <div class="product_details">
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="operation_style">移除购物车</div>
-    </div>
+    </div> -->
     <div class="settlement_style">
       <div class="payment_style">
         <div>RMB 1000</div>

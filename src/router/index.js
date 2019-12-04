@@ -23,6 +23,10 @@ import contactme from '@/components/othersmatter/contactme'
 import aftersale from '@/components/othersmatter/aftersale'
 import returnedpurchase from '@/components/othersmatter/returnedpurchase'
 import leavemessage from '@/components/othersmatter/leavemessage'
+import acountmanage from '@/components/othersmatter/acountmanage'
+import orderoperation from '@/components/othersmatter/orderoperation'
+
+
 
 import collection from '@/components/collection'
 
@@ -110,6 +114,17 @@ export default new Router({
           path: '/leavemessage',
           name: 'leavemessage',
           component: leavemessage
+        },
+        {
+          path: '/acountmanage',
+          name: 'acountmanage',
+          component: acountmanage
+        },
+
+        {
+          path: '/orderoperation',
+          name: 'orderoperation',
+          component: orderoperation
         },
         {
           path: '/orderpayment',

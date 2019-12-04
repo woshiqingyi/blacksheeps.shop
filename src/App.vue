@@ -48,6 +48,7 @@ export default {
 .c_other_content {
   display: flex;
   justify-content: center;
+  /* text-indent:2em; */
   margin-top: 20px;
   font-size: 15px;
   letter-spacing: 1px;

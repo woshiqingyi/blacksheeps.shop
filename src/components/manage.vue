@@ -9,7 +9,7 @@
             class="navigation"
             @command="navigateMenu"
           >
-            <img class="icon_style" src="../../static/image/icon/myaccount.png">
+            <img class="icon_style" src="../../static/image/icon/myaccount.png" />
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
               <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
@@ -22,7 +22,7 @@
             <!-- <el-button class="" type="text">商品分类</el-button>
             <el-button class="" type="text">我的收藏</el-button>
             <el-button class="" type="text">我的订单</el-button>-->
-            <div class="per_menu" @click="onIntroduce">商品分类</div>
+            <div class="per_menu" @click="onIntroduce">货架商品</div>
             <div class="per_menu" @click="onCollection">我的收藏</div>
             <div class="per_menu" @click="onOrder">我的订单</div>
           </div>
@@ -30,20 +30,19 @@
         <div class="icon_style"></div>
       </div>
     </div>
-    <router-view/>
+    <router-view />
     <div class="manage_bottom_layout">
-      
       <div class="per_mini_menu">
         <div class="main_title">帮助中心</div>
-        <div class="mini_title">账户管理</div>
-        <div class="mini_title">购物指南</div>
-        <div class="mini_title">订单操作</div>
+        <div class="mini_title" @click="onAccountManage">账户管理</div>
+        <!-- <div class="mini_title">购物指南</div> -->
+        <div class="mini_title" @click="onOrderOperation">订单操作</div>
       </div>
 
       <div class="per_mini_menu">
         <div class="main_title">服务支持</div>
         <div class="mini_title" @click="onAfterSale">售后服务</div>
-        <div class="mini_title" @click='onReturnePurchase'>七天无理由退货</div>
+        <div class="mini_title" @click="onReturnePurchase">七天无理由退货</div>
       </div>
 
       <div class="per_mini_menu">
@@ -52,21 +51,20 @@
         <div class="mini_title" @click="onContactMe">联系我</div>
         <div class="mini_title" @click="onLeaveMessage">留言板</div>
       </div>
-
     </div>
 
-    <a class='record_number' target="view_window" href="http://www.beian.miit.gov.cn/" >苏ICP备19063606号</a>
-    <!-- 帮助中心
-      1.账户管理
-      2.购物指南
-      3.订单操作
-      服务支持
-      1.售后服务
-      2.七天无理由退货
-      关于本网站
-      1.了解网站的建设的初衷
-      2.联系我
-    3.balcksheeps的价值观-->
+    <div class="bottom_layout">
+      <div class="line_style"></div>
+      <div class="bottom_remark">
+        <a class="a_style" target="view_window" href="http://www.beian.miit.gov.cn/">苏ICP备19063606号</a>
+        <img class="icon_remark_style" src="../../static/image/icon/beian.png" alt />
+        <a
+          class="a_style"
+          target="_blank"
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32108102010390"
+        >苏公网安备 32108102010390号</a>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -156,27 +154,33 @@ export default {
       this.$router.push({ name: "order" });
     },
 
-    onAfterSale(){
-       this.$router.push({name:'aftersale'})
+    onAccountManage(){
+      this.$router.push({ name: "acountmanage" });
     },
 
-    onReturnePurchase(){
-       this.$router.push({name:'returnedpurchase'})
+    onOrderOperation(){
+      this.$router.push({ name: "orderoperation" });
     },
 
-    onOriginalIntention(){
-      this.$router.push({name:'originalintention'})
+    onAfterSale() {
+      this.$router.push({ name: "aftersale" });
     },
 
-    onContactMe(){
-      this.$router.push({name:'contactme'})
+    onReturnePurchase() {
+      this.$router.push({ name: "returnedpurchase" });
     },
 
-    onLeaveMessage(){
-      this.$router.push({name:'leavemessage'})
+    onOriginalIntention() {
+      this.$router.push({ name: "originalintention" });
+    },
+
+    onContactMe() {
+      this.$router.push({ name: "contactme" });
+    },
+
+    onLeaveMessage() {
+      this.$router.push({ name: "leavemessage" });
     }
-
-
   }
 };
 </script>
@@ -272,23 +276,51 @@ export default {
   align-items: center;
 }
 
-.record_number{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-  margin-bottom: 70px;
+.a_style {
+  color: gray;
 }
 
-.main_title{
+.main_title {
   margin-top: 12px;
 }
 
-.mini_title{
+.mini_title {
   margin-top: 14px;
   color: gray;
   font-size: 13px;
   cursor: pointer;
+}
+
+.line_style {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 720px;
+  border-top: 1px rgb(230, 230, 230) solid;
+}
+
+.bottom_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_remark {
+  margin-top: 30px;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 70px;
+}
+
+.icon_remark_style {
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  margin-right: 3px;
 }
 </style>
 
