@@ -4,7 +4,7 @@
       <div class="account_style">创建你的账户</div>
       <input class="input_style" placeholder="请输入你的账号" type="text">
       <input class="input_style" placeholder="请输入你的账号" type="text">
-      <el-button class='button_style'>完成</el-button>
+      <button class='c_button'>完成</button>
     </div>
   </div>
 </template>
@@ -15,8 +15,17 @@ export default {
 </script>
 
 <style scoped>
+.c_button{
+  margin-top: 25px;
+  width: 200px;
+  background-color: #3e86ca;
+  color: white;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
 .login_layout {
-  margin-top: 10%;
+  margin-top: 7%;
   display: flex;
   justify-content: center;
 }
@@ -45,13 +54,6 @@ export default {
   width: 60%;
   font-size: 14px;
   height: 27px;
-}
-
-.button_style{
-  margin-top: 25px;
-  width: 200px;
-  background-color: #3e86ca;
-  color: white;
 }
 
 .per_input {

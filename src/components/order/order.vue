@@ -74,10 +74,13 @@ export default {
 </script>
 
 <style scoped>
+.c_button{
+  border-radius: 4px;
+}
+
 .per_number{
   color: rgba(160, 23, 23, 0.89);
   font-weight: 600;
-  
 }
 
 .order_layout {

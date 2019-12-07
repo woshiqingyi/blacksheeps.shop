@@ -25,6 +25,7 @@ import returnedpurchase from '@/components/othersmatter/returnedpurchase'
 import leavemessage from '@/components/othersmatter/leavemessage'
 import acountmanage from '@/components/othersmatter/acountmanage'
 import orderoperation from '@/components/othersmatter/orderoperation'
+import spaceengine from '@/components/othersmatter/spaceengine'
 
 
 
@@ -120,11 +121,15 @@ export default new Router({
           name: 'acountmanage',
           component: acountmanage
         },
-
         {
           path: '/orderoperation',
           name: 'orderoperation',
           component: orderoperation
+        },
+        {
+          path: '/spaceengine',
+          name: 'spaceengine',
+          component: spaceengine
         },
         {
           path: '/orderpayment',

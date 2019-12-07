@@ -5,7 +5,7 @@
       <div class="account_style">登陆我的账号</div>
       <input class="input_style" placeholder="请输入你的账号" v-model="Account.UserName" type="text">
       <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password" >
-      <el-button class='button_style' :style="LoginStyle" @click="onAccount">登陆</el-button>
+      <button class='c_button' :style="LoginStyle" @click="onAccount">登陆</button>
       <el-button class='register_button' @click="onRegister" type="text">无账号？立即去注册</el-button>
     </div>
   </div>
@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 .login_layout {
-  margin-top: 10%;
+  margin-top: 7%;
   display: flex;
   justify-content: center;
 }
@@ -100,8 +100,10 @@ export default {
   height: 27px;
 }
 
-.button_style{
+.c_button{
   margin-top: 25px;
+  border-radius: 3px;
+  font-weight: 500;
   width: 200px;
   background-color: rgb(241, 241, 241);
   color: white;

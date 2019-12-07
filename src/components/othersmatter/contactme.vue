@@ -16,7 +16,13 @@ export default {
 };
 </script>
 <style scoped>
+.c_other_content{
+  margin-top: 28px;
+  height: 12px;
+}
+
 .content_title{
   font-weight: 600;
 }
+
 </style>

@@ -148,7 +148,7 @@ export default {
 }
 
 .product_details {
-  margin-top: 25px;
+  margin-top: 5px;
   margin-left: 100px;
   font-size: 15px;
  /*  color: gray; */
@@ -196,7 +196,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 15px;
   font-size: 16px;
   font-weight: 600;
   color: #3e86ca;

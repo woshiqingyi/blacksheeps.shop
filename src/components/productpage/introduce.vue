@@ -15,7 +15,7 @@
       </div>
       <div></div>
       <div class="product_line_style"></div>
-      <div class="introduce_goods_mini_title">生活用品类</div>
+      <!-- <div class="introduce_goods_mini_title">生活用品类</div> -->
       <div class="introduce_goods">
         <product></product>
       </div>

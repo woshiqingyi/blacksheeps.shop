@@ -20,7 +20,7 @@
               <img :id="item.ID" :src="Tick" v-show="ChooseID == item.ID ? true: false">
             </span>
           </button>
-          <button class="c_button" style="padding:4px;font-size:13px;border-radius:3px;" @click="addAddress">新增地址</button>
+          <button class="c_button" style="padding:4px;font-size:13px;height:30px;width:100px;" @click="addAddress">新增地址</button>
         </div>
       </div>
       <div class="payment_title">支付方式</div>
