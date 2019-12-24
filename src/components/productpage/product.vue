@@ -36,6 +36,30 @@
         </div>
       </div>
     </div>
+
+    <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 </template>
@@ -87,6 +111,8 @@ export default {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+  border: 2px rgb(221, 221, 221) solid;
+  padding: 10px;
 }
 
 .per_product {
@@ -99,6 +125,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
   
 }
 
@@ -112,7 +139,8 @@ export default {
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
- 
+  /* border: 1px rgb(206, 206, 206) solid; */
+  /* border-radius: 3px; */
 }
  /* box-shadow:0 0 12px 3px rgb(219, 219, 219),2px 2px 12px 3px rgb(223, 223, 223); */
 

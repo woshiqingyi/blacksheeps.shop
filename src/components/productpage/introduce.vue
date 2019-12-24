@@ -3,34 +3,73 @@
     <div class="introduce_style">
       <div class="introduce_top">
         <div class="c_main_title" style="margin-top: 35px;">简介</div>
-        <div class="introduce_content">网站售卖一些二手商品，涉及范围是家具、书籍、生活用品</div>
-        <div class="introduce_content">低价出售</div>
-        <div class="introduce_content" style="margin-bottom:10px;">售卖的商品全是私人物品</div>
-        <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt />
+        <div class="introduce_content">网站售卖一些闲置商品，涉及范围是家具、书籍、生活用品</div>
+        <div class="introduce_content">价格合理</div>
+        <div class="introduce_content" style="margin-bottom:10px;">售卖的商品所得的利润用于社会发展</div>
+        <img
+          class="icon_more"
+          @click="DialogMoreIntroduce = true"
+          src="../../../static/image/icon/more.png"
+          alt
+        />
       </div>
-      
       <div class="introduce_goods_title">
-        <div>货架上所有商品</div>
-        <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt />
+        <div class="title_style">货架商品分类</div>
+        <!-- <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt /> -->
+        <div class="goods_layout">
+            
+          <div class="logo_style">
+            <div>blacksheeps</div>
+          </div>
+
+          <!-- <div class="menu_line_style"></div> -->
+          <div class="per_goods">
+            <img class="icon_style" src="../../../static/image/icon/book.png" alt />
+            <div class="goods_details">书籍</div>
+          </div>
+
+          <div class="per_goods">
+            <img class="icon_style" src="../../../static/image/icon/techan.png" alt />
+            <div class="goods_details">礼品</div>
+          </div>
+
+          <div class="per_goods">
+            <img class="icon_style" src="../../../static/image/icon/haixian.png" alt />
+            <div class="goods_details">海货</div>
+          </div>
+
+          <div class="per_goods">
+            <img class="icon_style" src="../../../static/image/icon/other.png" alt />
+            <div class="goods_details">其他</div>
+          </div>
+
+          <!-- <div class="menu_line_style"></div> -->
+
+          <div class="search_style">
+            <img class="icon_search_style" src="../../../static/image/icon/search.png" alt />
+          </div>
+
+          <!-- <div class="per_goods1">家具</div>
+          <div class="per_goods2">电器</div>
+          <div class="per_goods3">化妆品</div>
+          <div class="per_goods4">书籍</div>-->
+        </div>
       </div>
-      <div></div>
+
       <div class="product_line_style"></div>
       <!-- <div class="introduce_goods_mini_title">生活用品类</div> -->
       <div class="introduce_goods">
         <product></product>
       </div>
-      <el-dialog :center='true' top='22vh' :visible.sync="DialogMoreIntroduce" width="700px" >
-        <div class="introduce_more_content" >网站售卖一些二手商品，涉及范围是家具、书籍、生活用品，全部都是低价出售，售卖的商品全是私人物品，无利润。</div>
+      <el-dialog :center="true" top="22vh" :visible.sync="DialogMoreIntroduce" width="700px">
+        <div class="introduce_more_content">网站售卖一些二手商品，涉及范围是家具、书籍、生活用品，全部都是低价出售，售卖的商品全是私人物品，无利润。</div>
       </el-dialog>
-
       <!-- <el-dialog title="" :center='true' top='22vh' :visible.sync="DialogClassification" width="500px" >
-          
-      </el-dialog> -->
-      
+      </el-dialog>-->
       <!-- <transition name='fade' enter-active-class="fade-enter-active" leave-active-class="fade-leave-active">
         <div v-show="Is">hello</div>
       </transition>
-      <button @click="click">点击1111</button> -->
+      <button @click="click">点击1111</button>-->
     </div>
   </div>
 </template>
@@ -38,20 +77,19 @@
 <script>
 import product from "@/components/productpage/product";
 export default {
+  components: { product },
   data() {
     return {
-      DialogMoreIntroduce:false,
-      DialogClassification:false
+      DialogMoreIntroduce: false,
+      DialogClassification: false
     };
   },
 
-  methods:{
-    click(){
-      this.Is = !this.Is
+  methods: {
+    click() {
+      this.Is = !this.Is;
     }
-  },
-
-  components: { product }
+  }
 };
 </script>
 
@@ -70,12 +108,12 @@ export default {
 
 .introduce_top {
   width: 100%;
-  /* height: 200px; */
+  /* height: 215px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(240, 240, 240);
-  /* border-bottom: 1px rgb(182, 208, 238) solid; */
+  /* border-bottom: 1px rgb(131, 46, 46) solid; */
   /* border-bottom: 1px rgb(230, 230, 230) solid; */
   /* background-color: rgb(248, 244, 240); */
   /* background-color: rgb(241, 240, 236); */
@@ -87,54 +125,109 @@ export default {
   letter-spacing: 2px;
 }
 
-.product_line_style {
+/* .product_line_style {
   margin-top: 10px;
   margin-bottom: 15px;
   border-top: 1px rgb(219, 219, 219) solid;
   width: 500px;
-}
+} */
 
-.line_style {
+/* .line_style {
   margin-top: 15px;
   border-top: 1px rgb(219, 219, 219) solid;
   width: 300px;
-}
-
+} */
 .introduce_goods_title {
-  margin-top: 35px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  font-size: 20px;
+  margin-top: 10px;
+  /* border-top: 1px rgb(165, 165, 165) solid; */
+  height: 185px;
+  width: 100%;
+  /* margin-bottom: 20px; */
+  font-size: 17px;
   font-weight: 600;
+  letter-spacing: 2px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(241, 241, 241);
+  /* border-bottom: 1px rgb(212, 212, 212) solid; */
+  /* border-radius: 5px; */
+  /* border: 1px rgb(107, 153, 196) solid; */
 }
 
-.icon_style{
-  margin-left: 10px;
+.goods_layout {
+  margin-top: 15px;
+  display: flex;
+  width: 750px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: whitesmoke; */
+  padding: 8px;
+}
+
+.per_goods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.logo_style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+  font-size: 13px;
+  color: rgb(15, 102, 184);
+}
+
+/* .menu_line_style{
+  height: 100px;
+  border-left: 1px rgb(196, 196, 196) solid;
+} */
+
+.search_style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+}
+
+.icon_search_style {
   width: 20px;
-
+  height: 20px;
 }
 
-.introduce_more_content{
+.goods_details {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+.introduce_more_content {
   height: 200px;
   font-size: 15px;
   letter-spacing: 1px;
   line-height: 30px;
-  color: gray
+  color: gray;
 }
 
 .icon_style {
-  height: 23px;
-}
-
-.icon_more {
-  width: 34px;
+  height: 30px;
 }
 
 .introduce_goods_mini_title {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   font-size: 15px;
   font-weight: 600;
   display: flex;
@@ -146,30 +239,38 @@ export default {
   color: white;
 }
 
+.title_style{
+  color: rgb(2, 66, 138);
+}
+
 .introduce_goods {
   /* overflow:hidden;
   overflow-y: scroll;
   height: 500px; */
+  margin-top: 40px;
   width: 85%;
   max-width: 1300px;
   background-color: whitesmoke;
   /* border: 1px rgb(212, 212, 212) solid; */
 }
 
-.fade-enter{
+.icon_more {
+  width: 34px;
+}
+
+.fade-enter {
   opacity: 0;
 }
 
-.fade-enter-active{
+.fade-enter-active {
   transition: opacity 1.5s;
 }
 
-.fade-leave-to{
+.fade-leave-to {
   opacity: 0;
 }
 
-.fade-leave-active{
+.fade-leave-active {
   transition: opacity 1.5s;
 }
-
 </style>

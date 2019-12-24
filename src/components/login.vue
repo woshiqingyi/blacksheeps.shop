@@ -108,6 +108,7 @@ export default {
   background-color: rgb(241, 241, 241);
   color: white;
   background-color: #3e86ca;
+  padding: 7px;
 }
 
 .register_button{

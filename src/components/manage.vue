@@ -49,7 +49,7 @@
         <div class="main_title">关于本网站</div>
         <div class="mini_title" @click="onOriginalIntention">网站建设初衷</div>
         <div class="mini_title" @click="onContactMe">联系我</div>
-        <div class="mini_title" @click="onLeaveMessage">留言板</div>
+        <!-- <div class="mini_title" @click="onLeaveMessage">留言板</div> -->
         <!-- <div class="mini_title" @click="onSpaceEngine">我的SpaceEngine</div> -->
       </div>
     </div>
