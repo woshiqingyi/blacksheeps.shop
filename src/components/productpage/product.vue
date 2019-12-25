@@ -93,7 +93,7 @@ export default {
     getProductDetails(){
       this.$router.push({name:'productdetails'})
     },
-
+    
     showMouse(e){
       console.log('e',e.target.id)
       this.ChoosedID = e.target.id
@@ -111,8 +111,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  border: 2px rgb(221, 221, 221) solid;
+  border-top: 1px rgb(226, 226, 226) solid;
+  border-bottom: 1px rgb(226, 226, 226) solid;
   padding: 10px;
+  /* border-radius: 3px; */
 }
 
 .per_product {

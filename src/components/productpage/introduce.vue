@@ -6,53 +6,22 @@
         <div class="introduce_content">网站售卖一些闲置商品，涉及范围是家具、书籍、生活用品</div>
         <div class="introduce_content">价格合理</div>
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品所得的利润用于社会发展</div>
-        <img
-          class="icon_more"
-          @click="DialogMoreIntroduce = true"
-          src="../../../static/image/icon/more.png"
-          alt
-        />
+        <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt/>
       </div>
       <div class="introduce_goods_title">
         <div class="title_style">货架商品分类</div>
         <!-- <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt /> -->
         <div class="goods_layout">
-            
           <div class="logo_style">
             <div>blacksheeps</div>
           </div>
-
-          <!-- <div class="menu_line_style"></div> -->
-          <div class="per_goods">
-            <img class="icon_style" src="../../../static/image/icon/book.png" alt />
-            <div class="goods_details">书籍</div>
+          <div class="per_goods" v-for="item in GoodsMenuItems" :key="item.ID" @click="clickMenu" :id="item.ID" :style="ChooseID == item.ID?Style:''">
+            <img class="icon_style" :src="item.Image" alt />
+            <div class="goods_details">{{item.Name}}</div>
           </div>
-
-          <div class="per_goods">
-            <img class="icon_style" src="../../../static/image/icon/techan.png" alt />
-            <div class="goods_details">礼品</div>
-          </div>
-
-          <div class="per_goods">
-            <img class="icon_style" src="../../../static/image/icon/haixian.png" alt />
-            <div class="goods_details">海货</div>
-          </div>
-
-          <div class="per_goods">
-            <img class="icon_style" src="../../../static/image/icon/other.png" alt />
-            <div class="goods_details">其他</div>
-          </div>
-
-          <!-- <div class="menu_line_style"></div> -->
-
-          <div class="search_style">
+           <div class="search_style">
             <img class="icon_search_style" src="../../../static/image/icon/search.png" alt />
           </div>
-
-          <!-- <div class="per_goods1">家具</div>
-          <div class="per_goods2">电器</div>
-          <div class="per_goods3">化妆品</div>
-          <div class="per_goods4">书籍</div>-->
         </div>
       </div>
 
@@ -80,14 +49,26 @@ export default {
   components: { product },
   data() {
     return {
+      Style: "border-bottom: 1px rgb(209, 49, 49) solid;",
       DialogMoreIntroduce: false,
-      DialogClassification: false
+      DialogClassification: false,
+      ChooseID: "",
+      GoodsMenuItems: [
+        { Name: "书籍", ID: "1", Image: "../../../static/image/icon/book.png" },
+        { Name: "礼品", ID: "2", Image: "../../../static/image/icon/techan.png" },
+        { Name: "海货", ID: "3", Image: "../../../static/image/icon/haixian.png" },
+        { Name: "其他", ID: "4", Image: "../../../static/image/icon/other.png" }
+      ],
     };
   },
 
   methods: {
     click() {
       this.Is = !this.Is;
+    },
+
+    clickMenu(e) {
+      this.ChooseID = e.currentTarget.id;
     }
   }
 };
@@ -173,6 +154,7 @@ export default {
   align-items: center;
   width: 80px;
   cursor: pointer;
+  border-bottom: 1px rgb(165, 165, 165) solid;
 }
 
 .logo_style {
@@ -185,11 +167,6 @@ export default {
   font-size: 13px;
   color: rgb(15, 102, 184);
 }
-
-/* .menu_line_style{
-  height: 100px;
-  border-left: 1px rgb(196, 196, 196) solid;
-} */
 
 .search_style {
   display: flex;
@@ -239,7 +216,7 @@ export default {
   color: white;
 }
 
-.title_style{
+.title_style {
   color: rgb(2, 66, 138);
 }
 

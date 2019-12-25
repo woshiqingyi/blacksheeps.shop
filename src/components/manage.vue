@@ -23,7 +23,7 @@
             <el-button class="" type="text">我的收藏</el-button>
             <el-button class="" type="text">我的订单</el-button>-->
             <div class="per_menu" @click="onIntroduce">货架商品</div>
-            <div class="per_menu" @click="onCollection">我的收藏</div>
+            <!-- <div class="per_menu" @click="onCollection">我的收藏</div> -->
             <div class="per_menu" @click="onOrder">我的订单</div>
           </div>
         </div>
