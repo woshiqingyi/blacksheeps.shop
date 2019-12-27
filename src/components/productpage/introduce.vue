@@ -18,14 +18,13 @@
         </div>
       </div>
 
-       <div class="introduce_top">
+      <div class="introduce_top">
         <div class="c_main_title" style="margin-top: 30px;">简介</div>
         <div class="introduce_content">网站售卖一些闲置商品，涉及范围是家具、书籍、生活用品</div>
         <div class="introduce_content">价格合理</div>
         <div class="introduce_content" style="margin-bottom:10px;">售卖的商品所得的利润用于社会发展</div>
         <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt/>
       </div>
-
       <div class="product_line_style"></div>
       <!-- <div class="introduce_goods_mini_title">生活用品类</div> -->
       <div class="introduce_goods">
