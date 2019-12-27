@@ -14,6 +14,7 @@
               <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
               <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
               <el-dropdown-item command="onAccounts">我的账户</el-dropdown-item>
+              <el-dropdown-item command="onSignout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -47,7 +48,7 @@
 
       <div class="per_mini_menu">
         <div class="main_title">关于本网站</div>
-        <div class="mini_title" @click="onOriginalIntention">网站建设初衷</div>
+        <!-- <div class="mini_title" @click="onOriginalIntention">网站建设初衷</div> -->
         <div class="mini_title" @click="onContactMe">联系我</div>
         <!-- <div class="mini_title" @click="onLeaveMessage">留言板</div> -->
         <!-- <div class="mini_title" @click="onSpaceEngine">我的SpaceEngine</div> -->
@@ -140,6 +141,9 @@ export default {
       }
       if (Choosed == "onHelpCenter") {
         this.$router.push({ name: "helpcenter" });
+      }
+       if (Choosed == "onSignout") {
+        // this.$router.push({ name: "helpcenter" });
       }
     },
 

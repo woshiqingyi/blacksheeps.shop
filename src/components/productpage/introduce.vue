@@ -1,15 +1,8 @@
 <template>
   <div class="introduce_layout">
     <div class="introduce_style">
-      <div class="introduce_top">
-        <div class="c_main_title" style="margin-top: 35px;">简介</div>
-        <div class="introduce_content">网站售卖一些闲置商品，涉及范围是家具、书籍、生活用品</div>
-        <div class="introduce_content">价格合理</div>
-        <div class="introduce_content" style="margin-bottom:10px;">售卖的商品所得的利润用于社会发展</div>
-        <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt/>
-      </div>
       <div class="introduce_goods_title">
-        <div class="title_style">货架商品分类</div>
+        <!-- <div class="title_style">货架商品分类</div> -->
         <!-- <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt /> -->
         <div class="goods_layout">
           <div class="logo_style">
@@ -23,6 +16,14 @@
             <img class="icon_search_style" src="../../../static/image/icon/search.png" alt />
           </div>
         </div>
+      </div>
+
+       <div class="introduce_top">
+        <div class="c_main_title" style="margin-top: 30px;">简介</div>
+        <div class="introduce_content">网站售卖一些闲置商品，涉及范围是家具、书籍、生活用品</div>
+        <div class="introduce_content">价格合理</div>
+        <div class="introduce_content" style="margin-bottom:10px;">售卖的商品所得的利润用于社会发展</div>
+        <img class="icon_more" @click="DialogMoreIntroduce = true" src="../../../static/image/icon/more.png" alt/>
       </div>
 
       <div class="product_line_style"></div>
@@ -49,7 +50,8 @@ export default {
   components: { product },
   data() {
     return {
-      Style: "border-bottom: 1px rgb(209, 49, 49) solid;",
+      Style: "color: rgb(15, 102, 184);",
+      // Style: "border-bottom: 1px rgb(209, 49, 49) solid;",
       DialogMoreIntroduce: false,
       DialogClassification: false,
       ChooseID: "",
@@ -88,12 +90,13 @@ export default {
 }
 
 .introduce_top {
+  margin-top:10px;
   width: 100%;
   /* height: 215px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(247, 247, 247);
   /* border-bottom: 1px rgb(131, 46, 46) solid; */
   /* border-bottom: 1px rgb(230, 230, 230) solid; */
   /* background-color: rgb(248, 244, 240); */
@@ -119,9 +122,9 @@ export default {
   width: 300px;
 } */
 .introduce_goods_title {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* border-top: 1px rgb(165, 165, 165) solid; */
-  height: 185px;
+  height: 85px;
   width: 100%;
   /* margin-bottom: 20px; */
   font-size: 17px;
@@ -131,7 +134,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(241, 241, 241);
+   background-color: rgb(247, 247, 247);
   /* border-bottom: 1px rgb(212, 212, 212) solid; */
   /* border-radius: 5px; */
   /* border: 1px rgb(107, 153, 196) solid; */
@@ -154,7 +157,7 @@ export default {
   align-items: center;
   width: 80px;
   cursor: pointer;
-  border-bottom: 1px rgb(165, 165, 165) solid;
+  /* border-bottom: 1px rgb(165, 165, 165) solid; */
 }
 
 .logo_style {
@@ -163,7 +166,6 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 80px;
   font-size: 13px;
   color: rgb(15, 102, 184);
 }
@@ -174,10 +176,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 80px;
   cursor: pointer;
-  width: 100px;
-  height: 80px;
 }
 
 .icon_search_style {
@@ -200,7 +199,7 @@ export default {
 }
 
 .icon_style {
-  height: 30px;
+  height: 27px;
 }
 
 .introduce_goods_mini_title {
@@ -233,6 +232,7 @@ export default {
 
 .icon_more {
   width: 34px;
+  margin-bottom: 10px;
 }
 
 .fade-enter {

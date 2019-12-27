@@ -1,8 +1,8 @@
 <template>
   <div class="order_layout">
     <div class="order_style">
-      <div class="c_main_title">已购买商品的详情信息</div>
-      <div class="per_order">
+      <div class="c_main_title">我的订单状态</div>
+      <!-- <div class="per_order">
         <div class="per_order_title">
           <div class="per_order_title_date">2018-10-10</div>
           <div class="per_order_title_order">订单号：15548752485115</div>
@@ -52,6 +52,8 @@
             <button class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
+      </div> -->
+      <div class="order_remark">暂无创建订单信息，立即<span class="buy_order_style" @click="buyGoods">购买商品</span>
       </div>
     </div>
   </div>
@@ -68,6 +70,10 @@ export default {
 
     onOrderDetails(){
        this.$router.push({name:'productdetails'})
+    },
+
+    buyGoods(){
+      this.$router.push({name:'introduce'})
     }
   }
 };
@@ -206,5 +212,17 @@ export default {
   font-weight: 600;
   background-color: #3e86ca;
   color: white;
+}
+
+.order_remark{
+  margin-top: 45px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buy_order_style{
+  color: #3e86ca;
 }
 </style>

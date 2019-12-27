@@ -2,9 +2,11 @@
   <div class="shoppingcart_layout">
     <div class="per_product_title">
       <div class="c_main_title">购物车的所有的商品</div>
-      <div class="per_product_remark">所有订单均可享受免费送货和退货服务</div>
+      <div class="shoppingcart_remark">你的购物车暂无商品，立即<span class="remark_style" @click="buyGoods">添加商品</span></div>
+      <!-- <div class="per_product_remark">所有订单均可享受退货服务</div> -->
     </div>
    <!--  <div class="line_style"></div> -->
+<!--    
     <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
@@ -26,7 +28,8 @@
         </div>
       </div>
       <div class="operation_style">移除购物车</div>
-    </div>
+    </div> -->
+
     <!-- <div class="per_product">
       <div class="product_left">
         <img class="icon_style" src="../../../static/image/icon/honglou.jpg">
@@ -49,14 +52,14 @@
         </div>
       </div>
       <div class="operation_style">移除购物车</div>
-    </div> -->
+    </div>
     <div class="settlement_style">
       <div class="payment_style">
         <div>RMB 1000</div>
         <button class="c_button" @click="payGoods">结算</button>
       </div>
       <div class="freight_style">（含运费 5RMB）</div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -81,6 +84,10 @@ export default {
 
     payGoods(){
       this.$router.push({name:'orderpayment'})
+    },
+
+    buyGoods(){
+       this.$router.push({name:'introduce'})
     }
   }
 };
@@ -98,7 +105,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .per_product_title {
@@ -106,6 +113,18 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.shoppingcart_remark{
+  margin-top: 45px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remark_style{
+   color: rgb(15, 102, 184);
 }
 
 .per_product_remark {
