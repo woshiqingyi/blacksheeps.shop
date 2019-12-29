@@ -420,7 +420,7 @@
         baseUrl:{
             // DEBUG:"http://localhost:34402/api/gateway",
             // TEST:"https://test.yqybl.com/api",
-            PRODUCTION:"http://localhost:8080/user"
+            PRODUCTION:"http://tomcat.blacksheeps.com"
         },
         fileUrl:{
             // DEBUG:"http://filesvc.yqytest.com:81/api/gateway/upload",
@@ -453,7 +453,7 @@
                 traditional: options.traditional,
                 url: window.$v.service.getBaseUrl()+ "/" + options.action,
                 dataType: options.dataType,
-                data: {__Token__:t,Data:options.data},
+                data: options.data,
                 crossDomain: true,
                 success: function (data) {
                     if (options.callback)

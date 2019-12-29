@@ -2,14 +2,15 @@
   <div>
     <div class="layout">
       <div class="menu_style">
-        <div class="icon_layout">
+         <div class="menu_border"> 
+          <div class='show_account'>{{Manage.ShowAccountName}}</div>
           <el-dropdown
             placement="bottom"
             trigger="click"
             class="navigation"
             @command="navigateMenu"
           >
-            <img class="icon_style" src="../../static/image/icon/myaccount.png" />
+             <img class="icon_style" src="../../static/image/icon/myaccount.png" />
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
               <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
@@ -17,20 +18,21 @@
               <el-dropdown-item command="onSignout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-        </div>
+     
+          </div>
         <div class="menu_classify_layout">
           <div class="menu_classify">
-            <!-- <el-button class="" type="text">商品分类</el-button>
-            <el-button class="" type="text">我的收藏</el-button>
-            <el-button class="" type="text">我的订单</el-button>-->
             <div class="per_menu" @click="onIntroduce">货架商品</div>
             <!-- <div class="per_menu" @click="onCollection">我的收藏</div> -->
             <div class="per_menu" @click="onOrder">我的订单</div>
           </div>
         </div>
-        <div class="icon_style"></div>
+        <div class="menu_border" >
+      
+        </div>
       </div>
     </div>
+    
     <router-view />
     <div class="manage_bottom_layout">
       <div class="per_mini_menu">
@@ -74,6 +76,9 @@ export default {
   data: function() {
     return {
       Show: false,
+      Manage:{
+        ShowAccountName:''
+      },
       CommodityCategory: [
         {
           Name: "标签1"
@@ -99,6 +104,22 @@ export default {
   },
 
   created() {
+    var that = this
+      $v.service.call({
+      action: "user/get_information.do",
+      type: "POST",
+      data: {},
+      callback: function(data) {
+        console.log('data1',data)
+       if(data.status == 0){
+          that.Manage.ShowAccountName = data.username
+        }else{
+          that.Manage.ShowAccountName = '未登录'
+        }
+      }
+    });
+    
+    
     var dWidth = document.documentElement.clientWidth;
     var shezhi = this.CommodityCategory.length * 3;
     if (dWidth > 500) dWidth = 500;
@@ -143,6 +164,15 @@ export default {
         this.$router.push({ name: "helpcenter" });
       }
        if (Choosed == "onSignout") {
+         var that = this
+      $v.service.call({
+      action: "user/logout.do",
+      type: "POST",
+      data: {},
+      callback: function(data) {
+        console.log('退出登录',data)
+      }
+    });
         // this.$router.push({ name: "helpcenter" });
       }
     },
@@ -227,6 +257,27 @@ export default {
   flex-direction: row-reverse;
   width: 1100px;
   align-items: center;
+ /*  background-color: aqua; */
+}
+
+.menu_border{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.show_account{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: white;
+  font-size: 12px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
 }
 
 .account_style {
@@ -234,12 +285,14 @@ export default {
   font-size: 0.25rem;
 }
 .icon_layout {
-  background-color: white;
-  border-radius: 50%;
+ /*  background-color: white;
+  border-radius: 50%; */
 }
 .icon_style {
   height: 0.4rem;
   width: 0.4rem;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .menu_classify_layout {

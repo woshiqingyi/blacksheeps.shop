@@ -2,15 +2,65 @@
   <div class="login_layout">
     <div class="login_style">
       <div class="account_style">创建你的账户</div>
-      <input class="input_style" placeholder="请输入你的账号" type="text">
-      <input class="input_style" placeholder="请输入你的账号" type="text">
-      <button class='c_button'>完成</button>
+      <input class="input_style" v-model="RegisterAccount.Account" placeholder="请输入你的账号" type="text">
+      <input class="input_style" v-model="RegisterAccount.Password" placeholder="请输入你的账号" type="password">
+      <button class='c_button' @click="registerAccount">完成</button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  
+  data(){
+    return{
+      RegisterAccount:{
+        Account:"",
+        Password:""
+      }
+    }
+  },
+  methods:{
+    registerAccount(){
+      var that = this
+      $v.service.call({
+      action: "user/register.do",
+      type: "POST",
+      data: {
+        username:that.RegisterAccount.Account,
+        password:that.RegisterAccount.Password,
+      },
+      callback: function(data) {
+        if(data.status == 0){
+          that.$message.success('注册成功，请登录你的账号')
+          that.$router.push({name:'login'})
+        }else{
+          that.$message.error(data.msg)
+        }
+      }
+    });
+      /* var that = this
+      $.ajax({
+      disabledLoading: true,
+      type: "Post",
+      traditional: false,
+      url: "http://tomcat.blacksheeps.com/user/register.do",
+      dataType: "json",
+      async:false,
+      data: {
+        username:that.RegisterAccount.Account,
+        password:that.RegisterAccount.Password,
+      },
+      crossDomain: true,
+      success: function(data) {
+        if(data.status == 0){
+          that.$message.success('注册成功，请登录你的账号')
+          that.$router.push({name:'login'})
+        }else{
+          that.$message.error(data.msg)
+        }
+      },
+    }); */
+    }
+  }
 };
 </script>
 

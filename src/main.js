@@ -11,6 +11,15 @@ import '../node_modules/element-ui/lib/theme-chalk/index.css'
 import globaldate from '@/assets/globaldate'
 Vue.prototype.$ = globaldate
 
+
+
+import 'jquery.cookie'
+import {Loading} from 'element-ui';
+import {Message} from 'element-ui'
+window.$loading=Loading
+window.$message=Message
+import $v from '@/assets/js/vcan.js'
+
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 

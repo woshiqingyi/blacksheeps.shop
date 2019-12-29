@@ -5,7 +5,7 @@
       <div class="account_style">登陆我的账号</div>
       <input class="input_style" placeholder="请输入你的账号" v-model="Account.UserName" type="text">
       <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password" >
-      <button class='c_button' :style="LoginStyle" @click="onAccount">登陆</button>
+      <button class='c_button' :style="LoginStyle" @click="loginAccount">登陆</button>
       <el-button class='register_button' @click="onRegister" type="text">无账号？立即去注册</el-button>
     </div>
   </div>
@@ -25,29 +25,53 @@ export default {
   },
   created(){
     var Width = document.documentElement.clientWidth;
-    var Height = document.documentElement.clientHeight
-    $.ajax({
+    var Height = document.documentElement.clientHeight;
+    
+  },
+  methods:{
+    loginAccount(){
+      var that = this
+      $v.service.call({
+      action: "user/login.do",
+      type: "POST",
+      data: {
+        username:that.Account.UserName,
+        password:that.Account.Password,
+      },
+      callback: function(data) {
+        console.log(data)
+       if(data.status == 0){
+          that.$message.success(data.msg)
+          that.$router.push({name:'introduce'})
+        }else{
+          that.$message.error(data.msg)
+        }
+      }
+    });
+     /*  $.ajax({
       disabledLoading: true,
-      type: "Get",
+      type: "Post",
       traditional: false,
-      url: "https://www.blacksheeps.cn/manage/category/get_category.do",
+      url: "http://tomcat.blacksheeps.com/user/login.do",
       dataType: "json",
       async:false,
       data: {
-        __Token__: '',
-        Data: {}
+        username:that.Account.UserName,
+        password:that.Account.Password,
       },
       crossDomain: true,
       success: function(data) {
-        console.log("data", data);
+        if(data.status == 0){
+          that.$message.success(data.msg)
+          that.$router.push({name:'introduce'})
+        }else{
+          that.$message.error(data.msg)
+        }
       },
-    });
+    }); */
+   },
 
-  },
-  methods:{
-    onAccount(){
-      this.$message.warning('请输入账号跟密码')
-    },
+   
     onRegister(){
       this.$router.push('register')
     }
