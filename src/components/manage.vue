@@ -11,11 +11,11 @@
             @command="navigateMenu"
           >
              <img class="icon_style" src="../../static/image/icon/myaccount.png" />
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item command="onHelpCenter">帮助中心</el-dropdown-item>
-              <el-dropdown-item command="onShoppingCart">购物车</el-dropdown-item>
-              <el-dropdown-item command="onAccounts">我的账户</el-dropdown-item>
-              <el-dropdown-item command="onSignout">退出登录</el-dropdown-item>
+            <el-dropdown-menu slot="dropdown" class="dropdown_layout">
+              <el-dropdown-item command="onHelpCenter" class="dropdown_style"><img class="dropdown_icon" src="../../static/image/icon/help.png" />帮助中心</el-dropdown-item>
+              <el-dropdown-item command="onShoppingCart"  class="dropdown_style"><img class="dropdown_icon" src="../../static/image/icon/shopping.png" />购物车</el-dropdown-item>
+              <el-dropdown-item command="onAccounts"  class="dropdown_style"><img class="dropdown_icon" src="../../static/image/icon/account.png" />我的账户</el-dropdown-item>
+              <el-dropdown-item command="onSignout"  class="dropdown_style"><img class="dropdown_icon" src="../../static/image/icon/exit.png" />退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
      
@@ -104,7 +104,9 @@ export default {
   },
 
   created() {
+    
     var that = this
+      that.Manage.ShowAccountName = '未登录'
       $v.service.call({
       action: "user/get_information.do",
       type: "POST",
@@ -383,6 +385,23 @@ export default {
   height: 18px;
   margin-left: 8px;
   margin-right: 3px;
+}
+
+.dropdown_icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 25px;
+}
+
+.dropdown_layout{
+  margin-top: 22px;
+}
+
+.dropdown_style{
+  margin-top:5px;
+  width:145px;
+  font-size: 13px;
+  color: rgb(15, 102, 184);
 }
 </style>
 

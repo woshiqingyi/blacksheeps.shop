@@ -13,7 +13,7 @@ Vue.prototype.$ = globaldate
 
 
 
-import 'jquery.cookie'
+// import 'jquery.cookie'
 import {Loading} from 'element-ui';
 import {Message} from 'element-ui'
 window.$loading=Loading
