@@ -6,7 +6,7 @@
         <!-- <img class="icon_style" @click="DialogClassification = true" src="../../../static/image/icon/Goods.png" alt /> -->
         <div class="goods_layout">
           <div class="logo_style">
-            <div>blacksheeps</div>
+            <div>分类</div>
           </div>
           <div class="per_goods" v-for="item in GoodsMenuItems" :key="item.ID" @click="clickMenu" :id="item.ID" :style="ChooseID == item.ID?Style:''">
             <img class="icon_style" :src="item.Image" alt />
@@ -50,6 +50,7 @@ export default {
   data() {
     return {
       Style: "color: rgb(15, 102, 184);",
+      // rgba(160, 23, 23, 0.89)
       // Style: "border-bottom: 1px rgb(209, 49, 49) solid;",
       DialogMoreIntroduce: false,
       DialogClassification: false,
@@ -79,13 +80,17 @@ export default {
 .introduce_layout {
   display: flex;
   justify-content: center;
+  background-image: url('../../../static/image/icon/moon1.jpg');
+  
 }
+
 
 .introduce_style {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .introduce_top {
@@ -96,6 +101,7 @@ export default {
   flex-direction: column;
   align-items: center;
   background-color: rgb(247, 247, 247);
+  /* opacity: 0.9; */
   /* border-bottom: 1px rgb(131, 46, 46) solid; */
   /* border-bottom: 1px rgb(230, 230, 230) solid; */
   /* background-color: rgb(248, 244, 240); */
@@ -134,6 +140,8 @@ export default {
   justify-content: center;
   align-items: center;
    background-color: rgb(247, 247, 247);
+
+   /* opacity: 0.9; */
   /* border-bottom: 1px rgb(212, 212, 212) solid; */
   /* border-radius: 5px; */
   /* border: 1px rgb(107, 153, 196) solid; */
@@ -222,9 +230,11 @@ export default {
   /* overflow:hidden;
   overflow-y: scroll;
   height: 500px; */
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   width: 85%;
   max-width: 1300px;
+  
   background-color: whitesmoke;
   /* border: 1px rgb(212, 212, 212) solid; */
 }

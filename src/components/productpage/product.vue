@@ -60,6 +60,128 @@
         </div>
       </div>
     </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="per_product" >
+      <div class="per_mini_product" id="3" :style="id3 == ChoosedID?Style1:Style2" @mouseenter="showMouse" @mouseleave="hiddenMouse" @click="getProductDetails">
+        <img class="image_style" src="../../../static/image/icon/honglou.jpg" alt="">
+        <div class="per_product_content">
+          <div class="per_product_title">{{data1}}</div>
+          <div class="per_product_price">RMB
+            <span class="per_price_number">1000</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   </div>
 </template>
@@ -110,10 +232,16 @@ export default {
 .product_layout {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
-  border-top: 1px rgb(226, 226, 226) solid;
-  border-bottom: 1px rgb(226, 226, 226) solid;
+  /* background-color: white; */
+  /* border-top: 1px rgb(226, 226, 226) solid;
+  border-bottom: 1px rgb(226, 226, 226) solid; */
+  border-top: 1px #bed0e2 solid;
+  border-bottom: 1px #bed0e2 solid;
   padding: 10px;
+  
+  
+  
+  
   /* border-radius: 3px; */
 }
 
@@ -123,7 +251,7 @@ export default {
   /* height: 320px; */
   /* border-top: 1px rgb(182, 208, 238) solid;
   border-bottom: 1px rgb(182, 208, 238) solid; */
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   justify-content: center;
   align-items: center;

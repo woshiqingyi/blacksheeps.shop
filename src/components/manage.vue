@@ -18,8 +18,7 @@
               <el-dropdown-item command="onSignout"  class="dropdown_style"><img class="dropdown_icon" src="../../static/image/icon/exit.png" />退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-     
-          </div>
+        </div>
         <div class="menu_classify_layout">
           <div class="menu_classify">
             <div class="per_menu" @click="onIntroduce">货架商品</div>
@@ -28,7 +27,7 @@
           </div>
         </div>
         <div class="menu_border" >
-      
+         {{IP}}
         </div>
       </div>
     </div>
@@ -69,6 +68,9 @@
         >苏公网安备 32108102010390号</a>
       </div>
     </div>
+    <div class='background_image'>
+     
+    </div>
   </div>
 </template>
 <script>
@@ -76,6 +78,7 @@ export default {
   data: function() {
     return {
       Show: false,
+      IP:'',
       Manage:{
         ShowAccountName:''
       },
@@ -104,8 +107,7 @@ export default {
   },
 
   created() {
-    
-    var that = this
+    var that = this;
       that.Manage.ShowAccountName = '未登录'
       $v.service.call({
       action: "user/get_information.do",
@@ -227,6 +229,19 @@ export default {
 </script>
 
 <style scoped>
+
+.background_image{
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 100px;
+  background-repeat:no-repeat;
+ /* background-attachment:fixed; */
+/* background-position:center; */
+  
+}
+ 
+      
+
 .category {
   color: white;
   display: flex;
@@ -234,6 +249,7 @@ export default {
   align-items: center;
   height: 0.8rem;
   font-size: 0.25rem;
+  
 }
 
 .per-category {
@@ -252,6 +268,7 @@ export default {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
+  
 }
 
 .menu_style {
@@ -259,6 +276,8 @@ export default {
   flex-direction: row-reverse;
   width: 1100px;
   align-items: center;
+  
+  
  /*  background-color: aqua; */
 }
 
@@ -267,7 +286,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
 }
 
 .show_account{
@@ -402,6 +423,7 @@ export default {
   width:145px;
   font-size: 13px;
   color: rgb(15, 102, 184);
+  
 }
 </style>
 

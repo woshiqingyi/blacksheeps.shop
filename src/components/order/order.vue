@@ -2,7 +2,7 @@
   <div class="order_layout">
     <div class="order_style">
       <div class="c_main_title">我的订单状态</div>
-      <!-- <div class="per_order">
+      <div class="per_order">
         <div class="per_order_title">
           <div class="per_order_title_date">2018-10-10</div>
           <div class="per_order_title_order">订单号：15548752485115</div>
@@ -52,7 +52,7 @@
             <button class="c_button" style="margin-left:0px;" @click="onLogistics" >查看物流</button>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="order_remark">暂无创建订单信息，立即<span class="buy_order_style" @click="buyGoods">购买商品</span>
       </div>
     </div>
