@@ -11,7 +11,7 @@
     //       }
     //     }
     // };
-    window.vcan = window.$v =
+    window.vcan = window.$v = 
     {
         Debug:function(){
             return process.env.NODE_ENV=="development";
@@ -398,7 +398,7 @@
             s = s.replace(/\"/g,"&quot;");
             return s;  
         },
-        htmlDecodeByRegExp:function (str){  
+        htmlDecodeByRegExp:function (str){
             var s = "";
             if(str.length == 0) return "";
             s = str.replace(/&amp;/g,"&");
@@ -420,7 +420,7 @@
         baseUrl:{
             // DEBUG:"http://localhost:34402/api/gateway",
             // TEST:"https://test.yqybl.com/api",
-            PRODUCTION:"http://tomcat.blacksheeps.com"
+            PRODUCTION:"https://www.blacksheeps.cn"
         },
         fileUrl:{
             // DEBUG:"http://filesvc.yqytest.com:81/api/gateway/upload",

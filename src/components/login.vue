@@ -1,5 +1,6 @@
 
 <template>
+
   <div class="login_layout" :class="{height:Height}">
     <div class="login_style">
       <div class="account_style">登陆我的账号</div>
@@ -35,8 +36,8 @@ export default {
       action: "user/login.do",
       type: "POST",
       data: {
-        username:that.Account.UserName,
-        password:that.Account.Password,
+        username:'admin',
+        password:'admin',
       },
       callback: function(data) {
         console.log(data)
