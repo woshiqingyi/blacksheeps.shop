@@ -10,7 +10,9 @@
         <div class="per_info">昵称：郑晓峰</div>
         <div class="per_info">性别：男</div>
         <div class="per_info">城市：泉州</div>
-        <el-button type="text" @click="PersonInfo.dialogAccountInfo = true">编辑</el-button>
+        <el-button type="text" @click="PersonInfo.dialogAccountInfo = true"
+          >编辑</el-button
+        >
       </div>
     </div>
 
@@ -20,26 +22,31 @@
         <div class="per_info">邮箱：1355224991@qq.com</div>
         <div class="per_info">号码：18861828564</div>
         <div class="per_info">密码：**********</div>
-        <el-button type="text" @click="PersonInfo.dialogBindAccount = true">编辑</el-button>
+        <el-button type="text" @click="PersonInfo.dialogBindAccount = true"
+          >编辑</el-button
+        >
       </div>
     </div>
 
     <div class="per_account_layout">
       <div class="per_account_title">收货地址</div>
-      <div class="per_account_content_layout" >
-        <div class="per_account_content_address" v-for="item in PersonInfo.Shippinglist" :key="item.id">
-          <div class="per_info">姓名：{{item.receiverName}}</div>
-          <div class="per_info">联系号码：{{item.receiverPhone}}</div>
-          <div
-            class="per_info"
-            style="line-height:25px;margin-top:7px;"
-          >联系地址：{{item.receiverProvince}} {{item.receiverCity}} {{item.receiverDistrict}} {{item.receiverAddress}}</div>
+      <div class="per_account_content_layout">
+        <div
+          class="per_account_content_address"
+          v-for="item in PersonInfo.Shippinglist"
+          :key="item.id"
+        >
+          <div class="per_info">姓名：{{ item.receiverName }}</div>
+          <div class="per_info">联系号码：{{ item.receiverPhone }}</div>
+          <div class="per_info" style="line-height:25px;margin-top:7px;">
+            联系地址：{{ item.receiverProvince }} {{ item.receiverCity }}
+            {{ item.receiverDistrict }} {{ item.receiverAddress }}
+          </div>
+          <div class="per_info">邮政编码：{{ item.receiverZip }}</div>
           <el-button type="text" @click="editReceiver(item)">编辑</el-button>
         </div>
       </div>
     </div>
-
-   
 
     <!--  <div class="per_account_layout">
       <div class="per_account_title">收货地址</div>
@@ -74,7 +81,11 @@
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">性别</div>
-        <el-select v-model="PersonInfo.gender" placeholder="请选择性别" style="width:145px;">
+        <el-select
+          v-model="PersonInfo.gender"
+          placeholder="请选择性别"
+          style="width:145px;"
+        >
           <el-option
             v-for="item in GenderItems"
             :key="item.Code"
@@ -83,7 +94,11 @@
           ></el-option>
         </el-select>
         <div class="per_input_title">城市</div>
-        <el-select v-model="PersonInfo.city" placeholder="请选择性别" style="width:145px;">
+        <el-select
+          v-model="PersonInfo.city"
+          placeholder="请选择性别"
+          style="width:145px;"
+        >
           <el-option
             v-for="item in ProvinceItems"
             :key="item.Code"
@@ -98,8 +113,16 @@
           class="c_button"
           style="margin-right:10px;"
           @click="PersonInfo.dialogAccountInfo = false"
-        >关闭</button>
-        <button type="text" class="c_button" @click="PersonInfo.dialogAccountInfo = false">确认</button>
+        >
+          关闭
+        </button>
+        <button
+          type="text"
+          class="c_button"
+          @click="PersonInfo.dialogAccountInfo = false"
+        >
+          确认
+        </button>
       </div>
     </el-dialog>
 
@@ -109,7 +132,7 @@
       top="22vh"
       :visible.sync="PersonInfo.dialogBindAccount"
       width="550px"
-    >
+     >
       <div class="per_input_layout">
         <div class="per_input_title" style="margin-top:0px;">邮箱</div>
         <el-input
@@ -143,8 +166,16 @@
           class="c_button"
           @click="PersonInfo.dialogBindAccount = false"
           style="margin-right:10px;"
-        >关闭</button>
-        <button type="text" class="c_button" @click="PersonInfo.dialogBindAccount = false">确认</button>
+        >
+          关闭
+        </button>
+        <button
+          type="text"
+          class="c_button"
+          @click="PersonInfo.dialogBindAccount = false"
+        >
+          确认
+        </button>
       </div>
     </el-dialog>
 
@@ -154,12 +185,26 @@
       title="编辑收货地址"
       :visible.sync="PersonInfo.dialogReceiveAddress"
       width="550px"
-    >
+     >
+
+      ReceiveAddress: {
+        id: "",
+        receiverName: "",
+        receiverPhone: "",
+        receiverProvince: "",
+        receiverCity: "",
+        receiverDistrict: "",
+        receiverAddress: "",
+        receiverZip: ""
+      }
+
+
+
       <div class="per_input_layout" style="margin-top:0px;">
         <div class="per_input_title">姓名</div>
         <el-input
           type="text"
-          v-model="PersonInfo.nickname"
+          v-model="ReceiveAddress.receiverName"
           placeholder="请输入姓名"
           style="width:370px;"
         ></el-input>
@@ -168,28 +213,68 @@
         <div class="per_input_title">联系号码</div>
         <el-input
           type="text"
-          v-model="PersonInfo.nickname"
+          v-model="ReceiveAddress.receiverPhone"
           placeholder="请输入联系号码"
           style="width:370px;"
         ></el-input>
       </div>
+
       <div class="per_input_layout">
-        <div class="per_input_title">联系地址</div>
+        <div class="per_input_title">所在省份</div>
         <el-input
           type="text"
-          v-model="PersonInfo.nickname"
+          v-model="ReceiveAddress.receiverProvince"
+          placeholder="请输入所在省份"
+          style="width:370px;"
+        ></el-input>
+      </div>
+
+      <div class="per_input_layout">
+        <div class="per_input_title">所在区</div>
+        <el-input
+          type="text"
+          v-model="ReceiveAddress.receiverCity"
+          placeholder="请输入所在区"
+          style="width:370px;"
+        ></el-input>
+      </div>
+
+      <div class="per_input_layout">
+        <div class="per_input_title">所在街道</div>
+        <el-input
+          type="text"
+          v-model="ReceiveAddress.nickname"
           placeholder="请输入联系地址"
           style="width:370px;"
         ></el-input>
       </div>
+
+      <div class="per_input_layout">
+        <div class="per_input_title">详细地址</div>
+        <el-input
+          type="text"
+          v-model="ReceiveAddress.nickname"
+          placeholder="请输入联系地址"
+          style="width:370px;"
+        ></el-input>
+      </div>
+
       <div class="button_layout">
         <button
           type="text"
           class="c_button"
           @click="PersonInfo.dialogReceiveAddress = false"
           style="margin-right:10px;"
-        >关闭</button>
-        <button type="text" class="c_button" @click="PersonInfo.dialogReceiveAddress = false">确认</button>
+        >
+          关闭
+        </button>
+        <button
+          type="text"
+          class="c_button"
+          @click="PersonInfo.dialogReceiveAddress = false"
+        >
+          确认
+        </button>
       </div>
     </el-dialog>
   </div>
@@ -207,8 +292,19 @@ export default {
         nickname: "",
         gender: "",
         city: "",
-        ReceiverID:'',
-        Shippinglist:[]
+        ReceiverID: "",
+        Shippinglist: []
+      },
+
+      ReceiveAddress: {
+        id: "",
+        receiverName: "",
+        receiverPhone: "",
+        receiverProvince: "",
+        receiverCity: "",
+        receiverDistrict: "",
+        receiverAddress: "",
+        receiverZip: ""
       }
     };
   },
@@ -221,7 +317,7 @@ export default {
         id: ""
       },
       callback: function(data) {
-        console.log('111',data)
+        console.log("111", data);
         if (data.success) {
           that.PersonInfo.Shippinglist = data.data;
           console.log(that.PersonInfo.Shippinglist);
@@ -232,11 +328,12 @@ export default {
     console.log(this.$.ProvinceItems) */
   },
 
-  methods:{
-    editReceiver(info){
-        this.PersonInfo.ReceiverID = info.id
-        this.PersonInfo.dialogReceiveAddress = true
-    } 
+  methods: {
+    editReceiver(info) {
+      console.log("info", info);
+      this.PersonInfo.ReceiverID = info.id;
+      this.PersonInfo.dialogReceiveAddress = true;
+    }
   }
 };
 </script>
@@ -282,15 +379,13 @@ export default {
 .per_account_content_layout {
   display: flex;
   flex-direction: column;
-   width: 70%;
+  width: 70%;
 }
 
-.per_account_content_address{
+.per_account_content_address {
   font-size: 16px;
   letter-spacing: 2px;
 }
-
-
 
 .per_account_content {
   width: 70%;

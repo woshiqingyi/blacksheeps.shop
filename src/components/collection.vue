@@ -42,7 +42,7 @@
               <div class="per_collection_title">红楼梦</div>
               <div class="per_collection_price">RMB 100</div>
             </div>
-          </div>
+              </div> 
         </div>
 
         <div class="per_collection">
