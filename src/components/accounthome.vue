@@ -26,21 +26,51 @@
 
     <div class="per_account_layout">
       <div class="per_account_title">收货地址</div>
-      <div class="per_account_content">
-        <div class="per_info">姓名：郑晓峰</div>
-        <div class="per_info">联系号码：18861828564</div>
-        <div
-          class="per_info"
-          style="line-height:25px;margin-top:7px;"
-        >联系地址：福建省 泉州市 晋江市 陈埭镇 江滨南路泉商投资大厦2002</div>
-        <el-button type="text" @click="PersonInfo.dialogReceiveAddress = true">编辑</el-button>
+      <div class="per_account_content_layout" >
+        <div class="per_account_content_address" v-for="item in PersonInfo.Shippinglist" :key="item.id">
+          <div class="per_info">姓名：{{item.receiverName}}</div>
+          <div class="per_info">联系号码：{{item.receiverPhone}}</div>
+          <div
+            class="per_info"
+            style="line-height:25px;margin-top:7px;"
+          >联系地址：{{item.receiverProvince}} {{item.receiverCity}} {{item.receiverDistrict}} {{item.receiverAddress}}</div>
+          <el-button type="text" @click="editReceiver(item)">编辑</el-button>
+        </div>
       </div>
     </div>
 
-    <el-dialog title="编辑个人信息" :center="true" top="22vh" :visible.sync="PersonInfo.dialogAccountInfo" width="550px">
+   
+
+    <!--  <div class="per_account_layout">
+      <div class="per_account_title">收货地址</div>
+      <div v-for="item in PersonInfo.Shippinglist" :key="item.id">
+        <div class="per_account_content">
+          <div class="per_info">姓名：{{item.receiverName}}</div>
+          <div class="per_info">联系号码：{{item.receiverPhone}}</div>
+          <div
+            class="per_info"
+            style="line-height:25px;margin-top:7px;"
+          >联系地址：{{item.receiverProvince}} {{item.receiverCity}} {{item.receiverDistrict}} {{item.receiverAddress}}</div>
+          <el-button type="text" @click="PersonInfo.dialogReceiveAddress = true">编辑</el-button>
+        </div>
+      </div>
+    </div>-->
+
+    <el-dialog
+      title="编辑个人信息"
+      :center="true"
+      top="22vh"
+      :visible.sync="PersonInfo.dialogAccountInfo"
+      width="550px"
+    >
       <div class="per_input_layout" style="margin-top:0px;">
         <div class="per_input_title">昵称</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入昵称" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入昵称"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">性别</div>
@@ -69,26 +99,43 @@
           style="margin-right:10px;"
           @click="PersonInfo.dialogAccountInfo = false"
         >关闭</button>
-        <button
-          type="text"
-          class="c_button"
-          @click="PersonInfo.dialogAccountInfo = false"
-        >确认</button>
+        <button type="text" class="c_button" @click="PersonInfo.dialogAccountInfo = false">确认</button>
       </div>
     </el-dialog>
 
-    <el-dialog title="编辑账户绑定" :center="true" top="22vh" :visible.sync="PersonInfo.dialogBindAccount" width="550px">
+    <el-dialog
+      title="编辑账户绑定"
+      :center="true"
+      top="22vh"
+      :visible.sync="PersonInfo.dialogBindAccount"
+      width="550px"
+    >
       <div class="per_input_layout">
         <div class="per_input_title" style="margin-top:0px;">邮箱</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入昵称" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入昵称"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">手机号码</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入昵称" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入昵称"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">密码</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入昵称" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入昵称"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="button_layout">
         <button
@@ -97,11 +144,7 @@
           @click="PersonInfo.dialogBindAccount = false"
           style="margin-right:10px;"
         >关闭</button>
-        <button
-          type="text"
-          class="c_button"
-          @click="PersonInfo.dialogBindAccount = false"
-        >确认</button>
+        <button type="text" class="c_button" @click="PersonInfo.dialogBindAccount = false">确认</button>
       </div>
     </el-dialog>
 
@@ -110,62 +153,96 @@
       top="22vh"
       title="编辑收货地址"
       :visible.sync="PersonInfo.dialogReceiveAddress"
-      width="550px">
+      width="550px"
+    >
       <div class="per_input_layout" style="margin-top:0px;">
         <div class="per_input_title">姓名</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入姓名" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入姓名"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">联系号码</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入联系号码" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入联系号码"
+          style="width:370px;"
+        ></el-input>
       </div>
       <div class="per_input_layout">
         <div class="per_input_title">联系地址</div>
-        <el-input type="text" v-model="PersonInfo.nickname" placeholder="请输入联系地址" style="width:370px;"></el-input>
+        <el-input
+          type="text"
+          v-model="PersonInfo.nickname"
+          placeholder="请输入联系地址"
+          style="width:370px;"
+        ></el-input>
       </div>
-       <div class="button_layout">
+      <div class="button_layout">
         <button
           type="text"
           class="c_button"
           @click="PersonInfo.dialogReceiveAddress = false"
           style="margin-right:10px;"
         >关闭</button>
-        <button
-          type="text"
-          class="c_button"
-          @click="PersonInfo.dialogReceiveAddress = false"
-        >确认</button>
+        <button type="text" class="c_button" @click="PersonInfo.dialogReceiveAddress = false">确认</button>
       </div>
     </el-dialog>
   </div>
 </template>
 <script>
-
 export default {
   data() {
     return {
-      GenderItems:this.$.GenderItems,
-      ProvinceItems:this.$.ProvinceItems,
+      GenderItems: this.$.GenderItems,
+      ProvinceItems: this.$.ProvinceItems,
       PersonInfo: {
         dialogAccountInfo: false,
         dialogBindAccount: false,
         dialogReceiveAddress: false,
         nickname: "",
         gender: "",
-        city: ""
-      },
+        city: "",
+        ReceiverID:'',
+        Shippinglist:[]
+      }
     };
   },
-  created(){
-   
-    console.log(this.$.Fun(100))
-    console.log(this.$.ProvinceItems)
+  created() {
+    var that = this;
+    $v.service.call({
+      action: "get_shipping_list",
+      type: "POST",
+      data: {
+        id: ""
+      },
+      callback: function(data) {
+        console.log('111',data)
+        if (data.success) {
+          that.PersonInfo.Shippinglist = data.data;
+          console.log(that.PersonInfo.Shippinglist);
+        }
+      }
+    });
+    /*  console.log(this.$.Fun(100))
+    console.log(this.$.ProvinceItems) */
+  },
+
+  methods:{
+    editReceiver(info){
+        this.PersonInfo.ReceiverID = info.id
+        this.PersonInfo.dialogReceiveAddress = true
+    } 
   }
 };
 </script>
 <style scoped>
-.c_button{
-  padding:6px;
+.c_button {
+  padding: 6px;
 }
 .account_home {
   display: flex;
@@ -201,6 +278,19 @@ export default {
   font-size: 17px;
   font-weight: 600;
 }
+
+.per_account_content_layout {
+  display: flex;
+  flex-direction: column;
+   width: 70%;
+}
+
+.per_account_content_address{
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+
 
 .per_account_content {
   width: 70%;

@@ -1,6 +1,5 @@
 
 <template>
-
   <div class="login_layout" :class="{height:Height}">
     <div class="login_style">
       <div class="account_style">登陆我的账号</div>
@@ -33,43 +32,19 @@ export default {
     loginAccount(){
       var that = this
       $v.service.call({
-      action: "user/login.do",
+      action: "login",
       type: "POST",
-      data: {
-        username:'admin',
-        password:'admin',
-      },
-      callback: function(data) {
-        console.log(data)
-       if(data.status == 0){
-          that.$message.success(data.msg)
-          that.$router.push({name:'introduce'})
-        }else{
-          that.$message.error(data.msg)
-        }
-      }
-    });
-     /*  $.ajax({
-      disabledLoading: true,
-      type: "Post",
-      traditional: false,
-      url: "http://tomcat.blacksheeps.com/user/login.do",
-      dataType: "json",
-      async:false,
       data: {
         username:that.Account.UserName,
         password:that.Account.Password,
       },
-      crossDomain: true,
-      success: function(data) {
-        if(data.status == 0){
-          that.$message.success(data.msg)
-          that.$router.push({name:'introduce'})
-        }else{
-          that.$message.error(data.msg)
-        }
-      },
-    }); */
+      callback: function(data) {
+        console.log(data)
+        if (data.success) that.$message.success(data.msg)  
+        && that.$router.push({name: 'introduce'});
+        else that.$message.error(data.msg)
+      }
+    });
    },
 
    
@@ -97,7 +72,11 @@ export default {
   display: flex;
   justify-content: center;
 }
-
+/* .layout{
+  width: 100%;
+  height: 40px;
+  background-color: rgb(83, 83, 83);
+} */
 .login_style {
   background-color: whitesmoke;
   padding: 100px;

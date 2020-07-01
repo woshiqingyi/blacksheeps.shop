@@ -107,7 +107,7 @@ export default {
   },
 
   created() {
-    var that = this;
+   /*  var that = this;
       that.Manage.ShowAccountName = '未登录'
       $v.service.call({
       action: "user/get_information.do",
@@ -121,7 +121,7 @@ export default {
           that.Manage.ShowAccountName = '未登录'
         }
       }
-    });
+    }); */
     
     
     var dWidth = document.documentElement.clientWidth;

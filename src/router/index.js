@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+/* const payeename= () => import('@/components/remittanceexchange/Internationalremittance/payeename') */
+
 import login from '@/components/login'
 // import homepage from '@/components/homepage/homepage'
 import introduce from '@/components/productpage/introduce'
 import manage from '@/components/manage'
 import register from '@/components/register'
 import accounthome from '@/components/accounthome'
+
+/* const accounthome= () => import('@/components/accounthome')  */
+
 
 import shoppingcart from '@/components/shoppingcart/shoppingcart'
 import productdetails from '@/components/productdetails/productdetails'
