@@ -479,7 +479,7 @@
         baseUrl: {
             DEBUG: "http://localhost:34402/api/gateway",
             TEST: "https://trdsvc.yqytest.com/api/gateway",
-            PRODUCTION: "https://www.api.blacksheeps.cn"
+            PRODUCTION: "https://www.api.blacksheeps.cn/shop"
         },
         fileUrl: {
             DEBUG: "https://filesvc.yqytest.com/api/gateway",
