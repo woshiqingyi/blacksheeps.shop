@@ -46,7 +46,7 @@ export default {
     clickMenu(e) {
       this.ChooseID = e.target.id;
       if (e.target.id == "0") {
-        this.$router.push({ name: "accountinfo" });
+        this.$router.push({ name: "accountInfo" });
       } else if (e.target.id == "1") {
         this.$router.push({ name: "bindaccount" });
       } else if (e.target.id == "2") {
