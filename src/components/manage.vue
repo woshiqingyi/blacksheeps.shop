@@ -22,6 +22,7 @@
         <div class="menu_classify_layout">
           <div class="menu_classify">
             <div class="per_menu" @click="onIntroduce">货架商品</div>
+            
             <!-- <div class="per_menu" @click="onCollection">我的收藏</div> -->
             <div class="per_menu" @click="onOrder">我的订单</div>
           </div>
@@ -189,7 +190,7 @@ export default {
     },
 
     onAccountManage(){
-      this.$router.push({ name: "acountmanage" });
+      this.$router.push({ name: "accountManage" });
     },
 
     onOrderOperation(){

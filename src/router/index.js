@@ -19,7 +19,7 @@ import orderlogistics from '@/components/order/orderlogistics'
 import orderpayment from '@/components/order/orderpayment'
 
 import accountmanage from '@/components/account/accountmanage'
-import accountinfo from '@/components/account/accountinfo'
+import accountInfo from '@/components/account/accountInfo'
 import bindaccount from '@/components/account/bindaccount'
 import receiveaddress from '@/components/account/receiveaddress'
 import helpcenter from '@/components/othersmatter/helpcenter'
@@ -145,12 +145,12 @@ export default new Router({
           path: '/accountmanage',
           name: 'accountmanage',
           component: accountmanage,
-          redirect: 'accountinfo',
+          redirect: 'accountInfo',
           children: [
             {
-              path: '/accountinfo',
-              name: 'accountinfo',
-              component: accountinfo
+              path: '/accountInfo',
+              name: 'accountInfo',
+              component: accountInfo
             },
             {
               path: '/bindaccount',
