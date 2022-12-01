@@ -7,9 +7,41 @@
       <input class="input_style" placeholder="请输入你的密码" v-model="Account.Password" type="password" >
       <button class='c_button' :style="LoginStyle" @click="loginAccount">登陆</button>
       <el-button class='register_button' @click="onRegister" type="text">无账号？立即去注册</el-button>
+         <div class="other_login">
+         <div>其他登录方式</div>
+       
+
+          <a href="javascript:;" onclick="return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=101959583&amp;response_type=token&amp;scope=all&amp;redirect_uri=https://www.blacksheeps.cn/#/introduce', 'oauth2Login_10136' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');"><img class="icon" src="https://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/Connect_logo_4.png" alt="QQ登录" border="0"></a>
+  
+        <!--
+        <img class="icon"  src="../../static/image/icon/qq2.png" alt="">
+        <img class="icon" src="../../static/image/icon/weixin2.png" alt="">
+        <-->
+      </div>
     </div>
   </div>
 </template>
+
+
+<script type="text/javascript"  charset="utf-8"
+    src="http://connect.qq.com/qc_jssdk.js"
+    data-appid="101958511"
+    data-redirecturi="https://www.blacksheeps.cn/login"
+>
+
+$(function () {
+    QC.Login({
+        btnId:'login_btn_modal',
+        showModal:fasle,
+        size:'A_L'
+    })
+})
+
+
+</script>
+
+
+
 
 <script>
 export default {
@@ -77,6 +109,24 @@ export default {
   height: 40px;
   background-color: rgb(83, 83, 83);
 } */
+
+.icon{
+
+  height: 20px;
+}
+
+.other_login{
+  width: 230px;
+  
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size:12px;
+  color: gray;
+
+}
+
 .login_style {
   background-color: whitesmoke;
   padding: 100px;

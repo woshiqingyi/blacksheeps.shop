@@ -59,17 +59,12 @@
     <div class="bottom_layout">
       <div class="line_style"></div>
       <div class="bottom_remark">
-        <a class="a_style" target="view_window" href="http://www.beian.miit.gov.cn/">苏ICP备19063606号</a>
+        <a class="a_style" target="view_window" href="http://www.beian.miit.gov.cn/">闽ICP备2021011905号</a>
         <img class="icon_remark_style" src="../../static/image/icon/beian.png" alt />
-        <a
-          class="a_style"
-          target="_blank"
-          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32108102010390"
-        >苏公网安备 32108102010390号</a>
       </div>
     </div>
     <div class='background_image'>
-     
+        
     </div>
   </div>
 </template>
